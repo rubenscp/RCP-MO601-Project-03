@@ -1,0 +1,632 @@
+valid,0
+
+"SPEC CPU2017 Integer Speed Result"
+
+"Full Results Table"
+
+Benchmark,"Base # Threads","Est. Base Run Time","Est. Base Ratio","Base Selected","Base Status","Peak # Threads","Est. Peak Run Time","Est. Peak Ratio","Peak Selected","Peak Status",Description
+600.perlbench_s,16,555.538253,3.1951,0,S,,,,,,"refspeed(ref) iteration #1"
+600.perlbench_s,16,776.200685,2.28678,1,S,,,,,,"refspeed(ref) iteration #2"
+600.perlbench_s,16,791.478117,2.242639,0,S,,,,,,"refspeed(ref) iteration #3"
+602.gcc_s,16,771.877239,5.158851,0,S,,,,,,"refspeed(ref) iteration #1"
+602.gcc_s,16,1110.284891,3.586467,0,S,,,,,,"refspeed(ref) iteration #2"
+602.gcc_s,16,962.277325,4.1381,1,S,,,,,,"refspeed(ref) iteration #3"
+605.mcf_s,16,1226.333123,3.849688,0,S,,,,,,"refspeed(ref) iteration #1"
+605.mcf_s,16,1532.972462,3.079638,0,S,,,,,,"refspeed(ref) iteration #2"
+605.mcf_s,16,1499.12492,3.149171,1,S,,,,,,"refspeed(ref) iteration #3"
+620.omnetpp_s,16,772.477423,2.111389,0,S,,,,,,"refspeed(ref) iteration #1"
+620.omnetpp_s,16,3018.631588,0.540311,0,S,,,,,,"refspeed(ref) iteration #2"
+620.omnetpp_s,16,919.638629,1.773523,1,S,,,,,,"refspeed(ref) iteration #3"
+623.xalancbmk_s,16,1480.995681,0.956789,1,S,,,,,,"refspeed(ref) iteration #1"
+623.xalancbmk_s,16,2090.593811,0.677798,0,S,,,,,,"refspeed(ref) iteration #2"
+623.xalancbmk_s,16,717.587535,1.974672,0,S,,,,,,"refspeed(ref) iteration #3"
+625.x264_s,16,2195.779248,0.803359,0,S,,,,,,"refspeed(ref) iteration #1"
+625.x264_s,16,1760.845392,1.001792,1,S,,,,,,"refspeed(ref) iteration #2"
+625.x264_s,16,573.049483,3.078268,0,S,,,,,,"refspeed(ref) iteration #3"
+631.deepsjeng_s,16,1623.671021,0.882568,0,S,,,,,,"refspeed(ref) iteration #1"
+631.deepsjeng_s,16,1548.333011,0.925511,1,S,,,,,,"refspeed(ref) iteration #2"
+631.deepsjeng_s,16,616.986498,2.322579,0,S,,,,,,"refspeed(ref) iteration #3"
+641.leela_s,16,956.159912,1.78422,1,S,,,,,,"refspeed(ref) iteration #1"
+641.leela_s,16,2137.285759,0.798209,0,S,,,,,,"refspeed(ref) iteration #2"
+641.leela_s,16,654.710721,2.605731,0,S,,,,,,"refspeed(ref) iteration #3"
+648.exchange2_s,16,823.415898,3.570492,0,S,,,,,,"refspeed(ref) iteration #1"
+648.exchange2_s,16,585.570828,5.020742,1,S,,,,,,"refspeed(ref) iteration #2"
+648.exchange2_s,16,495.073681,5.93851,0,S,,,,,,"refspeed(ref) iteration #3"
+657.xz_s,,,,,NR,,,,,NR
+657.xz_s,,,,,NR,,,,,NR
+657.xz_s,,,,,NR,,,,,NR
+
+"Selected Results Table"
+
+Benchmark,"Base # Threads","Est. Base Run Time","Est. Base Ratio","Base Selected","Base Status","Peak # Threads","Est. Peak Run Time","Est. Peak Ratio","Peak Selected","Peak Status",Description
+600.perlbench_s,16,776.200685,2.28678,1,S,,,,,NR,"SelectedIteration (base #2; peak NR)"
+602.gcc_s,16,962.277325,4.1381,1,S,,,,,NR,"SelectedIteration (base #3; peak NR)"
+605.mcf_s,16,1499.12492,3.149171,1,S,,,,,NR,"SelectedIteration (base #3; peak NR)"
+620.omnetpp_s,16,919.638629,1.773523,1,S,,,,,NR,"SelectedIteration (base #3; peak NR)"
+623.xalancbmk_s,16,1480.995681,0.956789,1,S,,,,,NR,"SelectedIteration (base #1; peak NR)"
+625.x264_s,16,1760.845392,1.001792,1,S,,,,,NR,"SelectedIteration (base #2; peak NR)"
+631.deepsjeng_s,16,1548.333011,0.925511,1,S,,,,,NR,"SelectedIteration (base #2; peak NR)"
+641.leela_s,16,956.159912,1.78422,1,S,,,,,NR,"SelectedIteration (base #1; peak NR)"
+648.exchange2_s,16,585.570828,5.020742,1,S,,,,,NR,"SelectedIteration (base #2; peak NR)"
+657.xz_s,,,,,NR,,,,,NR
+
+SPECspeed2017_int_base,1.956466,,1.956466
+SPECspeed2017_int_peak,"Not Run",,,,,,,"Not Run"
+
+"Run number:",060.0
+"runcpu command:","/usr/local/spec_cpu2017/bin/harness/runcpu --configfile rubens-try1 --noreportable --iterations 3 --noreportable --nopower --runmode speed --tune base --size refspeed 600.perlbench_s 602.gcc_s 605.mcf_s 620.omnetpp_s 623.xalancbmk_s 625.x264_s 631.deepsjeng_s 641.leela_s 648.exchange2_s 998.specrand_is"
+"output root:","not used"
+
+"Hardware Vendor:","Laptop Rubens"
+"Hardware Model:",
+"Date tested:",May-2023
+"CPU2017 License:","nnn (Your SPEC license number)"
+"Test sponsor:","Laptop Rubens"
+"Tested by:","Laptop Rubens"
+"Hardware avail:",
+"Software avail:",
+
+
+HARDWARE
+
+"CPU Name","Intel Core i7-2620M"
+"  Max MHz"," "
+"  Nominal"," "
+Enabled," cores, 1 chip,  threads/core"
+Orderable," "
+"Cache L1"," "
+"  L2"," "
+"  L3"," "
+"  Other"," "
+Memory,"7.733 GB fixme: If using DDR4, the format is:"
+,"'N GB (N x N GB nRxn PC4-nnnnX-X)'"
+Storage,"1007 GB  add more disk info here"
+Other," "
+
+SOFTWARE
+
+OS,"Ubuntu 22.04.2 LTS"
+,5.15.90.1-microsoft-standard-WSL2
+Compiler,"C/C++/Fortran: Version 7.2.1 of GCC, the"
+,"GNU Compiler Collection"
+Parallel,Yes
+Firmware," "
+"File System",ext4
+"System State","Run level 5 (add definition here)"
+"Base Pointers",64-bit
+"Peak Pointers","Not Applicable"
+Other," "
+"Power Management",--
+
+"Environment Variables Notes"
+
+"Environment variables set by runcpu before the start of the run:"
+"LD_LIBRARY_PATH = ""/usr/lib64/:/usr/lib/:/lib64"""
+
+
+"Platform Notes"
+
+
+" Sysinfo program /usr/local/spec_cpu2017/bin/sysinfo"
+" Rev: r6732 of 2022-11-07 fe91c89b7ed5c36ae2c92cc097bec197"
+" running on NotebookRubens Fri May 19 06:10:07 2023"
+
+" SUT (System Under Test) info as seen by some common utilities."
+
+" ------------------------------------------------------------"
+" Table of contents"
+" ------------------------------------------------------------"
+"  1. uname -a"
+"  2. w"
+"  3. Username"
+"  4. ulimit -a"
+"  5. sysinfo process ancestry"
+"  6. /proc/cpuinfo"
+"  7. lscpu"
+"  8. numactl warning"
+"  9. /proc/meminfo"
+" 10. who -r"
+" 11. Systemd service manager version: systemd 249 (249.11-0ubuntu3.9)"
+" 12. Services, from systemctl list-unit-files"
+" 13. Linux kernel boot-time arguments, from /proc/cmdline"
+" 14. sysctl"
+" 15. /sys/kernel/mm/transparent_hugepage"
+" 16. /sys/kernel/mm/transparent_hugepage/khugepaged"
+" 17. OS release"
+" 18. Disk information"
+" 19. dmidecode"
+" ------------------------------------------------------------"
+
+" ------------------------------------------------------------"
+" 1. uname -a"
+"   Linux NotebookRubens 5.15.90.1-microsoft-standard-WSL2 #1 SMP Fri Jan 27 02:56:13 UTC 2023 x86_64 x86_64"
+"   x86_64 GNU/Linux"
+
+" ------------------------------------------------------------"
+" 2. w"
+"    06:10:07 up 3 days, 19:03,  2 users,  load average: 0.41, 0.20, 0.12"
+"   USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT"
+"   rubens   pts/1    -                Mon11    3days  0.27s  0.11s -bash"
+"   rubens   pts/2    -                Mon11    6.00s  3.10s  5.41s sudo -i"
+
+" ------------------------------------------------------------"
+" 3. Username"
+"   From environment variable $USER:  root"
+"   From the command 'logname':       rubens"
+
+" ------------------------------------------------------------"
+" 4. ulimit -a"
+"   time(seconds)        unlimited"
+"   file(blocks)         unlimited"
+"   data(kbytes)         unlimited"
+"   stack(kbytes)        8192"
+"   coredump(blocks)     0"
+"   memory(kbytes)       unlimited"
+"   locked memory(kbytes) 1013600"
+"   process              31649"
+"   nofiles              1024"
+"   vmemory(kbytes)      unlimited"
+"   locks                unlimited"
+"   rtprio               0"
+
+" ------------------------------------------------------------"
+" 5. sysinfo process ancestry"
+"  /sbin/init"
+"  /init"
+"  /init"
+"  /init"
+"  -bash"
+"  sudo -i"
+"  sudo -i"
+"  -bash"
+"  runcpu --config=rubens-try1 --noreportable --iterations=3 600.perlbench_s 602.gcc_s 605.mcf_s 620.omnetpp_s"
+"    623.xalancbmk_s 625.x264_s 631.deepsjeng_s 641.leela_s 648.exchange2_s 998.specrand_is"
+"  runcpu --configfile rubens-try1 --noreportable --iterations 3 --noreportable --nopower --runmode speed"
+"    --tune base --size refspeed 600.perlbench_s 602.gcc_s 605.mcf_s 620.omnetpp_s 623.xalancbmk_s 625.x264_s"
+"    631.deepsjeng_s 641.leela_s 648.exchange2_s 998.specrand_is --nopreenv --note-preenv --logfile"
+"    $SPEC/tmp/CPU2017.060/templogs/preenv.intspeed.060.0.log --lognum 060.0 --from_runcpu 2"
+"  specperl $SPEC/bin/sysinfo"
+" $SPEC = /usr/local/spec_cpu2017"
+
+" ------------------------------------------------------------"
+" 6. /proc/cpuinfo"
+"     model name      : Intel(R) Core(TM) i7-2620M CPU @ 2.70GHz"
+"     vendor_id       : GenuineIntel"
+"     cpu family      : 6"
+"     model           : 42"
+"     stepping        : 7"
+"     microcode       : 0xffffffff"
+"     bugs            : cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit"
+"                       mmio_unknown"
+"     cpu cores       : 2"
+"     siblings        : 4"
+"     1 physical ids (chips)"
+"     4 processors (hardware threads)"
+"     physical id 0: core ids 0-1"
+"     physical id 0: apicids 0-3"
+"   Caution: /proc/cpuinfo data regarding chips, cores, and threads is not necessarily reliable, especially for"
+"   virtualized systems.  Use the above data carefully."
+
+" ------------------------------------------------------------"
+" 7. lscpu"
+
+" From lscpu from util-linux 2.37.2:"
+"   Architecture:                    x86_64"
+"   CPU op-mode(s):                  32-bit, 64-bit"
+"   Address sizes:                   36 bits physical, 48 bits virtual"
+"   Byte Order:                      Little Endian"
+"   CPU(s):                          4"
+"   On-line CPU(s) list:             0-3"
+"   Vendor ID:                       GenuineIntel"
+"   Model name:                      Intel(R) Core(TM) i7-2620M CPU @ 2.70GHz"
+"   CPU family:                      6"
+"   Model:                           42"
+"   Thread(s) per core:              2"
+"   Core(s) per socket:              2"
+"   Socket(s):                       1"
+"   Stepping:                        7"
+"   BogoMIPS:                        5387.76"
+"   Flags:                           fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36"
+"                                    clflush mmx fxsr sse sse2 ht syscall nx rdtscp lm constant_tsc"
+"                                    arch_perfmon rep_good nopl xtopology cpuid pni pclmulqdq ssse3 cx16 pdcm"
+"                                    pcid sse4_1 sse4_2 popcnt aes xsave avx hypervisor lahf_lm pti ssbd ibrs"
+"                                    ibpb stibp xsaveopt flush_l1d arch_capabilities"
+"   Hypervisor vendor:               Microsoft"
+"   Virtualization type:             full"
+"   L1d cache:                       64 KiB (2 instances)"
+"   L1i cache:                       64 KiB (2 instances)"
+"   L2 cache:                        512 KiB (2 instances)"
+"   L3 cache:                        4 MiB (1 instance)"
+"   Vulnerability Itlb multihit:     KVM: Mitigation: VMX unsupported"
+"   Vulnerability L1tf:              Mitigation; PTE Inversion"
+"   Vulnerability Mds:               Vulnerable: Clear CPU buffers attempted, no microcode; SMT Host state"
+"                                    unknown"
+"   Vulnerability Meltdown:          Mitigation; PTI"
+"   Vulnerability Mmio stale data:   Unknown: No mitigations"
+"   Vulnerability Retbleed:          Not affected"
+"   Vulnerability Spec store bypass: Mitigation; Speculative Store Bypass disabled via prctl and seccomp"
+"   Vulnerability Spectre v1:        Mitigation; usercopy/swapgs barriers and __user pointer sanitization"
+"   Vulnerability Spectre v2:        Mitigation; Retpolines, IBPB conditional, IBRS_FW, STIBP conditional, RSB"
+"                                    filling, PBRSB-eIBRS Not affected"
+"   Vulnerability Srbds:             Not affected"
+"   Vulnerability Tsx async abort:   Not affected"
+
+" From lscpu --cache:"
+"      NAME ONE-SIZE ALL-SIZE WAYS TYPE        LEVEL SETS PHY-LINE COHERENCY-SIZE"
+"      L1d       32K      64K    8 Data            1   64        1             64"
+"      L1i       32K      64K    8 Instruction     1   64        1             64"
+"      L2       256K     512K    8 Unified         2  512        1             64"
+"      L3         4M       4M   16 Unified         3 4096        1             64"
+
+" ------------------------------------------------------------"
+" 8. numactl warning"
+
+" Unable to get information from 'numactl --hardware'.  Please consider installing numactl."
+
+" ------------------------------------------------------------"
+" 9. /proc/meminfo"
+"    MemTotal:        8108808 kB"
+
+" ------------------------------------------------------------"
+" 10. who -r"
+"   run-level 5 May 15 11:07"
+
+" ------------------------------------------------------------"
+" 11. Systemd service manager version: systemd 249 (249.11-0ubuntu3.9)"
+"   Default Target  Status"
+"   graphical       running"
+
+" ------------------------------------------------------------"
+" 12. Services, from systemctl list-unit-files"
+"   STATE            UNIT FILES"
+"   enabled          apparmor console-setup cron dmesg e2scrub_reap getty@ irqbalance keyboard-setup"
+"                    networkd-dispatcher rsyslog setvtrgb snapd systemd-pstore systemd-resolved"
+"                    systemd-timesyncd ua-reboot-cmds ubuntu-advantage ufw unattended-upgrades"
+"   enabled-runtime  console-getty netplan-ovs-cleanup systemd-remount-fs"
+"   disabled         debug-shell nftables rsync serial-getty@ systemd-boot-check-no-failures"
+"                    systemd-network-generator systemd-networkd systemd-networkd-wait-online systemd-sysext"
+"                    systemd-time-wait-sync"
+"   generated        apport"
+"   indirect         uuidd"
+"   masked           cryptdisks cryptdisks-early hwclock rc rcS screen-cleanup sudo systemd-binfmt x11-common"
+
+" ------------------------------------------------------------"
+" 13. Linux kernel boot-time arguments, from /proc/cmdline"
+"   initrd=\initrd.img"
+"   WSL_ROOT_INIT=1"
+"   panic=-1"
+"   nr_cpus=4"
+"   bonding.max_bonds=0"
+"   dummy.numdummies=0"
+"   fb_tunnels=none"
+"   swiotlb=force"
+"   console=hvc0"
+"   debug"
+"   pty.legacy_count=0"
+
+" ------------------------------------------------------------"
+" 14. sysctl"
+"   kernel.randomize_va_space           2"
+"   vm.compaction_proactiveness        20"
+"   vm.dirty_background_bytes           0"
+"   vm.dirty_background_ratio          10"
+"   vm.dirty_bytes                      0"
+"   vm.dirty_expire_centisecs        3000"
+"   vm.dirty_ratio                     20"
+"   vm.dirty_writeback_centisecs      500"
+"   vm.dirtytime_expire_seconds     43200"
+"   vm.extfrag_threshold              500"
+"   vm.nr_hugepages                     0"
+"   vm.nr_overcommit_hugepages          0"
+"   vm.swappiness                      60"
+"   vm.watermark_boost_factor       15000"
+"   vm.watermark_scale_factor          10"
+
+" ------------------------------------------------------------"
+" 15. /sys/kernel/mm/transparent_hugepage"
+"   defrag          always defer defer+madvise [madvise] never"
+"   enabled         [always] madvise never"
+"   hpage_pmd_size  2097152"
+"   shmem_enabled   always within_size advise [never] deny force"
+
+" ------------------------------------------------------------"
+" 16. /sys/kernel/mm/transparent_hugepage/khugepaged"
+"   alloc_sleep_millisecs   60000"
+"   defrag                      1"
+"   max_ptes_none             511"
+"   max_ptes_shared           256"
+"   max_ptes_swap              64"
+"   pages_to_scan            4096"
+"   scan_sleep_millisecs    10000"
+
+" ------------------------------------------------------------"
+" 17. OS release"
+"   From /etc/*-release /etc/*-version"
+"   os-release Ubuntu 22.04.2 LTS"
+
+" ------------------------------------------------------------"
+" 18. Disk information"
+" SPEC is set to: /usr/local/spec_cpu2017"
+"   Filesystem     Type  Size  Used Avail Use% Mounted on"
+"   /dev/sdc       ext4 1007G   39G  917G   5% /"
+
+" ------------------------------------------------------------"
+" 19. dmidecode"
+"   Additional information from dmidecode 3.3 follows.  WARNING: Use caution when you interpret this section."
+"   The 'dmidecode' program reads system data which is ""intended to allow hardware to be accurately"
+"   determined"", but the intent may not be met, as there are frequent changes to hardware, firmware, and the"
+"   ""DMTF SMBIOS"" standard."
+
+" BIOS: (could not find information)"
+
+"Compiler Version Notes"
+
+============================================================================================================
+"C       | 600.perlbench_s(base) 602.gcc_s(base) 605.mcf_s(base) 625.x264_s(base)"
+------------------------------------------------------------------------------------------------------------
+"Using built-in specs."
+COLLECT_GCC=/usr/bin/gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+OFFLOAD_TARGET_DEFAULT=1
+"Target: x86_64-linux-gnu"
+"Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.3.0-1ubuntu1~22.04'"
+"  --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs"
+"  --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr"
+"  --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared"
+"  --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix"
+"  --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug"
+"  --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object"
+"  --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib"
+"  --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto"
+"  --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64"
+"  --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic"
+"  --enable-offload-targets=nvptx-none=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-gcn/usr"
+"  --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu"
+"  --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2"
+"Thread model: posix"
+"Supported LTO compression algorithms: zlib zstd"
+"gcc version 11.3.0 (Ubuntu 11.3.0-1ubuntu1~22.04) "
+------------------------------------------------------------------------------------------------------------
+
+============================================================================================================
+"C++     | 620.omnetpp_s(base) 623.xalancbmk_s(base) 631.deepsjeng_s(base) 641.leela_s(base)"
+------------------------------------------------------------------------------------------------------------
+"Using built-in specs."
+COLLECT_GCC=/usr/bin/g++
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+OFFLOAD_TARGET_DEFAULT=1
+"Target: x86_64-linux-gnu"
+"Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.3.0-1ubuntu1~22.04'"
+"  --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs"
+"  --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr"
+"  --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared"
+"  --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix"
+"  --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug"
+"  --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object"
+"  --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib"
+"  --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto"
+"  --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64"
+"  --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic"
+"  --enable-offload-targets=nvptx-none=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-gcn/usr"
+"  --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu"
+"  --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2"
+"Thread model: posix"
+"Supported LTO compression algorithms: zlib zstd"
+"gcc version 11.3.0 (Ubuntu 11.3.0-1ubuntu1~22.04) "
+------------------------------------------------------------------------------------------------------------
+
+============================================================================================================
+"Fortran | 648.exchange2_s(base)"
+------------------------------------------------------------------------------------------------------------
+"Using built-in specs."
+COLLECT_GCC=/usr/bin/gfortran
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+OFFLOAD_TARGET_DEFAULT=1
+"Target: x86_64-linux-gnu"
+"Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.3.0-1ubuntu1~22.04'"
+"  --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs"
+"  --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr"
+"  --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared"
+"  --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix"
+"  --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug"
+"  --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object"
+"  --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib"
+"  --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto"
+"  --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64"
+"  --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic"
+"  --enable-offload-targets=nvptx-none=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-gcn/usr"
+"  --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu"
+"  --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2"
+"Thread model: posix"
+"Supported LTO compression algorithms: zlib zstd"
+"gcc version 11.3.0 (Ubuntu 11.3.0-1ubuntu1~22.04) "
+------------------------------------------------------------------------------------------------------------
+
+"Base Runtime Environment"
+600.perlbench_s," No flags used"
+602.gcc_s," No flags used"
+605.mcf_s," No flags used"
+620.omnetpp_s," No flags used"
+623.xalancbmk_s," No flags used"
+625.x264_s," No flags used"
+631.deepsjeng_s," No flags used"
+641.leela_s," No flags used"
+648.exchange2_s," No flags used"
+657.xz_s
+
+"Base Compiler Invocation"
+600.perlbench_s," gcc"," gcc"
+602.gcc_s," gcc"," gcc"
+605.mcf_s," gcc"," gcc"
+620.omnetpp_s," g++"," g++"
+623.xalancbmk_s," g++"," g++"
+625.x264_s," gcc"," gcc"
+631.deepsjeng_s," g++"," g++"
+641.leela_s," g++"," g++"
+648.exchange2_s," gfortran"," gfortran"
+657.xz_s
+
+"Base Portability Flags"
+600.perlbench_s," -DSPEC_LINUX_X64"," -DSPEC_LP64"
+602.gcc_s," -DSPEC_LP64"
+605.mcf_s," -DSPEC_LP64"
+620.omnetpp_s," -DSPEC_LP64"
+623.xalancbmk_s," -DSPEC_LINUX"," -DSPEC_LP64"
+625.x264_s," -DSPEC_LP64"
+631.deepsjeng_s," -DSPEC_LP64"
+641.leela_s," -DSPEC_LP64"
+648.exchange2_s," -DSPEC_LP64"
+657.xz_s
+
+"Base Optimization Flags"
+600.perlbench_s," -m64"," -std=c99"," -std=c99"," -m64"," -g"," -O3"," -march=native"," -fno-unsafe-math-optimizations"," -fno-tree-loop-vectorize"," -fopenmp"," -DSPEC_OPENMP"," -fno-strict-aliasing"," -fgnu89-inline"
+602.gcc_s," -m64"," -std=c99"," -std=c99"," -m64"," -g"," -O3"," -march=native"," -fno-unsafe-math-optimizations"," -fno-tree-loop-vectorize"," -fopenmp"," -DSPEC_OPENMP"," -fno-strict-aliasing"," -fgnu89-inline"
+605.mcf_s," -m64"," -std=c99"," -std=c99"," -m64"," -g"," -O3"," -march=native"," -fno-unsafe-math-optimizations"," -fno-tree-loop-vectorize"," -fopenmp"," -DSPEC_OPENMP"," -fno-strict-aliasing"," -fgnu89-inline"
+620.omnetpp_s," -m64"," -std=c++03"," -std=c++03"," -m64"," -g"," -O3"," -march=native"," -fno-unsafe-math-optimizations"," -fno-tree-loop-vectorize"," -fopenmp"," -DSPEC_OPENMP"
+623.xalancbmk_s," -m64"," -std=c++03"," -std=c++03"," -m64"," -g"," -O3"," -march=native"," -fno-unsafe-math-optimizations"," -fno-tree-loop-vectorize"," -fopenmp"," -DSPEC_OPENMP"
+625.x264_s," -m64"," -std=c99"," -std=c99"," -m64"," -g"," -O3"," -march=native"," -fno-unsafe-math-optimizations"," -fno-tree-loop-vectorize"," -fopenmp"," -DSPEC_OPENMP"," -fno-strict-aliasing"," -fgnu89-inline"
+631.deepsjeng_s," -m64"," -std=c++03"," -std=c++03"," -m64"," -g"," -O3"," -march=native"," -fno-unsafe-math-optimizations"," -fno-tree-loop-vectorize"," -fopenmp"," -DSPEC_OPENMP"
+641.leela_s," -m64"," -std=c++03"," -std=c++03"," -m64"," -g"," -O3"," -march=native"," -fno-unsafe-math-optimizations"," -fno-tree-loop-vectorize"," -fopenmp"," -DSPEC_OPENMP"
+648.exchange2_s," -m64"," -m64"," -g"," -O3"," -march=native"," -fno-unsafe-math-optimizations"," -fno-tree-loop-vectorize"," -DSPEC_OPENMP"," -fopenmp"
+657.xz_s
+
+"Base Other Flags"
+600.perlbench_s," -fallow-argument-mismatch"," -fcommon"
+602.gcc_s," -fallow-argument-mismatch"," -fcommon"
+605.mcf_s," -fallow-argument-mismatch"," -fcommon"
+620.omnetpp_s," -fallow-argument-mismatch"," -fcommon"
+623.xalancbmk_s," -fallow-argument-mismatch"," -fcommon"
+625.x264_s," -fallow-argument-mismatch"," -fcommon"," -fcommon"
+631.deepsjeng_s," -fallow-argument-mismatch"," -fcommon"
+641.leela_s," -fallow-argument-mismatch"," -fcommon"
+648.exchange2_s," -fallow-argument-mismatch"," -fcommon"
+657.xz_s
+
+"Base Forbidden Flags"
+600.perlbench_s
+602.gcc_s
+605.mcf_s
+620.omnetpp_s
+623.xalancbmk_s
+625.x264_s
+631.deepsjeng_s
+641.leela_s
+648.exchange2_s
+657.xz_s
+
+"Base Unknown Flags"
+600.perlbench_s
+602.gcc_s
+605.mcf_s
+620.omnetpp_s
+623.xalancbmk_s
+625.x264_s
+631.deepsjeng_s
+641.leela_s
+648.exchange2_s
+657.xz_s
+
+"Peak Runtime Environment"
+600.perlbench_s
+602.gcc_s
+605.mcf_s
+620.omnetpp_s
+623.xalancbmk_s
+625.x264_s
+631.deepsjeng_s
+641.leela_s
+648.exchange2_s
+657.xz_s
+
+"Peak Compiler Invocation"
+600.perlbench_s
+602.gcc_s
+605.mcf_s
+620.omnetpp_s
+623.xalancbmk_s
+625.x264_s
+631.deepsjeng_s
+641.leela_s
+648.exchange2_s
+657.xz_s
+
+"Peak Portability Flags"
+600.perlbench_s
+602.gcc_s
+605.mcf_s
+620.omnetpp_s
+623.xalancbmk_s
+625.x264_s
+631.deepsjeng_s
+641.leela_s
+648.exchange2_s
+657.xz_s
+
+"Peak Optimization Flags"
+600.perlbench_s
+602.gcc_s
+605.mcf_s
+620.omnetpp_s
+623.xalancbmk_s
+625.x264_s
+631.deepsjeng_s
+641.leela_s
+648.exchange2_s
+657.xz_s
+
+"Peak Other Flags"
+600.perlbench_s
+602.gcc_s
+605.mcf_s
+620.omnetpp_s
+623.xalancbmk_s
+625.x264_s
+631.deepsjeng_s
+641.leela_s
+648.exchange2_s
+657.xz_s
+
+"Peak Forbidden Flags"
+600.perlbench_s
+602.gcc_s
+605.mcf_s
+620.omnetpp_s
+623.xalancbmk_s
+625.x264_s
+631.deepsjeng_s
+641.leela_s
+648.exchange2_s
+657.xz_s
+
+"Peak Unknown Flags"
+600.perlbench_s
+602.gcc_s
+605.mcf_s
+620.omnetpp_s
+623.xalancbmk_s
+625.x264_s
+631.deepsjeng_s
+641.leela_s
+648.exchange2_s
+657.xz_s
+
+ERRORS
+
+##############################################################################
+"#   INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN  #"
+"#                                                                            #"
+"# 'reportable' flag not set during run                                       #"
+"# 657.xz_s (base) did not have enough runs!                                  #"
+"#                                                                            #"
+"#   INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN INVALID RUN  #"
+##############################################################################
+----------------
+"For questions about","this result, please","contact the tester.",
+"For other inquiries,","please contact",info@spec.org.,
+"Copyright 2017-2023 Standard","Performance Evaluation",Corporation,
+"Tested with SPEC CPU2017",v1.1.9.
+"Result run on","2023-05-19 06:10:06-0300."
+"Report generated on","2023-05-19 15:12:04","by SPEC CPU2017 CSV","formatter v6253."

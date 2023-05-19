@@ -1,0 +1,137 @@
+\subsection{SPEC CPU 2017}
+
+SPEC: Executar em um computador e coletar as métricas finais de desempenho. Consultar o site do SPEC e indicar como suas métricas se comparam a outros computadores. Fique confortável com a seleção de tamanho das entradas. Entrega: sequência de comandos executados e métricas com suas comparações a outros computadores.
+
+O SPEC CPU 2017 é um pacote de benchmark que contém a próxima geração de SPECs, pacotes de processamento intensivo de CPU par amedição e comparação de desempenho computacional, sobrecarregando o processador do sistema, memória e compilador \cite{spec_2017}.
+
+SPEC oferece 4 suites para benchmark: intspeed, fpspeed, intrate e fprate. Em cada suite, pode-se utilizar 4 métricas: base, peak, energy\textunderscore base e energy\textunderscore peak. 
+
+Benchmark SPEC CPU 2017: 
+
+\begin{itemize}
+    \item Execução das instruções contidas em https://spec.org/cpu2017/Docs/quick-start.html
+    \item https://www.spec.org/cpu2017/Docs/install-guide-unix.html\#config
+    \item source shrc
+    \item runcpu --config=rubens-try1 SPECspeed2017\textunderscore int\textunderscore base
+    \item runcpu --config=rubens-try1 SPECspeed2017\textunderscore int\textunderscore peak
+    \item Instalações e atualizações:
+    \item atualizei Ubuntu e instalei os pacotes text
+    \begin{itemize}
+        \item sudo apt-get update
+        \item sudo apt-get install tcl-dev
+        \item sudo apt-get install gettext
+        \item sudo apt-get install libcurl4-openssl-dev 
+        \item sudo apt-get install libcurl4-nss-dev 
+        \item sudo apt-get install libcurl4-gnutls-dev
+        \item sudo apt-get install gfortran
+    \end{itemize}
+
+    \item Correção do erro de compilação "multiple definition of cfgparams"  \\
+    em https://www.spec.org/cpu2017/Docs/benchmarks/625.x264\textunderscore s.html
+    Adicionei -fcommon no arquivo de configuração "rubens-try1.cfg"
+    \item Correção no arquivo de configuração \\
+    copies           = 4   \# EDIT to change number of copies (see above) - Rubens alterou de 1 para 4 
+    \item 
+\end{itemize}
+
+aaaaaaaaaaaaaaaaa
+
+
+\begin{itemize}
+    \item A instalação foi feita a partir do arquivo fornecido pelo professor cpu2017-1.1.0.iso 
+    \item Criar pasta destino para montagem da imagem: mkdir spec \textunderscore cpu \textunderscore 2017 \textunderscore files
+    \item Montar imagem: mount cpu2017-1.1.0.iso  spec \textunderscore cpu \textunderscore 2017 \textunderscore files/
+    \item Acessar a pasta montada para instalação
+    \item Desmontar pasra: umount spec \textunderscore cpu \textunderscore 2017 \textunderscore files/
+\end{itemize}
+
+
+xxxxxxxxxxxxxxxxxxxxxx \\
+
+\begin{itemize}
+    \item Página principal do produto: https://www.spec.org/cpu2017/
+    \item Purchase SPEC CPU 2017 witj non-profit pricing: https://www.spec.org/nonprofitorder.html
+\end{itemize}
+
+
+Outros links:
+\begin{itemize}
+    \item Instalando SPEC CPU 2017 em Unix Systems: https://www.spec.org/cpu2017/Docs/install-guide-unix.html
+    \item Requisitos: https://www.spec.org/cpu2017/Docs/system-requirements.html
+\end{itemize}
+
+Dúvida: Solicitei no sábado (06/05/2023)  SPEC ACCEL, SPEChpc 2021, SPEC OMP2012, SPEC MPI2007, com meus dois e-mails (r216146@dac.unicamp e rubenscp@gmail.com), porém sem resposta. 
+
+\begin{itemize}
+    \item User specific HPG benchmark download links:
+    \item SPEC ACCEL (809,063,568 bytes): \\
+    https://www.spec.org/hpg/download.bin/user/02a301d64cdace300ed738fa19d386286be \\
+    0542e901849dfba250b6905476f44/accel-1.4.tar.xz
+    \item SPEChpc 2021 (547,920,016 bytes): \\
+    https://www.spec.org/hpg/download.bin/user/02a301d64cdace300ed738fa19d386286be \\
+    0542e901849dfba250b6905476f44/hpc2021-1.1.7.iso.xz
+    \item SPEC OMP2012 (806,159,080 bytes): \\
+    https://www.spec.org/hpg/download.bin/user/02a301d64cdace300ed738fa19d386286be \\
+    0542e901849dfba250b6905476f44/omp2012-1.1.iso.xz
+    \item SPEC MPI2007 (2,520,446,976 bytes): \\
+    https://www.spec.org/hpg/download.bin/user/02a301d64cdace300ed738fa19d386286be \\
+    0542e901849dfba250b6905476f44/mpi2007-2.0.1.iso
+    \item (NOTE: The above download links are valid until Mon Jun 05 20:55:44 EDT -04:00 2023)
+    \item HPG Benchmark File Checksums (SHA-256 and 512): https://www.spec.org/hpg/releases
+\end{itemize}
+
+
+
+
+% Algumas métricas possíveis são speed e rate
+% \begin{itemize}
+%     \item SPECspeed {2017_int_base}
+%     \item SPECspeed {2017_int_peak}
+%     \item SPECspeed {2017_int_energy_base}
+%     \item SPECspeed {2017_int_energy_peak}
+% \end{itemize}
+
+
+
+% \begin{itemize}
+%     \item Criar pasta "benchmarch_spec_2017"
+% \end{itemize}
+
+% \begin{itemize}
+%     \item 
+%     \item Site oficial: https://www.spec.org/cpu2017/releases/
+%     \item wget https://www.spec.org/cpu2017/releases/cpu2017-1.1.9.tar.xz.sha512
+%     \item Installing from tarfile: https://www.spec.org/cpu2017/Docs/install-guide-unix.html
+%     \item 
+%     \item 
+% \end{itemize}
+
+Procedimentos para execução da tarefa:
+\begin{enumerate}
+    \item Executar em um computador o SPEC CUP 2017
+    \item Coletar as métricas finais de desempenho
+    \item Documentar a sequência de comandos executados
+    \item Documentar as métricas utilizadas na medição 
+    \item Documentar comparações do benchmark realizado no meu computador e de outros computadores (olhar no site do SPEC): https://www.spec.org/cgi-bin/osgresults?conf=cpu2017
+\end{enumerate}
+
+
+Entrega: sequência de comandos executados e métricas com suas comparações a outros computadores.
+
+\begin{itemize}
+    \item Sequencia de comandos 
+    \item Métricas I:
+    \begin{itemize}
+        \item base
+        \item peak
+        \item energy\textunderscore base 
+        \item energy\textunderscore peak
+    \end{itemize}
+    \item Métricas II:
+    \begin{itemize}
+        \item Integer speed 
+        \item Integer rate 
+        \item Float speed 
+        \item Float rate 
+    \end{itemize}
+\end{itemize}

@@ -1,0 +1,44 @@
+
+\subsection{Simulador Multi-core Sniper}
+
+Sniper: Instalar e executar no seu computador. Executar 3 programas pequenos (< 1 milhão de instruções cada). Entrega: sequência de comandos executados, slowdown de simulação (tempo do programa executado no simulador dividido pelo tempo do programa executando nativamente), colete e apresente algumas métricas de desempenho do coletadas pelo simulador. \\
+
+Sniper é um simulador do processador x86 para computação paralela, alta velocidade e acurácia.
+
+\begin{itemize}
+    \item Site oficial: https://snipersim.org//w/The\_Sniper\_Multi-Core\_Simulator.
+    \item Instalação: foram seguidas as instruções disponibilizadas na página do produto.
+\end{itemize}
+
+Foi instalado também o Pin conforme instruções no site do Sniper. \\
+
+
+Verificar o resultado produzido pelo pin:
+
+\begin{itemize}
+    \item cd source/tools/SimpleExamples
+    \item make obj-intel64/opcodemix.so
+    \item ../../../pin -t obj-intel64/opcodemix.so -- /bin/ls
+    \item Acessar a pasta: benchmark/sniper/sniper-7.4/pin-kit/pin-3.27-98718-gbeaa5d51e-gcc-linux
+    \item Acessar a pasta: source/tools/SimpleExamples
+    \item Verificar os arquivos com extensão $out$.
+\end{itemize}
+
+
+Programas a serem testados:
+
+\begin{enumerate}
+    \item opcodemix.cpp
+    \item coco.cpp 
+    \item trace.cpp
+    \item catmix.cpp 
+\end{enumerate}
+
+
+\textbf{Entrega}
+
+\begin{enumerate}
+    \item Sequência de comandos executados.
+    \item Slowdown de simulação (tempo do programa executado no simulador dividido pelo tempo do programa executando nativamente).
+    \item Apresentar algumas métricas de desempenho coletadas pelo simulador.
+\end{enumerate}
