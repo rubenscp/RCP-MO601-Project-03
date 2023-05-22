@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex main"] 0 "main.aux" "main.bbl" "main" 1684207333 -1
+["bibtex main"] 0 "main.aux" "main.bbl" "main" 1684680074 -1
   "./Tarefas/reference.bib" 1683402244 519 077ca60e8b1f95d794b7cc5eeb1ca367 ""
   "C:/Program Files/MiKTeX/bibtex/bib/abntex2/abntex2-options.bib" 1543106829 5396 4eb260dac60f150ae608d45252853090 ""
   "C:/Program Files/MiKTeX/bibtex/bst/abntex2/abntex2-alf.bst" 1543106830 60064 0819ac8568f9a482510a46e3a8a6f605 ""
-  "main.aux" 1684207330 2402 e9c3c52af35567c930349ab09c79de9d "pdflatex"
+  "main.aux" 1684680070 2402 e9c3c52af35567c930349ab09c79de9d "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1684207320 "w:/My Drive/Doutorado IC-Unicamp/Classes/MO601 - CA2/04. Assignments/Projects/RCP-MO601-Project-03/report/main.tex" "main.pdf" "main" 1684207333 0
+["pdflatex"] 1684680060 "w:/My Drive/Doutorado IC-Unicamp/Classes/MO601 - CA2/04. Assignments/Projects/RCP-MO601-Project-03/report/main.tex" "main.pdf" "main" 1684680074 0
   "C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
   "C:/Program Files/MiKTeX/fonts/tfm/adobe/times/ptmb7t.tfm" 1136786654 2172 fd0c924230362ff848a33632ed45dc23 ""
   "C:/Program Files/MiKTeX/fonts/tfm/adobe/times/ptmb8r.tfm" 1136786654 4524 6bce29db5bc272ba5f332261583fee9c ""
@@ -227,7 +227,7 @@
   "Imagens/LOGO-UNICAMP.png" 1679794094 35196 3783dd225ea7097921951508a884fe62 ""
   "Imagens/logo-ic-unicamp-slant-tint-beg-sky-ora-0120.png" 1661625395 45786 8068f93704709fc4b3f184efa01fbc72 ""
   "Tarefas/01_spec_cpu_2017.tex" 1684207305 5990 d318c7bf7dc2531c60ee561765b88d52 ""
-  "Tarefas/02_sniper.tex" 1683563472 1677 c95cdac82f68866bde4e268e7018dda0 ""
+  "Tarefas/02_sniper.tex" 1684680056 1674 b2dab50efe6cfecaba8f171e2f0450f4 ""
   "Tarefas/03_perf.tex" 1683563685 931 a86ababa4dc14b99350b6aacfaae99f2 ""
   "Tarefas/04_parsec.tex" 1683565475 1244 93c314a55352cf702a1f7a20fd7ee33e ""
   "Tarefas/05_rodinia.tex" 1683565581 1160 c5c2fdcaa8d6a3cbf81eb2977136b330 ""
@@ -238,12 +238,12 @@
   "Tarefas/consideracoes_aprendizado.tex" 1683411234 160 f859f1f64e01c40047fa04640d7629fd ""
   "Tarefas/introducao.tex" 1683155222 729 6baaa6d06e831914993366af734e01b7 ""
   "Tarefas/nomenclatura.tex" 1679794094 359 40b24878b45af3f19e9211140b19221f ""
-  "main.aux" 1684207330 2402 e9c3c52af35567c930349ab09c79de9d "pdflatex"
+  "main.aux" 1684680070 2402 e9c3c52af35567c930349ab09c79de9d "pdflatex"
   "main.bbl" 1684168214 440 d58e747efcc50dfa0d489c25ee207873 "bibtex main"
   "main.nls" 0 -1 0 ""
-  "main.out" 1684207330 1578 a1073c99b6c638be6c65b01c476838f4 "pdflatex"
+  "main.out" 1684680070 1578 a1073c99b6c638be6c65b01c476838f4 "pdflatex"
   "main.tex" 1683566820 3368 d6cdfb06857ce84a56d2ae5be5c32c98 ""
-  "main.toc" 1684207330 912 c5c6a73162ef028bf811f15337508102 "pdflatex"
+  "main.toc" 1684680070 912 c5c6a73162ef028bf811f15337508102 "pdflatex"
   "w:/My Drive/Doutorado IC-Unicamp/Classes/MO601 - CA2/04. Assignments/Projects/RCP-MO601-Project-03/report/main.tex" 1683566820 3368 d6cdfb06857ce84a56d2ae5be5c32c98 ""
   (generated)
   "main.aux"
