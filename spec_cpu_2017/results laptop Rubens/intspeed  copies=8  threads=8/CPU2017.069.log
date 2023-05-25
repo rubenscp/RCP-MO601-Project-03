@@ -1,0 +1,1970 @@
+runcpu v6612 started at 2023-05-24 00:55:47 on "NotebookRubens"
+runcpu is: /usr/local/spec_cpu2017/bin/harness/runcpu
+runcpu: runcpu '--config=rubens-try1' --noreportable --iterations=3 600.perlbench_s 602.gcc_s 605.mcf_s 620.omnetpp_s 623.xalancbmk_s 625.x264_s 631.deepsjeng_s 641.leela_s 648.exchange2_s 998.specrand_is
+toolset: linux-x86_64
+suite: CPU2017 1.1.9
+
+Locating benchmarks...found 47 benchmarks in 73 benchsets.
+Reading config file '/usr/local/spec_cpu2017/config/rubens-try1.cfg'
+
+1 configuration selected:
+
+ Action    Run Mode   Workload      Report Type      Benchmarks
+--------   --------   --------   -----------------   --------------------------
+validate   speed      refspeed   SPECspeed2017_int   600.perlbench_s,          
+                                                     602.gcc_s, 605.mcf_s,     
+                                                     620.omnetpp_s,            
+                                                     623.xalancbmk_s,          
+                                                     625.x264_s,               
+                                                     631.deepsjeng_s,          
+                                                     641.leela_s,              
+                                                     648.exchange2_s,          
+                                                     998.specrand_is           
+-------------------------------------------------------------------------------
+
+Setting up environment for running 600.perlbench_s, 602.gcc_s, 605.mcf_s, 620.omnetpp_s, 623.xalancbmk_s, 625.x264_s, 631.deepsjeng_s, 641.leela_s, 648.exchange2_s, 998.specrand_is...
+Starting runcpu for 600.perlbench_s, 602.gcc_s, 605.mcf_s, 620.omnetpp_s, 623.xalancbmk_s, 625.x264_s, 631.deepsjeng_s, 641.leela_s, 648.exchange2_s, 998.specrand_is...
+Running "specperl /usr/local/spec_cpu2017/bin/sysinfo" to gather system information.
+sysinfo: r6732 of 2022-11-07 (fe91c89b7ed5c36ae2c92cc097bec197)
+sysinfo: ...getting basic information about kernel, users, and limits
+sysinfo: Getting system information for Linux...
+sysinfo: ...getting CPU info
+sysinfo: ...getting info from numactl
+sysinfo: ...getting memory info
+sysinfo: ...getting info from systemd
+sysinfo: ...getting power info
+sysinfo: ...getting system tuning info
+sysinfo: ...getting OS info
+sysinfo: ...getting disk info
+sysinfo: ...getting info from /sys/devices/virtual/dmi/id
+sysinfo: ...getting info from dmidecode
+Read 265 info lines from the sysinfo program:
+  1: notes_plat_sysinfo_100 =  
+  2: notes_plat_sysinfo_101 = Sysinfo program /usr/local/spec_cpu2017/bin/sysinfo
+  3: notes_plat_sysinfo_102 = Rev: r6732 of 2022-11-07 fe91c89b7ed5c36ae2c92cc097bec197
+  4: notes_plat_sysinfo_103 = running on NotebookRubens Wed May 24 00:55:49 2023
+  5: notes_plat_sysinfo_104 =  
+  6: notes_plat_sysinfo_105 = SUT (System Under Test) info as seen by some common utilities.
+  7: notes_plat_sysinfo_107 = 
+  8: notes_plat_sysinfo_108 = ------------------------------------------------------------
+  9: notes_plat_sysinfo_109 = Table of contents
+ 10: notes_plat_sysinfo_110 = ------------------------------------------------------------
+ 11: notes_plat_sysinfo_111 =  1. uname -a
+ 12: notes_plat_sysinfo_112 =  2. w
+ 13: notes_plat_sysinfo_113 =  3. Username
+ 14: notes_plat_sysinfo_114 =  4. ulimit -a
+ 15: notes_plat_sysinfo_115 =  5. sysinfo process ancestry
+ 16: notes_plat_sysinfo_116 =  6. /proc/cpuinfo
+ 17: notes_plat_sysinfo_117 =  7. lscpu
+ 18: notes_plat_sysinfo_118 =  8. numactl warning
+ 19: notes_plat_sysinfo_119 =  9. /proc/meminfo
+ 20: notes_plat_sysinfo_120 = 10. who -r
+ 21: notes_plat_sysinfo_121 = 11. Systemd service manager version: systemd 249 (249.11-0ubuntu3.9)
+ 22: notes_plat_sysinfo_122 = 12. Services, from systemctl list-unit-files
+ 23: notes_plat_sysinfo_123 = 13. Linux kernel boot-time arguments, from /proc/cmdline
+ 24: notes_plat_sysinfo_124 = 14. sysctl
+ 25: notes_plat_sysinfo_125 = 15. /sys/kernel/mm/transparent_hugepage
+ 26: notes_plat_sysinfo_126 = 16. /sys/kernel/mm/transparent_hugepage/khugepaged
+ 27: notes_plat_sysinfo_127 = 17. OS release
+ 28: notes_plat_sysinfo_128 = 18. Disk information
+ 29: notes_plat_sysinfo_129 = 19. dmidecode
+ 30: notes_plat_sysinfo_130 = ------------------------------------------------------------
+ 31: notes_plat_sysinfo_206 =  
+ 32: notes_plat_sysinfo_207 = ------------------------------------------------------------
+ 33: notes_plat_sysinfo_208 = 1. uname -a
+ 34: notes_plat_sysinfo_209 =   Linux NotebookRubens 5.15.90.1-microsoft-standard-WSL2 #1 SMP Fri Jan 27 02:56:13 UTC 2023 x86_64 x86_64
+ 35: notes_plat_sysinfo_210 =   x86_64 GNU/Linux
+ 36: notes_plat_sysinfo_211 =  
+ 37: notes_plat_sysinfo_212 = ------------------------------------------------------------
+ 38: notes_plat_sysinfo_213 = 2. w
+ 39: notes_plat_sysinfo_214 =    00:55:49 up 1 day,  9:08,  3 users,  load average: 0.02, 0.01, 0.00
+ 40: notes_plat_sysinfo_215 =   USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+ 41: notes_plat_sysinfo_216 =   rubens   pts/1    -                Mon10   38:52m  0.08s  0.05s -bash
+ 42: notes_plat_sysinfo_217 =   rubens   pts/2    -                20:28    3:50m  0.52s  0.50s sudo -i
+ 43: notes_plat_sysinfo_218 =   rubens   pts/4    -                20:47    2.00s  3.33s  0.91s sudo -i
+ 44: notes_plat_sysinfo_219 =  
+ 45: notes_plat_sysinfo_220 = ------------------------------------------------------------
+ 46: notes_plat_sysinfo_221 = 3. Username
+ 47: notes_plat_sysinfo_222 =   From environment variable $USER:  root
+ 48: notes_plat_sysinfo_223 =   From the command 'logname':       rubens
+ 49: notes_plat_sysinfo_224 =  
+ 50: notes_plat_sysinfo_225 = ------------------------------------------------------------
+ 51: notes_plat_sysinfo_226 = 4. ulimit -a
+ 52: notes_plat_sysinfo_227 =   time(seconds)        unlimited
+ 53: notes_plat_sysinfo_228 =   file(blocks)         unlimited
+ 54: notes_plat_sysinfo_229 =   data(kbytes)         unlimited
+ 55: notes_plat_sysinfo_230 =   stack(kbytes)        8192
+ 56: notes_plat_sysinfo_231 =   coredump(blocks)     0
+ 57: notes_plat_sysinfo_232 =   memory(kbytes)       unlimited
+ 58: notes_plat_sysinfo_233 =   locked memory(kbytes) 1013600
+ 59: notes_plat_sysinfo_234 =   process              31649
+ 60: notes_plat_sysinfo_235 =   nofiles              1024
+ 61: notes_plat_sysinfo_236 =   vmemory(kbytes)      unlimited
+ 62: notes_plat_sysinfo_237 =   locks                unlimited
+ 63: notes_plat_sysinfo_238 =   rtprio               0
+ 64: notes_plat_sysinfo_239 =  
+ 65: notes_plat_sysinfo_240 = ------------------------------------------------------------
+ 66: notes_plat_sysinfo_241 = 5. sysinfo process ancestry
+ 67: notes_plat_sysinfo_242 =  /sbin/init
+ 68: notes_plat_sysinfo_243 =  /init
+ 69: notes_plat_sysinfo_244 =  /init
+ 70: notes_plat_sysinfo_245 =  /init
+ 71: notes_plat_sysinfo_246 =  -bash
+ 72: notes_plat_sysinfo_247 =  sudo -i
+ 73: notes_plat_sysinfo_248 =  sudo -i
+ 74: notes_plat_sysinfo_249 =  -bash
+ 75: notes_plat_sysinfo_250 =  runcpu --config=rubens-try1 --noreportable --iterations=3 600.perlbench_s 602.gcc_s 605.mcf_s 620.omnetpp_s
+ 76: notes_plat_sysinfo_251 =    623.xalancbmk_s 625.x264_s 631.deepsjeng_s 641.leela_s 648.exchange2_s 998.specrand_is
+ 77: notes_plat_sysinfo_252 =  runcpu --configfile rubens-try1 --noreportable --iterations 3 --noreportable --nopower --runmode speed
+ 78: notes_plat_sysinfo_253 =    --tune base --size refspeed 600.perlbench_s 602.gcc_s 605.mcf_s 620.omnetpp_s 623.xalancbmk_s 625.x264_s
+ 79: notes_plat_sysinfo_254 =    631.deepsjeng_s 641.leela_s 648.exchange2_s 998.specrand_is --nopreenv --note-preenv --logfile
+ 80: notes_plat_sysinfo_255 =    $SPEC/tmp/CPU2017.069/templogs/preenv.intspeed.069.0.log --lognum 069.0 --from_runcpu 2
+ 81: notes_plat_sysinfo_256 =  specperl $SPEC/bin/sysinfo
+ 82: notes_plat_sysinfo_257 = $SPEC = /usr/local/spec_cpu2017
+ 83: notes_plat_sysinfo_258 =  
+ 84: notes_plat_sysinfo_259 = ------------------------------------------------------------
+ 85: notes_plat_sysinfo_260 = 6. /proc/cpuinfo
+ 86: notes_plat_sysinfo_261 =     model name      : Intel(R) Core(TM) i7-2620M CPU @ 2.70GHz
+ 87: notes_plat_sysinfo_262 =     vendor_id       : GenuineIntel
+ 88: notes_plat_sysinfo_263 =     cpu family      : 6
+ 89: notes_plat_sysinfo_264 =     model           : 42
+ 90: notes_plat_sysinfo_265 =     stepping        : 7
+ 91: notes_plat_sysinfo_266 =     microcode       : 0xffffffff
+ 92: notes_plat_sysinfo_267 =     bugs            : cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit
+ 93: notes_plat_sysinfo_268 =                       mmio_unknown
+ 94: notes_plat_sysinfo_269 =     cpu cores       : 2
+ 95: notes_plat_sysinfo_270 =     siblings        : 4
+ 96: notes_plat_sysinfo_271 =     1 physical ids (chips)
+ 97: notes_plat_sysinfo_272 =     4 processors (hardware threads)
+ 98: notes_plat_sysinfo_273 =     physical id 0: core ids 0-1
+ 99: notes_plat_sysinfo_274 =     physical id 0: apicids 0-3
+100: notes_plat_sysinfo_275 =   Caution: /proc/cpuinfo data regarding chips, cores, and threads is not necessarily reliable, especially for
+101: notes_plat_sysinfo_276 =   virtualized systems.  Use the above data carefully.
+102: notes_plat_sysinfo_277 =  
+103: notes_plat_sysinfo_278 = ------------------------------------------------------------
+104: notes_plat_sysinfo_279 = 7. lscpu
+105: notes_plat_sysinfo_280 =  
+106: notes_plat_sysinfo_281 = From lscpu from util-linux 2.37.2:
+107: notes_plat_sysinfo_282 =   Architecture:                    x86_64
+108: notes_plat_sysinfo_283 =   CPU op-mode(s):                  32-bit, 64-bit
+109: notes_plat_sysinfo_284 =   Address sizes:                   36 bits physical, 48 bits virtual
+110: notes_plat_sysinfo_285 =   Byte Order:                      Little Endian
+111: notes_plat_sysinfo_286 =   CPU(s):                          4
+112: notes_plat_sysinfo_287 =   On-line CPU(s) list:             0-3
+113: notes_plat_sysinfo_288 =   Vendor ID:                       GenuineIntel
+114: notes_plat_sysinfo_289 =   Model name:                      Intel(R) Core(TM) i7-2620M CPU @ 2.70GHz
+115: notes_plat_sysinfo_290 =   CPU family:                      6
+116: notes_plat_sysinfo_291 =   Model:                           42
+117: notes_plat_sysinfo_292 =   Thread(s) per core:              2
+118: notes_plat_sysinfo_293 =   Core(s) per socket:              2
+119: notes_plat_sysinfo_294 =   Socket(s):                       1
+120: notes_plat_sysinfo_295 =   Stepping:                        7
+121: notes_plat_sysinfo_296 =   BogoMIPS:                        5387.76
+122: notes_plat_sysinfo_297 =   Flags:                           fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36
+123: notes_plat_sysinfo_298 =                                    clflush mmx fxsr sse sse2 ht syscall nx rdtscp lm constant_tsc
+124: notes_plat_sysinfo_299 =                                    arch_perfmon rep_good nopl xtopology cpuid pni pclmulqdq ssse3 cx16 pdcm
+125: notes_plat_sysinfo_300 =                                    pcid sse4_1 sse4_2 popcnt aes xsave avx hypervisor lahf_lm pti ssbd ibrs
+126: notes_plat_sysinfo_301 =                                    ibpb stibp xsaveopt flush_l1d arch_capabilities
+127: notes_plat_sysinfo_302 =   Hypervisor vendor:               Microsoft
+128: notes_plat_sysinfo_303 =   Virtualization type:             full
+129: notes_plat_sysinfo_304 =   L1d cache:                       64 KiB (2 instances)
+130: notes_plat_sysinfo_305 =   L1i cache:                       64 KiB (2 instances)
+131: notes_plat_sysinfo_306 =   L2 cache:                        512 KiB (2 instances)
+132: notes_plat_sysinfo_307 =   L3 cache:                        4 MiB (1 instance)
+133: notes_plat_sysinfo_308 =   Vulnerability Itlb multihit:     KVM: Mitigation: VMX unsupported
+134: notes_plat_sysinfo_309 =   Vulnerability L1tf:              Mitigation; PTE Inversion
+135: notes_plat_sysinfo_310 =   Vulnerability Mds:               Vulnerable: Clear CPU buffers attempted, no microcode; SMT Host state
+136: notes_plat_sysinfo_311 =                                    unknown
+137: notes_plat_sysinfo_312 =   Vulnerability Meltdown:          Mitigation; PTI
+138: notes_plat_sysinfo_313 =   Vulnerability Mmio stale data:   Unknown: No mitigations
+139: notes_plat_sysinfo_314 =   Vulnerability Retbleed:          Not affected
+140: notes_plat_sysinfo_315 =   Vulnerability Spec store bypass: Mitigation; Speculative Store Bypass disabled via prctl and seccomp
+141: notes_plat_sysinfo_316 =   Vulnerability Spectre v1:        Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+142: notes_plat_sysinfo_317 =   Vulnerability Spectre v2:        Mitigation; Retpolines, IBPB conditional, IBRS_FW, STIBP conditional, RSB
+143: notes_plat_sysinfo_318 =                                    filling, PBRSB-eIBRS Not affected
+144: notes_plat_sysinfo_319 =   Vulnerability Srbds:             Not affected
+145: notes_plat_sysinfo_320 =   Vulnerability Tsx async abort:   Not affected
+146: notes_plat_sysinfo_321 =  
+147: notes_plat_sysinfo_322 = From lscpu --cache:
+148: notes_plat_sysinfo_323 =      NAME ONE-SIZE ALL-SIZE WAYS TYPE        LEVEL SETS PHY-LINE COHERENCY-SIZE
+149: notes_plat_sysinfo_324 =      L1d       32K      64K    8 Data            1   64        1             64
+150: notes_plat_sysinfo_325 =      L1i       32K      64K    8 Instruction     1   64        1             64
+151: notes_plat_sysinfo_326 =      L2       256K     512K    8 Unified         2  512        1             64
+152: notes_plat_sysinfo_327 =      L3         4M       4M   16 Unified         3 4096        1             64
+153: notes_plat_sysinfo_328 =  
+154: notes_plat_sysinfo_329 = ------------------------------------------------------------
+155: notes_plat_sysinfo_330 = 8. numactl warning
+156: notes_plat_sysinfo_331 =  
+157: notes_plat_sysinfo_332 = Unable to get information from 'numactl --hardware'.  Please consider installing numactl.
+158: notes_plat_sysinfo_333 =  
+159: notes_plat_sysinfo_334 = ------------------------------------------------------------
+160: notes_plat_sysinfo_335 = 9. /proc/meminfo
+161: notes_plat_sysinfo_336 =    MemTotal:        8108808 kB
+162: notes_plat_sysinfo_337 =  
+163: notes_plat_sysinfo_338 = ------------------------------------------------------------
+164: notes_plat_sysinfo_339 = 10. who -r
+165: notes_plat_sysinfo_340 =   run-level 5 May 22 10:03
+166: notes_plat_sysinfo_341 =  
+167: notes_plat_sysinfo_342 = ------------------------------------------------------------
+168: notes_plat_sysinfo_343 = 11. Systemd service manager version: systemd 249 (249.11-0ubuntu3.9)
+169: notes_plat_sysinfo_344 =   Default Target  Status
+170: notes_plat_sysinfo_345 =   graphical       running
+171: notes_plat_sysinfo_346 =  
+172: notes_plat_sysinfo_347 = ------------------------------------------------------------
+173: notes_plat_sysinfo_348 = 12. Services, from systemctl list-unit-files
+174: notes_plat_sysinfo_349 =   STATE            UNIT FILES
+175: notes_plat_sysinfo_350 =   enabled          apparmor console-setup cron dmesg e2scrub_reap getty@ irqbalance keyboard-setup rsyslog
+176: notes_plat_sysinfo_351 =                    setvtrgb snapd systemd-pstore systemd-resolved systemd-timesyncd
+177: notes_plat_sysinfo_352 =   enabled-runtime  console-getty systemd-remount-fs
+178: notes_plat_sysinfo_353 =   disabled         debug-shell nftables rsync serial-getty@ systemd-boot-check-no-failures
+179: notes_plat_sysinfo_354 =                    systemd-network-generator systemd-networkd systemd-networkd-wait-online systemd-sysext
+180: notes_plat_sysinfo_355 =                    systemd-time-wait-sync
+181: notes_plat_sysinfo_356 =   generated        apport
+182: notes_plat_sysinfo_357 =   indirect         uuidd
+183: notes_plat_sysinfo_358 =   masked           cryptdisks cryptdisks-early hwclock networkd-dispatcher rc rcS screen-cleanup sudo
+184: notes_plat_sysinfo_359 =                    systemd-binfmt ua-reboot-cmds ubuntu-advantage ufw unattended-upgrades x11-common
+185: notes_plat_sysinfo_360 =  
+186: notes_plat_sysinfo_361 = ------------------------------------------------------------
+187: notes_plat_sysinfo_362 = 13. Linux kernel boot-time arguments, from /proc/cmdline
+188: notes_plat_sysinfo_363 =   initrd=\initrd.img
+189: notes_plat_sysinfo_364 =   WSL_ROOT_INIT=1
+190: notes_plat_sysinfo_365 =   panic=-1
+191: notes_plat_sysinfo_366 =   nr_cpus=4
+192: notes_plat_sysinfo_367 =   bonding.max_bonds=0
+193: notes_plat_sysinfo_368 =   dummy.numdummies=0
+194: notes_plat_sysinfo_369 =   fb_tunnels=none
+195: notes_plat_sysinfo_370 =   swiotlb=force
+196: notes_plat_sysinfo_371 =   console=hvc0
+197: notes_plat_sysinfo_372 =   debug
+198: notes_plat_sysinfo_373 =   pty.legacy_count=0
+199: notes_plat_sysinfo_374 =  
+200: notes_plat_sysinfo_375 = ------------------------------------------------------------
+201: notes_plat_sysinfo_376 = 14. sysctl
+202: notes_plat_sysinfo_377 =   kernel.randomize_va_space           2
+203: notes_plat_sysinfo_378 =   vm.compaction_proactiveness        20
+204: notes_plat_sysinfo_379 =   vm.dirty_background_bytes           0
+205: notes_plat_sysinfo_380 =   vm.dirty_background_ratio          10
+206: notes_plat_sysinfo_381 =   vm.dirty_bytes                      0
+207: notes_plat_sysinfo_382 =   vm.dirty_expire_centisecs        3000
+208: notes_plat_sysinfo_383 =   vm.dirty_ratio                     20
+209: notes_plat_sysinfo_384 =   vm.dirty_writeback_centisecs      500
+210: notes_plat_sysinfo_385 =   vm.dirtytime_expire_seconds     43200
+211: notes_plat_sysinfo_386 =   vm.extfrag_threshold              500
+212: notes_plat_sysinfo_387 =   vm.nr_hugepages                     0
+213: notes_plat_sysinfo_388 =   vm.nr_overcommit_hugepages          0
+214: notes_plat_sysinfo_389 =   vm.swappiness                      60
+215: notes_plat_sysinfo_390 =   vm.watermark_boost_factor       15000
+216: notes_plat_sysinfo_391 =   vm.watermark_scale_factor          10
+217: notes_plat_sysinfo_392 =  
+218: notes_plat_sysinfo_393 = ------------------------------------------------------------
+219: notes_plat_sysinfo_394 = 15. /sys/kernel/mm/transparent_hugepage
+220: notes_plat_sysinfo_395 =   defrag          always defer defer+madvise [madvise] never
+221: notes_plat_sysinfo_396 =   enabled         [always] madvise never
+222: notes_plat_sysinfo_397 =   hpage_pmd_size  2097152
+223: notes_plat_sysinfo_398 =   shmem_enabled   always within_size advise [never] deny force
+224: notes_plat_sysinfo_399 =  
+225: notes_plat_sysinfo_400 = ------------------------------------------------------------
+226: notes_plat_sysinfo_401 = 16. /sys/kernel/mm/transparent_hugepage/khugepaged
+227: notes_plat_sysinfo_402 =   alloc_sleep_millisecs   60000
+228: notes_plat_sysinfo_403 =   defrag                      1
+229: notes_plat_sysinfo_404 =   max_ptes_none             511
+230: notes_plat_sysinfo_405 =   max_ptes_shared           256
+231: notes_plat_sysinfo_406 =   max_ptes_swap              64
+232: notes_plat_sysinfo_407 =   pages_to_scan            4096
+233: notes_plat_sysinfo_408 =   scan_sleep_millisecs    10000
+234: notes_plat_sysinfo_409 =  
+235: notes_plat_sysinfo_410 = ------------------------------------------------------------
+236: notes_plat_sysinfo_411 = 17. OS release
+237: notes_plat_sysinfo_412 =   From /etc/*-release /etc/*-version
+238: notes_plat_sysinfo_413 =   os-release Ubuntu 22.04.2 LTS
+239: notes_plat_sysinfo_414 =  
+240: notes_plat_sysinfo_415 = ------------------------------------------------------------
+241: notes_plat_sysinfo_416 = 18. Disk information
+242: notes_plat_sysinfo_417 = SPEC is set to: /usr/local/spec_cpu2017
+243: notes_plat_sysinfo_418 =   Filesystem     Type  Size  Used Avail Use% Mounted on
+244: notes_plat_sysinfo_419 =   /dev/sdc       ext4 1007G   76G  881G   8% /
+245: notes_plat_sysinfo_420 =  
+246: notes_plat_sysinfo_421 = ------------------------------------------------------------
+247: notes_plat_sysinfo_422 = 19. dmidecode
+248: notes_plat_sysinfo_423 =   Additional information from dmidecode 3.3 follows.  WARNING: Use caution when you interpret this section.
+249: notes_plat_sysinfo_424 =   The 'dmidecode' program reads system data which is "intended to allow hardware to be accurately
+250: notes_plat_sysinfo_425 =   determined", but the intent may not be met, as there are frequent changes to hardware, firmware, and the
+251: notes_plat_sysinfo_426 =   "DMTF SMBIOS" standard.
+252: notes_plat_sysinfo_427 =  
+253: notes_plat_sysinfo_428 = BIOS: (could not find information)
+254: hw_cpu_name        = Intel Core i7-2620M
+255: hw_disk            = 1007 GB  add more disk info here
+256: hw_memory001       = 7.733 GB fixme: If using DDR4, the format is:
+257: hw_memory002       = 'N GB (N x N GB nRxn PC4-nnnnX-X)'
+258: hw_nchips          = 1
+259: hw_ncores          = 2
+260: hw_nthreadspercore = 2
+261: prepared_by        = root  (is never output, only tags rawfile)
+262: sw_file            = ext4
+263: sw_os001           = Ubuntu 22.04.2 LTS
+264: sw_os002           = 5.15.90.1-microsoft-standard-WSL2
+265: sw_state           = Run level 5 (add definition here)
+
+Retrieving flags file (/usr/local/spec_cpu2017/config/flags/gcc.xml)...
+Verbosity = 5
+Action    = validate
+Tune      = base
+Label     = Rubens-m64
+Size      = refspeed
+benchmarks= 600.perlbench_s,602.gcc_s,605.mcf_s,620.omnetpp_s,623.xalancbmk_s,625.x264_s,631.deepsjeng_s,641.leela_s,648.exchange2_s,998.specrand_is
+outputs   = txt,html,cfg,pdf,csv
+username  = root
+Environment settings:
+LD_LIBRARY_PATH = "%{gcc_dir}/lib64/:%{gcc_dir}/lib/:/lib64"
+
+Benchmarks selected: 600.perlbench_s, 602.gcc_s, 605.mcf_s, 620.omnetpp_s, 623.xalancbmk_s, 625.x264_s, 631.deepsjeng_s, 641.leela_s, 648.exchange2_s, 998.specrand_is
+Compiling Binaries
+------------------------------------------------------------------------
+COMP: "/usr/bin/gcc     -std=c99   -m64 -c -o options.o -DSPEC -DNDEBUG -DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64  -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch        -DSPEC_LINUX_X64   -fopenmp -DSPEC_OPENMP -fcommon -fno-strict-aliasing -fgnu89-inline   -DSPEC_LP64  <source>"
+C: CC="/usr/bin/gcc     -std=c99   -m64"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-DPERL_CORE -I. -Idist/IO -Icpan/Time-HiRes -Icpan/HTML-Parser -Iext/re -Ispecrand -DDOUBLE_SLASHES_SPECIAL=0 -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch"
+O: COPTIMIZE=""
+P: PORTABILITY="-DSPEC_LINUX_X64"
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE="-fopenmp -DSPEC_OPENMP -fcommon"
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/usr/bin/gcc     -std=c99   -m64      -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch     -DSPEC_LINUX_X64   -fopenmp -DSPEC_OPENMP -fcommon -fno-strict-aliasing -fgnu89-inline <objects>   -lm         -o options  "
+C: LD="/usr/bin/gcc     -std=c99   -m64"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch"
+P: PORTABILITY="-DSPEC_LINUX_X64"
+O: EXTRA_OPTIMIZE="-fopenmp -DSPEC_OPENMP -fcommon"
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+ CC_VERSION_OPTION:
+Using built-in specs.
+COLLECT_GCC=/usr/bin/gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.3.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-nvptx/usr,am
+dgcn-amdhsa=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.3.0 (Ubuntu 11.3.0-1ubuntu1~22.04) 
+  Up to date 600.perlbench_s base Rubens-m64
+------------------------------------------------------------------------
+COMP: "/usr/bin/gcc     -std=c99   -m64 -c -o options.o -DSPEC -DNDEBUG -I. -I./include -I./spec_qsort -DSPEC_602 -DIN_GCC -DHAVE_CONFIG_H  -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch           -fopenmp -DSPEC_OPENMP -fcommon -fno-strict-aliasing -fgnu89-inline   -DSPEC_LP64  <source>"
+C: CC="/usr/bin/gcc     -std=c99   -m64"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-I. -I./include -I./spec_qsort -DSPEC_602 -DIN_GCC -DHAVE_CONFIG_H"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch"
+O: COPTIMIZE=""
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE="-fopenmp -DSPEC_OPENMP -fcommon"
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/usr/bin/gcc     -std=c99   -m64      -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch        -fopenmp -DSPEC_OPENMP -fcommon -fno-strict-aliasing -fgnu89-inline <objects>   -lm         -o options  "
+C: LD="/usr/bin/gcc     -std=c99   -m64"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch"
+O: EXTRA_OPTIMIZE="-fopenmp -DSPEC_OPENMP -fcommon"
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+ CC_VERSION_OPTION:
+Using built-in specs.
+COLLECT_GCC=/usr/bin/gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.3.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-nvptx/usr,am
+dgcn-amdhsa=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.3.0 (Ubuntu 11.3.0-1ubuntu1~22.04) 
+  Up to date 602.gcc_s base Rubens-m64
+------------------------------------------------------------------------
+COMP: "/usr/bin/gcc     -std=c99   -m64 -c -o options.o -DSPEC -DNDEBUG  -Ispec_qsort -DSPEC_AUTO_SUPPRESS_OPENMP -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch           -fopenmp -DSPEC_OPENMP -fcommon -fno-strict-aliasing -fgnu89-inline   -DSPEC_LP64  <source>"
+C: CC="/usr/bin/gcc     -std=c99   -m64"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS=""
+P: BENCH_CFLAGS="-Ispec_qsort -DSPEC_AUTO_SUPPRESS_OPENMP"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch"
+O: COPTIMIZE=""
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE="-fopenmp -DSPEC_OPENMP -fcommon"
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/usr/bin/gcc     -std=c99   -m64      -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch        -fopenmp -DSPEC_OPENMP -fcommon -fno-strict-aliasing -fgnu89-inline <objects>   -lm         -o options  "
+C: LD="/usr/bin/gcc     -std=c99   -m64"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch"
+O: EXTRA_OPTIMIZE="-fopenmp -DSPEC_OPENMP -fcommon"
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+ CC_VERSION_OPTION:
+Using built-in specs.
+COLLECT_GCC=/usr/bin/gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.3.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-nvptx/usr,am
+dgcn-amdhsa=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.3.0 (Ubuntu 11.3.0-1ubuntu1~22.04) 
+  Up to date 605.mcf_s base Rubens-m64
+------------------------------------------------------------------------
+COMP: "/usr/bin/g++     -std=c++03 -m64 -c -o options.o -DSPEC -DNDEBUG -Isimulator/platdep -Isimulator -Imodel -DWITH_NETBUILDER  -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch       -fopenmp -DSPEC_OPENMP -fcommon  -DSPEC_LP64  <source>"
+C: CXXC="/usr/bin/g++     -std=c++03 -m64"
+C: CXXOBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-Isimulator/platdep -Isimulator -Imodel -DWITH_NETBUILDER"
+P: BENCH_CXXFLAGS=""
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch"
+O: CXXOPTIMIZE=""
+P: PORTABILITY=""
+P: CXXPORTABILITY=""
+O: EXTRA_CXXFLAGS=""
+O: EXTRA_OPTIMIZE="-fopenmp -DSPEC_OPENMP -fcommon"
+O: EXTRA_CXXOPTIMIZE=""
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CXXPORTABILITY=""
+LINK: "/usr/bin/g++     -std=c++03 -m64      -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch        -fopenmp -DSPEC_OPENMP -fcommon  <objects>            -o options  "
+C: LD="/usr/bin/g++     -std=c++03 -m64"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch"
+O: EXTRA_OPTIMIZE="-fopenmp -DSPEC_OPENMP -fcommon"
+C: LDOUT="-o options"
+ CXXC_VERSION_OPTION:
+Using built-in specs.
+COLLECT_GCC=/usr/bin/g++
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.3.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-nvptx/usr,am
+dgcn-amdhsa=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.3.0 (Ubuntu 11.3.0-1ubuntu1~22.04) 
+  Up to date 620.omnetpp_s base Rubens-m64
+------------------------------------------------------------------------
+COMP: "/usr/bin/g++     -std=c++03 -m64 -c -o options.o -DSPEC -DNDEBUG  -DAPP_NO_THREADS -DXALAN_INMEM_MSG_LOADER -I. -Ixercesc -Ixercesc/dom -Ixercesc/dom/impl -Ixercesc/sax -Ixercesc/util/MsgLoaders/InMemory -Ixercesc/util/Transcoders/Iconv -Ixalanc/include -DPROJ_XMLPARSER -DPROJ_XMLUTIL -DPROJ_PARSERS -DPROJ_SAX4C -DPROJ_SAX2 -DPROJ_DOM -DPROJ_VALIDATORS -DXML_USE_INMEM_MESSAGELOADER -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch    -DSPEC_LINUX   -fopenmp -DSPEC_OPENMP -fcommon  -DSPEC_LP64  <source>"
+C: CXXC="/usr/bin/g++     -std=c++03 -m64"
+C: CXXOBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS=""
+P: BENCH_CXXFLAGS="-DAPP_NO_THREADS -DXALAN_INMEM_MSG_LOADER -I. -Ixercesc -Ixercesc/dom -Ixercesc/dom/impl -Ixercesc/sax -Ixercesc/util/MsgLoaders/InMemory -Ixercesc/util/Transcoders/Iconv -Ixalanc/include -DPROJ_XMLPARSER -DPROJ_XMLUTIL -DPROJ_PARSERS -DPROJ_SAX4C -DPROJ_SAX2 -DPROJ_DOM -DPROJ_VALIDATORS -DXML_USE_INMEM_MESSAGELOADER"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch"
+O: CXXOPTIMIZE=""
+P: PORTABILITY="-DSPEC_LINUX"
+P: CXXPORTABILITY=""
+O: EXTRA_CXXFLAGS=""
+O: EXTRA_OPTIMIZE="-fopenmp -DSPEC_OPENMP -fcommon"
+O: EXTRA_CXXOPTIMIZE=""
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CXXPORTABILITY=""
+LINK: "/usr/bin/g++     -std=c++03 -m64      -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch     -DSPEC_LINUX   -fopenmp -DSPEC_OPENMP -fcommon  <objects>            -o options  "
+C: LD="/usr/bin/g++     -std=c++03 -m64"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch"
+P: PORTABILITY="-DSPEC_LINUX"
+O: EXTRA_OPTIMIZE="-fopenmp -DSPEC_OPENMP -fcommon"
+C: LDOUT="-o options"
+ CXXC_VERSION_OPTION:
+Using built-in specs.
+COLLECT_GCC=/usr/bin/g++
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.3.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-nvptx/usr,am
+dgcn-amdhsa=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.3.0 (Ubuntu 11.3.0-1ubuntu1~22.04) 
+  Up to date 623.xalancbmk_s base Rubens-m64
+------------------------------------------------------------------------
+COMP: "/usr/bin/gcc     -std=c99   -m64 -c -o options.o -DSPEC -DNDEBUG -Ildecod_src/inc -Ix264_src -Ix264_src/extras -Ix264_src/common -DSPEC_AUTO_BYTEORDER=0x12345678  -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch          -fcommon -fopenmp -DSPEC_OPENMP -fcommon -fno-strict-aliasing -fgnu89-inline   -DSPEC_LP64  <source>"
+C: CC="/usr/bin/gcc     -std=c99   -m64"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-Ildecod_src/inc -Ix264_src -Ix264_src/extras -Ix264_src/common -DSPEC_AUTO_BYTEORDER=0x12345678"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch"
+O: COPTIMIZE=""
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS="-fcommon"
+O: EXTRA_OPTIMIZE="-fopenmp -DSPEC_OPENMP -fcommon"
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/usr/bin/gcc     -std=c99   -m64      -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch        -fopenmp -DSPEC_OPENMP -fcommon -fno-strict-aliasing -fgnu89-inline <objects>   -lm         -o options  "
+C: LD="/usr/bin/gcc     -std=c99   -m64"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch"
+O: EXTRA_OPTIMIZE="-fopenmp -DSPEC_OPENMP -fcommon"
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+ CC_VERSION_OPTION:
+Using built-in specs.
+COLLECT_GCC=/usr/bin/gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.3.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-nvptx/usr,am
+dgcn-amdhsa=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.3.0 (Ubuntu 11.3.0-1ubuntu1~22.04) 
+COMP: "/usr/bin/gcc     -std=c99   -m64 -c -o options.o -DSPEC -DNDEBUG -Ildecod_src/inc -Ix264_src -Ix264_src/extras -Ix264_src/common -DSPEC_AUTO_BYTEORDER=0x12345678  -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch          -fcommon -fopenmp -DSPEC_OPENMP -fcommon -fno-strict-aliasing -fgnu89-inline   -DSPEC_LP64  <source>"
+C: CC="/usr/bin/gcc     -std=c99   -m64"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-Ildecod_src/inc -Ix264_src -Ix264_src/extras -Ix264_src/common -DSPEC_AUTO_BYTEORDER=0x12345678"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch"
+O: COPTIMIZE=""
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS="-fcommon"
+O: EXTRA_OPTIMIZE="-fopenmp -DSPEC_OPENMP -fcommon"
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/usr/bin/gcc     -std=c99   -m64      -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch        -fopenmp -DSPEC_OPENMP -fcommon -fno-strict-aliasing -fgnu89-inline <objects>   -lm         -o options  "
+C: LD="/usr/bin/gcc     -std=c99   -m64"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch"
+O: EXTRA_OPTIMIZE="-fopenmp -DSPEC_OPENMP -fcommon"
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+ CC_VERSION_OPTION:
+Using built-in specs.
+COLLECT_GCC=/usr/bin/gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.3.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-nvptx/usr,am
+dgcn-amdhsa=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.3.0 (Ubuntu 11.3.0-1ubuntu1~22.04) 
+COMP: "/usr/bin/gcc     -std=c99   -m64 -c -o options.o -DSPEC -DNDEBUG -Ildecod_src/inc -Ix264_src -Ix264_src/extras -Ix264_src/common -DSPEC_AUTO_BYTEORDER=0x12345678  -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch          -fcommon -fopenmp -DSPEC_OPENMP -fcommon -fno-strict-aliasing -fgnu89-inline   -DSPEC_LP64  <source>"
+C: CC="/usr/bin/gcc     -std=c99   -m64"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-Ildecod_src/inc -Ix264_src -Ix264_src/extras -Ix264_src/common -DSPEC_AUTO_BYTEORDER=0x12345678"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch"
+O: COPTIMIZE=""
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS="-fcommon"
+O: EXTRA_OPTIMIZE="-fopenmp -DSPEC_OPENMP -fcommon"
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/usr/bin/gcc     -std=c99   -m64      -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch        -fopenmp -DSPEC_OPENMP -fcommon -fno-strict-aliasing -fgnu89-inline <objects>   -lm         -o options  "
+C: LD="/usr/bin/gcc     -std=c99   -m64"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch"
+O: EXTRA_OPTIMIZE="-fopenmp -DSPEC_OPENMP -fcommon"
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+ CC_VERSION_OPTION:
+Using built-in specs.
+COLLECT_GCC=/usr/bin/gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.3.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-nvptx/usr,am
+dgcn-amdhsa=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.3.0 (Ubuntu 11.3.0-1ubuntu1~22.04) 
+  Up to date 625.x264_s base Rubens-m64
+------------------------------------------------------------------------
+COMP: "/usr/bin/g++     -std=c++03 -m64 -c -o options.o -DSPEC -DNDEBUG -DBIG_MEMORY  -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch       -fopenmp -DSPEC_OPENMP -fcommon  -DSPEC_LP64  <source>"
+C: CXXC="/usr/bin/g++     -std=c++03 -m64"
+C: CXXOBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-DBIG_MEMORY"
+P: BENCH_CXXFLAGS=""
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch"
+O: CXXOPTIMIZE=""
+P: PORTABILITY=""
+P: CXXPORTABILITY=""
+O: EXTRA_CXXFLAGS=""
+O: EXTRA_OPTIMIZE="-fopenmp -DSPEC_OPENMP -fcommon"
+O: EXTRA_CXXOPTIMIZE=""
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CXXPORTABILITY=""
+LINK: "/usr/bin/g++     -std=c++03 -m64      -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch        -fopenmp -DSPEC_OPENMP -fcommon  <objects>            -o options  "
+C: LD="/usr/bin/g++     -std=c++03 -m64"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch"
+O: EXTRA_OPTIMIZE="-fopenmp -DSPEC_OPENMP -fcommon"
+C: LDOUT="-o options"
+ CXXC_VERSION_OPTION:
+Using built-in specs.
+COLLECT_GCC=/usr/bin/g++
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.3.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-nvptx/usr,am
+dgcn-amdhsa=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.3.0 (Ubuntu 11.3.0-1ubuntu1~22.04) 
+  Up to date 631.deepsjeng_s base Rubens-m64
+------------------------------------------------------------------------
+COMP: "/usr/bin/g++     -std=c++03 -m64 -c -o options.o -DSPEC -DNDEBUG -I.  -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch       -fopenmp -DSPEC_OPENMP -fcommon  -DSPEC_LP64  <source>"
+C: CXXC="/usr/bin/g++     -std=c++03 -m64"
+C: CXXOBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-I."
+P: BENCH_CXXFLAGS=""
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch"
+O: CXXOPTIMIZE=""
+P: PORTABILITY=""
+P: CXXPORTABILITY=""
+O: EXTRA_CXXFLAGS=""
+O: EXTRA_OPTIMIZE="-fopenmp -DSPEC_OPENMP -fcommon"
+O: EXTRA_CXXOPTIMIZE=""
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CXXPORTABILITY=""
+LINK: "/usr/bin/g++     -std=c++03 -m64      -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch        -fopenmp -DSPEC_OPENMP -fcommon  <objects>            -o options  "
+C: LD="/usr/bin/g++     -std=c++03 -m64"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch"
+O: EXTRA_OPTIMIZE="-fopenmp -DSPEC_OPENMP -fcommon"
+C: LDOUT="-o options"
+ CXXC_VERSION_OPTION:
+Using built-in specs.
+COLLECT_GCC=/usr/bin/g++
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.3.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-nvptx/usr,am
+dgcn-amdhsa=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.3.0 (Ubuntu 11.3.0-1ubuntu1~22.04) 
+  Up to date 641.leela_s base Rubens-m64
+------------------------------------------------------------------------
+FPP: "specpp -DSPEC -DNDEBUG -DSPEC_OPENMP -DSPEC_LP64 <source> -o <source>.fppized.f9x"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+O: OPTIMIZE=""
+O: EXTRA_OPTIMIZE="-DSPEC_OPENMP"
+O: FPPOPTIMIZE=""
+O: EXTRA_FPPOPTIMIZE=""
+O: FOPTIMIZE=""
+O: EXTRA_FOPTIMIZE=""
+P: PORTABILITY=""
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: FPORTABILITY=""
+P: EXTRA_FPORTABILITY=""
+COMP: "/usr/bin/gfortran           -m64 -c -o options.o -g -O3 -march=native -fno-unsafe-math-optimizations -fno-tree-loop-vectorize -fallow-argument-mismatch -fopenmp -fcommon <source>"
+C: FC="/usr/bin/gfortran           -m64"
+C: FOBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS=""
+P: BENCH_FFLAGS=""
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch"
+O: FOPTIMIZE=""
+P: PORTABILITY=""
+P: FPORTABILITY=""
+O: EXTRA_FFLAGS=""
+O: EXTRA_OPTIMIZE="-fopenmp -DSPEC_OPENMP -fcommon"
+O: EXTRA_FOPTIMIZE=""
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_FPORTABILITY=""
+LINK: "/usr/bin/gfortran           -m64      -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch        -fopenmp -DSPEC_OPENMP -fcommon  <objects>            -o options  "
+C: LD="/usr/bin/gfortran           -m64"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch"
+O: EXTRA_OPTIMIZE="-fopenmp -DSPEC_OPENMP -fcommon"
+C: LDOUT="-o options"
+ FC_VERSION_OPTION:
+Using built-in specs.
+COLLECT_GCC=/usr/bin/gfortran
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.3.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-nvptx/usr,am
+dgcn-amdhsa=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.3.0 (Ubuntu 11.3.0-1ubuntu1~22.04) 
+  Up to date 648.exchange2_s base Rubens-m64
+------------------------------------------------------------------------
+COMP: "/usr/bin/gcc     -std=c99   -m64 -c -o options.o -DSPEC -DNDEBUG -Ispecrand-common  -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch           -fopenmp -DSPEC_OPENMP -fcommon -fno-strict-aliasing -fgnu89-inline   -DSPEC_LP64  <source>"
+C: CC="/usr/bin/gcc     -std=c99   -m64"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DNDEBUG"
+P: BENCH_FLAGS="-Ispecrand-common"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch"
+O: COPTIMIZE=""
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE="-fopenmp -DSPEC_OPENMP -fcommon"
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+P: EXTRA_PORTABILITY="-DSPEC_LP64"
+P: EXTRA_CPORTABILITY=""
+LINK: "/usr/bin/gcc     -std=c99   -m64      -g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch        -fopenmp -DSPEC_OPENMP -fcommon -fno-strict-aliasing -fgnu89-inline <objects>            -o options  "
+C: LD="/usr/bin/gcc     -std=c99   -m64"
+O: OPTIMIZE="-g -O3 -march=native -fno-unsafe-math-optimizations  -fno-tree-loop-vectorize   -fallow-argument-mismatch"
+O: EXTRA_OPTIMIZE="-fopenmp -DSPEC_OPENMP -fcommon"
+O: EXTRA_COPTIMIZE="-fno-strict-aliasing -fgnu89-inline"
+C: LDOUT="-o options"
+ CC_VERSION_OPTION:
+Using built-in specs.
+COLLECT_GCC=/usr/bin/gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.3.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-nvptx/usr,am
+dgcn-amdhsa=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.3.0 (Ubuntu 11.3.0-1ubuntu1~22.04) 
+  Up to date 998.specrand_is base Rubens-m64
+
+
+Setting Up Run Directories
+  Setting up 600.perlbench_s refspeed (ref) base Rubens-m64: run_base_refspeed_Rubens-m64.0001
+  Setting up 602.gcc_s refspeed (ref) base Rubens-m64: run_base_refspeed_Rubens-m64.0001
+  Setting up 605.mcf_s refspeed (ref) base Rubens-m64: run_base_refspeed_Rubens-m64.0001
+  Setting up 620.omnetpp_s refspeed (ref) base Rubens-m64: run_base_refspeed_Rubens-m64.0001
+  Setting up 623.xalancbmk_s refspeed (ref) base Rubens-m64: run_base_refspeed_Rubens-m64.0001
+  Setting up 625.x264_s refspeed (ref) base Rubens-m64: OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/625.x264_s/run/run_base_refspeed_Rubens-m64.0001 -f inputgen.cmd -e inputgen.err -o inputgen.stdout'
+Start command: 2023-05-24 00:56:21 (1684900581.87921)
+Stop command: 2023-05-24 00:56:56 (1684900616.30466)
+Elapsed time for command: 00:00:34 (34.4254519939423)
+Input generation total elapsed time = 35 seconds
+Input generation elapsed time (0:1) = 34.269017 seconds
+run_base_refspeed_Rubens-m64.0001
+  Setting up 631.deepsjeng_s refspeed (ref) base Rubens-m64: run_base_refspeed_Rubens-m64.0000
+  Setting up 641.leela_s refspeed (ref) base Rubens-m64: run_base_refspeed_Rubens-m64.0000
+  Setting up 648.exchange2_s refspeed (ref) base Rubens-m64: run_base_refspeed_Rubens-m64.0000
+  Setting up 998.specrand_is refspeed (ref) base Rubens-m64: run_base_refspeed_Rubens-m64.0000
+-----------------------------------
+Running Benchmarks
+-----------------------------------
+  Running (#1) 600.perlbench_s refspeed (ref) base Rubens-m64 threads:8 [2023-05-24 00:57:06]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /usr/local/spec_cpu2017/benchspec/CPU/600.perlbench_s/run/run_base_refspeed_Rubens-m64.0001
+    -o checkspam.2500.5.25.11.150.1.1.1.1.out -e checkspam.2500.5.25.11.150.1.1.1.1.err ../run_base_refspeed_Rubens-m64.0001/perlbench_s_base.Rubens-m64 -I./lib checkspam.pl 2500 5 25 11 150 1 1 1 1 > checkspam.2500.5.25.11.150.1.1.1.1.out 2>> checkspam.2500.5.25.11.150.1.1.1.1.err (timed)
+    -o diffmail.4.800.10.17.19.300.out -e diffmail.4.800.10.17.19.300.err ../run_base_refspeed_Rubens-m64.0001/perlbench_s_base.Rubens-m64 -I./lib diffmail.pl 4 800 10 17 19 300 > diffmail.4.800.10.17.19.300.out 2>> diffmail.4.800.10.17.19.300.err (timed)
+    -o splitmail.6400.12.26.16.100.0.out -e splitmail.6400.12.26.16.100.0.err ../run_base_refspeed_Rubens-m64.0001/perlbench_s_base.Rubens-m64 -I./lib splitmail.pl 6400 12 26 16 100 0 > splitmail.6400.12.26.16.100.0.out 2>> splitmail.6400.12.26.16.100.0.err (timed)
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/600.perlbench_s/run/run_base_refspeed_Rubens-m64.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/600.perlbench_s/run/run_base_refspeed_Rubens-m64.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2023-05-24 00:57:06 (1684900626.95616)
+Stop command: 2023-05-24 01:06:35 (1684901195.81426)
+Elapsed time for command: 00:09:28 (568.85809803009)
+Workload elapsed time (copy 0 workload 1) = 230.960421 seconds
+Workload elapsed time (copy 0 workload 2) = 161.136729 seconds
+Workload elapsed time (copy 0 workload 3) = 176.599815 seconds
+Copy 0 of 600.perlbench_s (base refspeed) run 1 finished at 2023-05-24 01:06:35.  Total elapsed time: 568.696965
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+comparing 'checkspam.2500.5.25.11.150.1.1.1.1.out' with floatcompare=1, nansupport=no
+comparing 'diffmail.4.800.10.17.19.300.out' with floatcompare=1, nansupport=no
+comparing 'splitmail.6400.12.26.16.100.0.out' with floatcompare=1, nansupport=no
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/600.perlbench_s/run/run_base_refspeed_Rubens-m64.0001 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/600.perlbench_s/run/run_base_refspeed_Rubens-m64.0001 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2023-05-24 01:06:35 (1684901195.90868)
+Stop command: 2023-05-24 01:06:37 (1684901197.1868)
+Elapsed time for command: 00:00:01 (1.2781229019165)
+Benchmark Times:
+  Run Start:    2023-05-24 00:57:06 (1684900626)
+  Run Stop:     2023-05-24 01:06:35 (1684901195)
+  Run Elapsed:  00:09:29 (569)
+  Run Reported: 00:09:28 (568 697183000 568.697183)
+ Success 600.perlbench_s base refspeed ratio=3.12, runtime=568.697183, copies=1, threads=8, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running (#1) 602.gcc_s refspeed (ref) base Rubens-m64 threads:8 [2023-05-24 01:06:37]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /usr/local/spec_cpu2017/benchspec/CPU/602.gcc_s/run/run_base_refspeed_Rubens-m64.0001
+    -o gcc-pp.opts-O5_-fipa-pta.out -e gcc-pp.opts-O5_-fipa-pta.err ../run_base_refspeed_Rubens-m64.0001/sgcc_base.Rubens-m64 gcc-pp.c -O5 -fipa-pta -o gcc-pp.opts-O5_-fipa-pta.s > gcc-pp.opts-O5_-fipa-pta.out 2>> gcc-pp.opts-O5_-fipa-pta.err (timed)
+    -o gcc-pp.opts-O5_-finline-limit_1000_-fselective-scheduling_-fselective-scheduling2.out -e gcc-pp.opts-O5_-finline-limit_1000_-fselective-scheduling_-fselective-scheduling2.err ../run_base_refspeed_Rubens-m64.0001/sgcc_base.Rubens-m64 gcc-pp.c -O5 -finline-limit=1000 -fselective-scheduling -fselective-scheduling2 -o gcc-pp.opts-O5_-finline-limit_1000_-fselective-scheduling_-fselective-scheduling2.s > gcc-pp.opts-O5_-finline-limit_1000_-fselective-scheduling_-fselective-scheduling2.out 2>> gcc-pp.opts-O5_-finline-limit_1000_-fselective-scheduling_-fselective-scheduling2.err (timed)
+    -o gcc-pp.opts-O5_-finline-limit_24000_-fgcse_-fgcse-las_-fgcse-lm_-fgcse-sm.out -e gcc-pp.opts-O5_-finline-limit_24000_-fgcse_-fgcse-las_-fgcse-lm_-fgcse-sm.err ../run_base_refspeed_Rubens-m64.0001/sgcc_base.Rubens-m64 gcc-pp.c -O5 -finline-limit=24000 -fgcse -fgcse-las -fgcse-lm -fgcse-sm -o gcc-pp.opts-O5_-finline-limit_24000_-fgcse_-fgcse-las_-fgcse-lm_-fgcse-sm.s > gcc-pp.opts-O5_-finline-limit_24000_-fgcse_-fgcse-las_-fgcse-lm_-fgcse-sm.out 2>> gcc-pp.opts-O5_-finline-limit_24000_-fgcse_-fgcse-las_-fgcse-lm_-fgcse-sm.err (timed)
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/602.gcc_s/run/run_base_refspeed_Rubens-m64.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/602.gcc_s/run/run_base_refspeed_Rubens-m64.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2023-05-24 01:06:37 (1684901197.93618)
+Stop command: 2023-05-24 01:20:44 (1684902044.6718)
+Elapsed time for command: 00:14:06 (846.73562502861)
+Workload elapsed time (copy 0 workload 1) = 502.911543 seconds
+Workload elapsed time (copy 0 workload 2) = 176.973236 seconds
+Workload elapsed time (copy 0 workload 3) = 166.554874 seconds
+Copy 0 of 602.gcc_s (base refspeed) run 1 finished at 2023-05-24 01:20:44.  Total elapsed time: 846.439653
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+comparing 'gcc-pp.opts-O5_-finline-limit_1000_-fselective-scheduling_-fselective-scheduling2.s' with floatcompare=1, nansupport=no
+comparing 'gcc-pp.opts-O5_-finline-limit_24000_-fgcse_-fgcse-las_-fgcse-lm_-fgcse-sm.s' with floatcompare=1, nansupport=no
+comparing 'gcc-pp.opts-O5_-fipa-pta.s' with floatcompare=1, nansupport=no
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/602.gcc_s/run/run_base_refspeed_Rubens-m64.0001 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/602.gcc_s/run/run_base_refspeed_Rubens-m64.0001 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2023-05-24 01:20:46 (1684902046.2067)
+Stop command: 2023-05-24 01:21:18 (1684902078.13932)
+Elapsed time for command: 00:00:31 (31.9326241016388)
+Benchmark Times:
+  Run Start:    2023-05-24 01:06:37 (1684901197)
+  Run Stop:     2023-05-24 01:20:44 (1684902044)
+  Run Elapsed:  00:14:07 (847)
+  Run Reported: 00:14:06 (846 446627000 846.446627)
+ Success 602.gcc_s base refspeed ratio=4.70, runtime=846.446627, copies=1, threads=8, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running (#1) 605.mcf_s refspeed (ref) base Rubens-m64 threads:8 [2023-05-24 01:21:18]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /usr/local/spec_cpu2017/benchspec/CPU/605.mcf_s/run/run_base_refspeed_Rubens-m64.0001
+    -o inp.out -e inp.err ../run_base_refspeed_Rubens-m64.0001/mcf_s_base.Rubens-m64 inp.in  > inp.out 2>> inp.err (timed)
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/605.mcf_s/run/run_base_refspeed_Rubens-m64.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/605.mcf_s/run/run_base_refspeed_Rubens-m64.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2023-05-24 01:21:18 (1684902078.5541)
+Stop command: 2023-05-24 01:41:56 (1684903316.95708)
+Elapsed time for command: 00:20:38 (1238.40297698975)
+Workload elapsed time (copy 0 workload 1) = 1238.237354 seconds
+Copy 0 of 605.mcf_s (base refspeed) run 1 finished at 2023-05-24 01:41:56.  Total elapsed time: 1238.237354
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+comparing 'inp.out' with 
+comparing 'mcf.out' with 
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/605.mcf_s/run/run_base_refspeed_Rubens-m64.0001 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/605.mcf_s/run/run_base_refspeed_Rubens-m64.0001 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2023-05-24 01:41:57 (1684903317.06295)
+Stop command: 2023-05-24 01:41:57 (1684903317.63629)
+Elapsed time for command: 00:00:00 (0.573335886001587)
+Benchmark Times:
+  Run Start:    2023-05-24 01:21:18 (1684902078)
+  Run Stop:     2023-05-24 01:41:56 (1684903316)
+  Run Elapsed:  00:20:38 (1238)
+  Run Reported: 00:20:38 (1238 237487000 1238.237487)
+ Success 605.mcf_s base refspeed ratio=3.81, runtime=1238.237487, copies=1, threads=8, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running (#1) 620.omnetpp_s refspeed (ref) base Rubens-m64 threads:8 [2023-05-24 01:41:58]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /usr/local/spec_cpu2017/benchspec/CPU/620.omnetpp_s/run/run_base_refspeed_Rubens-m64.0001
+    -o omnetpp.General-0.out -e omnetpp.General-0.err ../run_base_refspeed_Rubens-m64.0001/omnetpp_s_base.Rubens-m64 -c General -r 0 > omnetpp.General-0.out 2>> omnetpp.General-0.err (timed)
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/620.omnetpp_s/run/run_base_refspeed_Rubens-m64.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/620.omnetpp_s/run/run_base_refspeed_Rubens-m64.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2023-05-24 01:41:58 (1684903318.33993)
+Stop command: 2023-05-24 01:55:13 (1684904113.13362)
+Elapsed time for command: 00:13:14 (794.793685913086)
+Workload elapsed time (copy 0 workload 1) = 794.628157 seconds
+Copy 0 of 620.omnetpp_s (base refspeed) run 1 finished at 2023-05-24 01:55:12.  Total elapsed time: 794.628157
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+comparing 'General-0.sca' with abstol=1e-06, reltol=1e-05
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/620.omnetpp_s/run/run_base_refspeed_Rubens-m64.0001 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/620.omnetpp_s/run/run_base_refspeed_Rubens-m64.0001 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2023-05-24 01:55:13 (1684904113.22435)
+Stop command: 2023-05-24 01:55:18 (1684904118.86728)
+Elapsed time for command: 00:00:05 (5.64293003082275)
+Benchmark Times:
+  Run Start:    2023-05-24 01:41:58 (1684903318)
+  Run Stop:     2023-05-24 01:55:13 (1684904113)
+  Run Elapsed:  00:13:15 (795)
+  Run Reported: 00:13:14 (794 628279000 794.628279)
+ Success 620.omnetpp_s base refspeed ratio=2.05, runtime=794.628279, copies=1, threads=8, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running (#1) 623.xalancbmk_s refspeed (ref) base Rubens-m64 threads:8 [2023-05-24 01:55:20]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /usr/local/spec_cpu2017/benchspec/CPU/623.xalancbmk_s/run/run_base_refspeed_Rubens-m64.0001
+    -o ref-t5.out -e ref-t5.err ../run_base_refspeed_Rubens-m64.0001/xalancbmk_s_base.Rubens-m64 -v t5.xml xalanc.xsl > ref-t5.out 2>> ref-t5.err (timed)
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/623.xalancbmk_s/run/run_base_refspeed_Rubens-m64.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/623.xalancbmk_s/run/run_base_refspeed_Rubens-m64.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2023-05-24 01:55:20 (1684904120.25271)
+Stop command: 2023-05-24 02:05:47 (1684904747.43161)
+Elapsed time for command: 00:10:27 (627.178899049759)
+Workload elapsed time (copy 0 workload 1) = 627.016405 seconds
+Copy 0 of 623.xalancbmk_s (base refspeed) run 1 finished at 2023-05-24 02:05:47.  Total elapsed time: 627.016405
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+comparing 'ref-t5.out' with 
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/623.xalancbmk_s/run/run_base_refspeed_Rubens-m64.0001 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/623.xalancbmk_s/run/run_base_refspeed_Rubens-m64.0001 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2023-05-24 02:05:47 (1684904747.54121)
+Stop command: 2023-05-24 02:05:48 (1684904748.08584)
+Elapsed time for command: 00:00:00 (0.544627904891968)
+Benchmark Times:
+  Run Start:    2023-05-24 01:55:20 (1684904120)
+  Run Stop:     2023-05-24 02:05:47 (1684904747)
+  Run Elapsed:  00:10:27 (627)
+  Run Reported: 00:10:27 (627 16523000 627.016523)
+ Success 623.xalancbmk_s base refspeed ratio=2.26, runtime=627.016523, copies=1, threads=8, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running (#1) 625.x264_s refspeed (ref) base Rubens-m64 threads:8 [2023-05-24 02:05:48]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /usr/local/spec_cpu2017/benchspec/CPU/625.x264_s/run/run_base_refspeed_Rubens-m64.0001
+    -o run_000-1000_x264_s_base.Rubens-m64_x264_pass1.out -e run_000-1000_x264_s_base.Rubens-m64_x264_pass1.err ../run_base_refspeed_Rubens-m64.0001/x264_s_base.Rubens-m64 --pass 1 --stats x264_stats.log --bitrate 1000 --frames 1000 -o BuckBunny_New.264 BuckBunny.yuv 1280x720 > run_000-1000_x264_s_base.Rubens-m64_x264_pass1.out 2>> run_000-1000_x264_s_base.Rubens-m64_x264_pass1.err (timed)
+    -o run_000-1000_x264_s_base.Rubens-m64_x264_pass2.out -e run_000-1000_x264_s_base.Rubens-m64_x264_pass2.err ../run_base_refspeed_Rubens-m64.0001/x264_s_base.Rubens-m64 --pass 2 --stats x264_stats.log --bitrate 1000 --dumpyuv 200 --frames 1000 -o BuckBunny_New.264 BuckBunny.yuv 1280x720 > run_000-1000_x264_s_base.Rubens-m64_x264_pass2.out 2>> run_000-1000_x264_s_base.Rubens-m64_x264_pass2.err (timed)
+    -o run_0500-1250_x264_s_base.Rubens-m64_x264.out -e run_0500-1250_x264_s_base.Rubens-m64_x264.err ../run_base_refspeed_Rubens-m64.0001/x264_s_base.Rubens-m64 --seek 500 --dumpyuv 200 --frames 1250 -o BuckBunny_New.264 BuckBunny.yuv 1280x720 > run_0500-1250_x264_s_base.Rubens-m64_x264.out 2>> run_0500-1250_x264_s_base.Rubens-m64_x264.err (timed)
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/625.x264_s/run/run_base_refspeed_Rubens-m64.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/625.x264_s/run/run_base_refspeed_Rubens-m64.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2023-05-24 02:05:48 (1684904748.32443)
+Stop command: 2023-05-24 02:14:24 (1684905264.68943)
+Elapsed time for command: 00:08:36 (516.365002155304)
+Workload elapsed time (copy 0 workload 1) = 64.115795 seconds
+Workload elapsed time (copy 0 workload 2) = 225.150603 seconds
+Workload elapsed time (copy 0 workload 3) = 226.932259 seconds
+Copy 0 of 625.x264_s (base refspeed) run 1 finished at 2023-05-24 02:14:24.  Total elapsed time: 516.198657
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+comparing 'imagevalidate_frame_1100.out' with reltol=0.085
+comparing 'imagevalidate_frame_1249.out' with reltol=0.085
+comparing 'imagevalidate_frame_200.out' with reltol=0.085
+comparing 'imagevalidate_frame_400.out' with reltol=0.085
+comparing 'imagevalidate_frame_600.out' with reltol=0.085
+comparing 'imagevalidate_frame_700.out' with reltol=0.085
+comparing 'imagevalidate_frame_800.out' with reltol=0.085
+comparing 'imagevalidate_frame_900.out' with reltol=0.085
+comparing 'imagevalidate_frame_999.out' with reltol=0.085
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/625.x264_s/run/run_base_refspeed_Rubens-m64.0001 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/625.x264_s/run/run_base_refspeed_Rubens-m64.0001 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2023-05-24 02:14:24 (1684905264.85069)
+Stop command: 2023-05-24 02:14:27 (1684905267.12861)
+Elapsed time for command: 00:00:02 (2.27792501449585)
+Benchmark Times:
+  Run Start:    2023-05-24 02:05:48 (1684904748)
+  Run Stop:     2023-05-24 02:14:24 (1684905264)
+  Run Elapsed:  00:08:36 (516)
+  Run Reported: 00:08:36 (516 198835000 516.198835)
+ Success 625.x264_s base refspeed ratio=3.42, runtime=516.198835, copies=1, threads=8, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running (#1) 631.deepsjeng_s refspeed (ref) base Rubens-m64 threads:8 [2023-05-24 02:14:27]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /usr/local/spec_cpu2017/benchspec/CPU/631.deepsjeng_s/run/run_base_refspeed_Rubens-m64.0000
+    -o ref.out -e ref.err ../run_base_refspeed_Rubens-m64.0000/deepsjeng_s_base.Rubens-m64 ref.txt > ref.out 2>> ref.err (timed)
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/631.deepsjeng_s/run/run_base_refspeed_Rubens-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/631.deepsjeng_s/run/run_base_refspeed_Rubens-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2023-05-24 02:14:27 (1684905267.26484)
+Stop command: 2023-05-24 02:23:00 (1684905780.62038)
+Elapsed time for command: 00:08:33 (513.355537891388)
+Workload elapsed time (copy 0 workload 1) = 513.07105 seconds
+Copy 0 of 631.deepsjeng_s (base refspeed) run 1 finished at 2023-05-24 02:23:00.  Total elapsed time: 513.07105
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+comparing 'ref.out' with obiwan=1
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/631.deepsjeng_s/run/run_base_refspeed_Rubens-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/631.deepsjeng_s/run/run_base_refspeed_Rubens-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2023-05-24 02:23:01 (1684905781.92817)
+Stop command: 2023-05-24 02:23:02 (1684905782.52225)
+Elapsed time for command: 00:00:00 (0.594074964523315)
+Benchmark Times:
+  Run Start:    2023-05-24 02:14:27 (1684905267)
+  Run Stop:     2023-05-24 02:23:00 (1684905780)
+  Run Elapsed:  00:08:33 (513)
+  Run Reported: 00:08:33 (513 72619000 513.072619)
+ Success 631.deepsjeng_s base refspeed ratio=2.79, runtime=513.072619, copies=1, threads=8, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running (#1) 641.leela_s refspeed (ref) base Rubens-m64 threads:8 [2023-05-24 02:23:02]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /usr/local/spec_cpu2017/benchspec/CPU/641.leela_s/run/run_base_refspeed_Rubens-m64.0000
+    -o ref.out -e ref.err ../run_base_refspeed_Rubens-m64.0000/leela_s_base.Rubens-m64 ref.sgf > ref.out 2>> ref.err (timed)
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/641.leela_s/run/run_base_refspeed_Rubens-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/641.leela_s/run/run_base_refspeed_Rubens-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2023-05-24 02:23:02 (1684905782.96831)
+Stop command: 2023-05-24 02:32:31 (1684906351.43764)
+Elapsed time for command: 00:09:28 (568.469332933426)
+Workload elapsed time (copy 0 workload 1) = 568.303172 seconds
+Copy 0 of 641.leela_s (base refspeed) run 1 finished at 2023-05-24 02:32:31.  Total elapsed time: 568.303172
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+comparing 'ref.out' with 
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/641.leela_s/run/run_base_refspeed_Rubens-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/641.leela_s/run/run_base_refspeed_Rubens-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2023-05-24 02:32:31 (1684906351.52755)
+Stop command: 2023-05-24 02:32:31 (1684906351.88714)
+Elapsed time for command: 00:00:00 (0.359580039978027)
+Benchmark Times:
+  Run Start:    2023-05-24 02:23:02 (1684905782)
+  Run Stop:     2023-05-24 02:32:31 (1684906351)
+  Run Elapsed:  00:09:29 (569)
+  Run Reported: 00:09:28 (568 303306000 568.303306)
+ Success 641.leela_s base refspeed ratio=3.00, runtime=568.303306, copies=1, threads=8, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running (#1) 648.exchange2_s refspeed (ref) base Rubens-m64 threads:8 [2023-05-24 02:32:31]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /usr/local/spec_cpu2017/benchspec/CPU/648.exchange2_s/run/run_base_refspeed_Rubens-m64.0000
+    -o exchange2.txt -e exchange2.err ../run_base_refspeed_Rubens-m64.0000/exchange2_s_base.Rubens-m64 6 > exchange2.txt 2>> exchange2.err (timed)
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/648.exchange2_s/run/run_base_refspeed_Rubens-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/648.exchange2_s/run/run_base_refspeed_Rubens-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2023-05-24 02:32:32 (1684906352.02366)
+Stop command: 2023-05-24 02:40:05 (1684906805.94969)
+Elapsed time for command: 00:07:33 (453.926024913788)
+Workload elapsed time (copy 0 workload 1) = 453.760408 seconds
+Copy 0 of 648.exchange2_s (base refspeed) run 1 finished at 2023-05-24 02:40:05.  Total elapsed time: 453.760408
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+comparing 's.txt' with 
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/648.exchange2_s/run/run_base_refspeed_Rubens-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/648.exchange2_s/run/run_base_refspeed_Rubens-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2023-05-24 02:40:06 (1684906806.02494)
+Stop command: 2023-05-24 02:40:06 (1684906806.37876)
+Elapsed time for command: 00:00:00 (0.353819131851196)
+Benchmark Times:
+  Run Start:    2023-05-24 02:32:32 (1684906352)
+  Run Stop:     2023-05-24 02:40:05 (1684906805)
+  Run Elapsed:  00:07:33 (453)
+  Run Reported: 00:07:33 (453 760520000 453.76052)
+ Success 648.exchange2_s base refspeed ratio=6.48, runtime=453.760520, copies=1, threads=8, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running (#1) 998.specrand_is refspeed (ref) base Rubens-m64 threads:8 [2023-05-24 02:40:06]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /usr/local/spec_cpu2017/benchspec/CPU/998.specrand_is/run/run_base_refspeed_Rubens-m64.0000
+    -o rand.234923.out -e rand.234923.err ../run_base_refspeed_Rubens-m64.0000/specrand_is_base.Rubens-m64 1255432124 234923 > rand.234923.out 2>> rand.234923.err (timed)
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/998.specrand_is/run/run_base_refspeed_Rubens-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/998.specrand_is/run/run_base_refspeed_Rubens-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2023-05-24 02:40:06 (1684906806.50686)
+Stop command: 2023-05-24 02:40:06 (1684906806.74695)
+Elapsed time for command: 00:00:00 (0.240095853805542)
+Workload elapsed time (copy 0 workload 1) = 0.07709 seconds
+Copy 0 of 998.specrand_is (base refspeed) run 1 finished at 2023-05-24 02:40:06.  Total elapsed time: 0.07709
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+comparing 'rand.234923.out' with floatcompare=1, nansupport=0
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/998.specrand_is/run/run_base_refspeed_Rubens-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/998.specrand_is/run/run_base_refspeed_Rubens-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2023-05-24 02:40:06 (1684906806.82424)
+Stop command: 2023-05-24 02:40:08 (1684906808.33735)
+Elapsed time for command: 00:00:01 (1.51311588287354)
+Benchmark Times:
+  Run Start:    2023-05-24 02:40:06 (1684906806)
+  Run Stop:     2023-05-24 02:40:06 (1684906806)
+  Run Elapsed:  00:00:00 (0)
+  Run Reported: 00:00:00 (0 77189000 0.077189)
+ Success 998.specrand_is base refspeed ratio=129.55, runtime=0.077189, copies=1, threads=8, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running (#2) 600.perlbench_s refspeed (ref) base Rubens-m64 threads:8 [2023-05-24 02:40:09]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /usr/local/spec_cpu2017/benchspec/CPU/600.perlbench_s/run/run_base_refspeed_Rubens-m64.0001
+    -o checkspam.2500.5.25.11.150.1.1.1.1.out -e checkspam.2500.5.25.11.150.1.1.1.1.err ../run_base_refspeed_Rubens-m64.0001/perlbench_s_base.Rubens-m64 -I./lib checkspam.pl 2500 5 25 11 150 1 1 1 1 > checkspam.2500.5.25.11.150.1.1.1.1.out 2>> checkspam.2500.5.25.11.150.1.1.1.1.err (timed)
+    -o diffmail.4.800.10.17.19.300.out -e diffmail.4.800.10.17.19.300.err ../run_base_refspeed_Rubens-m64.0001/perlbench_s_base.Rubens-m64 -I./lib diffmail.pl 4 800 10 17 19 300 > diffmail.4.800.10.17.19.300.out 2>> diffmail.4.800.10.17.19.300.err (timed)
+    -o splitmail.6400.12.26.16.100.0.out -e splitmail.6400.12.26.16.100.0.err ../run_base_refspeed_Rubens-m64.0001/perlbench_s_base.Rubens-m64 -I./lib splitmail.pl 6400 12 26 16 100 0 > splitmail.6400.12.26.16.100.0.out 2>> splitmail.6400.12.26.16.100.0.err (timed)
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/600.perlbench_s/run/run_base_refspeed_Rubens-m64.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/600.perlbench_s/run/run_base_refspeed_Rubens-m64.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2023-05-24 02:40:09 (1684906809.83002)
+Stop command: 2023-05-24 02:49:34 (1684907374.49449)
+Elapsed time for command: 00:09:24 (564.664467096329)
+Workload elapsed time (copy 0 workload 1) = 233.458396 seconds
+Workload elapsed time (copy 0 workload 2) = 152.929269 seconds
+Workload elapsed time (copy 0 workload 3) = 178.115061 seconds
+Copy 0 of 600.perlbench_s (base refspeed) run 2 finished at 2023-05-24 02:49:34.  Total elapsed time: 564.502726
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+comparing 'checkspam.2500.5.25.11.150.1.1.1.1.out' with floatcompare=1, nansupport=no
+comparing 'diffmail.4.800.10.17.19.300.out' with floatcompare=1, nansupport=no
+comparing 'splitmail.6400.12.26.16.100.0.out' with floatcompare=1, nansupport=no
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/600.perlbench_s/run/run_base_refspeed_Rubens-m64.0001 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/600.perlbench_s/run/run_base_refspeed_Rubens-m64.0001 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2023-05-24 02:49:34 (1684907374.56791)
+Stop command: 2023-05-24 02:49:35 (1684907375.8521)
+Elapsed time for command: 00:00:01 (1.28419089317322)
+Benchmark Times:
+  Run Start:    2023-05-24 02:40:09 (1684906809)
+  Run Stop:     2023-05-24 02:49:34 (1684907374)
+  Run Elapsed:  00:09:25 (565)
+  Run Reported: 00:09:24 (564 502946000 564.502946)
+ Success 600.perlbench_s base refspeed ratio=3.14, runtime=564.502946, copies=1, threads=8, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running (#2) 602.gcc_s refspeed (ref) base Rubens-m64 threads:8 [2023-05-24 02:49:36]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /usr/local/spec_cpu2017/benchspec/CPU/602.gcc_s/run/run_base_refspeed_Rubens-m64.0001
+    -o gcc-pp.opts-O5_-fipa-pta.out -e gcc-pp.opts-O5_-fipa-pta.err ../run_base_refspeed_Rubens-m64.0001/sgcc_base.Rubens-m64 gcc-pp.c -O5 -fipa-pta -o gcc-pp.opts-O5_-fipa-pta.s > gcc-pp.opts-O5_-fipa-pta.out 2>> gcc-pp.opts-O5_-fipa-pta.err (timed)
+    -o gcc-pp.opts-O5_-finline-limit_1000_-fselective-scheduling_-fselective-scheduling2.out -e gcc-pp.opts-O5_-finline-limit_1000_-fselective-scheduling_-fselective-scheduling2.err ../run_base_refspeed_Rubens-m64.0001/sgcc_base.Rubens-m64 gcc-pp.c -O5 -finline-limit=1000 -fselective-scheduling -fselective-scheduling2 -o gcc-pp.opts-O5_-finline-limit_1000_-fselective-scheduling_-fselective-scheduling2.s > gcc-pp.opts-O5_-finline-limit_1000_-fselective-scheduling_-fselective-scheduling2.out 2>> gcc-pp.opts-O5_-finline-limit_1000_-fselective-scheduling_-fselective-scheduling2.err (timed)
+    -o gcc-pp.opts-O5_-finline-limit_24000_-fgcse_-fgcse-las_-fgcse-lm_-fgcse-sm.out -e gcc-pp.opts-O5_-finline-limit_24000_-fgcse_-fgcse-las_-fgcse-lm_-fgcse-sm.err ../run_base_refspeed_Rubens-m64.0001/sgcc_base.Rubens-m64 gcc-pp.c -O5 -finline-limit=24000 -fgcse -fgcse-las -fgcse-lm -fgcse-sm -o gcc-pp.opts-O5_-finline-limit_24000_-fgcse_-fgcse-las_-fgcse-lm_-fgcse-sm.s > gcc-pp.opts-O5_-finline-limit_24000_-fgcse_-fgcse-las_-fgcse-lm_-fgcse-sm.out 2>> gcc-pp.opts-O5_-finline-limit_24000_-fgcse_-fgcse-las_-fgcse-lm_-fgcse-sm.err (timed)
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/602.gcc_s/run/run_base_refspeed_Rubens-m64.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/602.gcc_s/run/run_base_refspeed_Rubens-m64.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2023-05-24 02:49:36 (1684907376.82759)
+Stop command: 2023-05-24 03:02:34 (1684908154.13495)
+Elapsed time for command: 00:12:57 (777.307355880737)
+Workload elapsed time (copy 0 workload 1) = 437.892657 seconds
+Workload elapsed time (copy 0 workload 2) = 174.404731 seconds
+Workload elapsed time (copy 0 workload 3) = 164.728392 seconds
+Copy 0 of 602.gcc_s (base refspeed) run 2 finished at 2023-05-24 03:02:33.  Total elapsed time: 777.02578
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+comparing 'gcc-pp.opts-O5_-finline-limit_1000_-fselective-scheduling_-fselective-scheduling2.s' with floatcompare=1, nansupport=no
+comparing 'gcc-pp.opts-O5_-finline-limit_24000_-fgcse_-fgcse-las_-fgcse-lm_-fgcse-sm.s' with floatcompare=1, nansupport=no
+comparing 'gcc-pp.opts-O5_-fipa-pta.s' with floatcompare=1, nansupport=no
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/602.gcc_s/run/run_base_refspeed_Rubens-m64.0001 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/602.gcc_s/run/run_base_refspeed_Rubens-m64.0001 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2023-05-24 03:02:35 (1684908155.19163)
+Stop command: 2023-05-24 03:03:06 (1684908186.43938)
+Elapsed time for command: 00:00:31 (31.2477569580078)
+Benchmark Times:
+  Run Start:    2023-05-24 02:49:36 (1684907376)
+  Run Stop:     2023-05-24 03:02:34 (1684908154)
+  Run Elapsed:  00:12:58 (778)
+  Run Reported: 00:12:57 (777 31056000 777.031056)
+ Success 602.gcc_s base refspeed ratio=5.12, runtime=777.031056, copies=1, threads=8, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running (#2) 605.mcf_s refspeed (ref) base Rubens-m64 threads:8 [2023-05-24 03:03:06]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /usr/local/spec_cpu2017/benchspec/CPU/605.mcf_s/run/run_base_refspeed_Rubens-m64.0001
+    -o inp.out -e inp.err ../run_base_refspeed_Rubens-m64.0001/mcf_s_base.Rubens-m64 inp.in  > inp.out 2>> inp.err (timed)
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/605.mcf_s/run/run_base_refspeed_Rubens-m64.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/605.mcf_s/run/run_base_refspeed_Rubens-m64.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2023-05-24 03:03:06 (1684908186.80326)
+Stop command: 2023-05-24 03:22:37 (1684909357.21003)
+Elapsed time for command: 00:19:30 (1170.40676689148)
+Workload elapsed time (copy 0 workload 1) = 1170.24557 seconds
+Copy 0 of 605.mcf_s (base refspeed) run 2 finished at 2023-05-24 03:22:37.  Total elapsed time: 1170.24557
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+comparing 'inp.out' with 
+comparing 'mcf.out' with 
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/605.mcf_s/run/run_base_refspeed_Rubens-m64.0001 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/605.mcf_s/run/run_base_refspeed_Rubens-m64.0001 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2023-05-24 03:22:37 (1684909357.29253)
+Stop command: 2023-05-24 03:22:37 (1684909357.83727)
+Elapsed time for command: 00:00:00 (0.544739961624146)
+Benchmark Times:
+  Run Start:    2023-05-24 03:03:06 (1684908186)
+  Run Stop:     2023-05-24 03:22:37 (1684909357)
+  Run Elapsed:  00:19:31 (1171)
+  Run Reported: 00:19:30 (1170 245673000 1170.245673)
+ Success 605.mcf_s base refspeed ratio=4.03, runtime=1170.245673, copies=1, threads=8, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running (#2) 620.omnetpp_s refspeed (ref) base Rubens-m64 threads:8 [2023-05-24 03:22:38]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /usr/local/spec_cpu2017/benchspec/CPU/620.omnetpp_s/run/run_base_refspeed_Rubens-m64.0001
+    -o omnetpp.General-0.out -e omnetpp.General-0.err ../run_base_refspeed_Rubens-m64.0001/omnetpp_s_base.Rubens-m64 -c General -r 0 > omnetpp.General-0.out 2>> omnetpp.General-0.err (timed)
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/620.omnetpp_s/run/run_base_refspeed_Rubens-m64.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/620.omnetpp_s/run/run_base_refspeed_Rubens-m64.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2023-05-24 03:22:38 (1684909358.52268)
+Stop command: 2023-05-24 03:35:18 (1684910118.22637)
+Elapsed time for command: 00:12:39 (759.703685045242)
+Workload elapsed time (copy 0 workload 1) = 759.537643 seconds
+Copy 0 of 620.omnetpp_s (base refspeed) run 2 finished at 2023-05-24 03:35:18.  Total elapsed time: 759.537643
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+comparing 'General-0.sca' with abstol=1e-06, reltol=1e-05
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/620.omnetpp_s/run/run_base_refspeed_Rubens-m64.0001 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/620.omnetpp_s/run/run_base_refspeed_Rubens-m64.0001 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2023-05-24 03:35:18 (1684910118.34698)
+Stop command: 2023-05-24 03:35:24 (1684910124.37808)
+Elapsed time for command: 00:00:06 (6.03109502792358)
+Benchmark Times:
+  Run Start:    2023-05-24 03:22:38 (1684909358)
+  Run Stop:     2023-05-24 03:35:18 (1684910118)
+  Run Elapsed:  00:12:40 (760)
+  Run Reported: 00:12:39 (759 537761000 759.537761)
+ Success 620.omnetpp_s base refspeed ratio=2.15, runtime=759.537761, copies=1, threads=8, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running (#2) 623.xalancbmk_s refspeed (ref) base Rubens-m64 threads:8 [2023-05-24 03:35:25]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /usr/local/spec_cpu2017/benchspec/CPU/623.xalancbmk_s/run/run_base_refspeed_Rubens-m64.0001
+    -o ref-t5.out -e ref-t5.err ../run_base_refspeed_Rubens-m64.0001/xalancbmk_s_base.Rubens-m64 -v t5.xml xalanc.xsl > ref-t5.out 2>> ref-t5.err (timed)
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/623.xalancbmk_s/run/run_base_refspeed_Rubens-m64.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/623.xalancbmk_s/run/run_base_refspeed_Rubens-m64.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2023-05-24 03:35:25 (1684910125.72057)
+Stop command: 2023-05-24 03:45:56 (1684910756.16004)
+Elapsed time for command: 00:10:30 (630.43946814537)
+Workload elapsed time (copy 0 workload 1) = 630.273297 seconds
+Copy 0 of 623.xalancbmk_s (base refspeed) run 2 finished at 2023-05-24 03:45:56.  Total elapsed time: 630.273297
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+comparing 'ref-t5.out' with 
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/623.xalancbmk_s/run/run_base_refspeed_Rubens-m64.0001 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/623.xalancbmk_s/run/run_base_refspeed_Rubens-m64.0001 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2023-05-24 03:45:56 (1684910756.24012)
+Stop command: 2023-05-24 03:45:56 (1684910756.83349)
+Elapsed time for command: 00:00:00 (0.593367099761963)
+Benchmark Times:
+  Run Start:    2023-05-24 03:35:25 (1684910125)
+  Run Stop:     2023-05-24 03:45:56 (1684910756)
+  Run Elapsed:  00:10:31 (631)
+  Run Reported: 00:10:30 (630 273410000 630.27341)
+ Success 623.xalancbmk_s base refspeed ratio=2.25, runtime=630.273410, copies=1, threads=8, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running (#2) 625.x264_s refspeed (ref) base Rubens-m64 threads:8 [2023-05-24 03:45:57]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /usr/local/spec_cpu2017/benchspec/CPU/625.x264_s/run/run_base_refspeed_Rubens-m64.0001
+    -o run_000-1000_x264_s_base.Rubens-m64_x264_pass1.out -e run_000-1000_x264_s_base.Rubens-m64_x264_pass1.err ../run_base_refspeed_Rubens-m64.0001/x264_s_base.Rubens-m64 --pass 1 --stats x264_stats.log --bitrate 1000 --frames 1000 -o BuckBunny_New.264 BuckBunny.yuv 1280x720 > run_000-1000_x264_s_base.Rubens-m64_x264_pass1.out 2>> run_000-1000_x264_s_base.Rubens-m64_x264_pass1.err (timed)
+    -o run_000-1000_x264_s_base.Rubens-m64_x264_pass2.out -e run_000-1000_x264_s_base.Rubens-m64_x264_pass2.err ../run_base_refspeed_Rubens-m64.0001/x264_s_base.Rubens-m64 --pass 2 --stats x264_stats.log --bitrate 1000 --dumpyuv 200 --frames 1000 -o BuckBunny_New.264 BuckBunny.yuv 1280x720 > run_000-1000_x264_s_base.Rubens-m64_x264_pass2.out 2>> run_000-1000_x264_s_base.Rubens-m64_x264_pass2.err (timed)
+    -o run_0500-1250_x264_s_base.Rubens-m64_x264.out -e run_0500-1250_x264_s_base.Rubens-m64_x264.err ../run_base_refspeed_Rubens-m64.0001/x264_s_base.Rubens-m64 --seek 500 --dumpyuv 200 --frames 1250 -o BuckBunny_New.264 BuckBunny.yuv 1280x720 > run_0500-1250_x264_s_base.Rubens-m64_x264.out 2>> run_0500-1250_x264_s_base.Rubens-m64_x264.err (timed)
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/625.x264_s/run/run_base_refspeed_Rubens-m64.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/625.x264_s/run/run_base_refspeed_Rubens-m64.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2023-05-24 03:45:57 (1684910757.08877)
+Stop command: 2023-05-24 03:55:26 (1684911326.60514)
+Elapsed time for command: 00:09:29 (569.516372919083)
+Workload elapsed time (copy 0 workload 1) = 64.630183 seconds
+Workload elapsed time (copy 0 workload 2) = 241.70387 seconds
+Workload elapsed time (copy 0 workload 3) = 263.015849 seconds
+Copy 0 of 625.x264_s (base refspeed) run 2 finished at 2023-05-24 03:55:26.  Total elapsed time: 569.349902
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+comparing 'imagevalidate_frame_1100.out' with reltol=0.085
+comparing 'imagevalidate_frame_1249.out' with reltol=0.085
+comparing 'imagevalidate_frame_200.out' with reltol=0.085
+comparing 'imagevalidate_frame_400.out' with reltol=0.085
+comparing 'imagevalidate_frame_600.out' with reltol=0.085
+comparing 'imagevalidate_frame_700.out' with reltol=0.085
+comparing 'imagevalidate_frame_800.out' with reltol=0.085
+comparing 'imagevalidate_frame_900.out' with reltol=0.085
+comparing 'imagevalidate_frame_999.out' with reltol=0.085
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/625.x264_s/run/run_base_refspeed_Rubens-m64.0001 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/625.x264_s/run/run_base_refspeed_Rubens-m64.0001 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2023-05-24 03:55:26 (1684911326.72213)
+Stop command: 2023-05-24 03:55:29 (1684911329.0075)
+Elapsed time for command: 00:00:02 (2.28536891937256)
+Benchmark Times:
+  Run Start:    2023-05-24 03:45:57 (1684910757)
+  Run Stop:     2023-05-24 03:55:26 (1684911326)
+  Run Elapsed:  00:09:29 (569)
+  Run Reported: 00:09:29 (569 350088000 569.350088)
+ Success 625.x264_s base refspeed ratio=3.10, runtime=569.350088, copies=1, threads=8, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running (#2) 631.deepsjeng_s refspeed (ref) base Rubens-m64 threads:8 [2023-05-24 03:55:29]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /usr/local/spec_cpu2017/benchspec/CPU/631.deepsjeng_s/run/run_base_refspeed_Rubens-m64.0000
+    -o ref.out -e ref.err ../run_base_refspeed_Rubens-m64.0000/deepsjeng_s_base.Rubens-m64 ref.txt > ref.out 2>> ref.err (timed)
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/631.deepsjeng_s/run/run_base_refspeed_Rubens-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/631.deepsjeng_s/run/run_base_refspeed_Rubens-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2023-05-24 03:55:29 (1684911329.12272)
+Stop command: 2023-05-24 04:04:07 (1684911847.88899)
+Elapsed time for command: 00:08:38 (518.766264915466)
+Workload elapsed time (copy 0 workload 1) = 518.492834 seconds
+Copy 0 of 631.deepsjeng_s (base refspeed) run 2 finished at 2023-05-24 04:04:07.  Total elapsed time: 518.492834
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+comparing 'ref.out' with obiwan=1
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/631.deepsjeng_s/run/run_base_refspeed_Rubens-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/631.deepsjeng_s/run/run_base_refspeed_Rubens-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2023-05-24 04:04:08 (1684911848.70096)
+Stop command: 2023-05-24 04:04:09 (1684911849.15928)
+Elapsed time for command: 00:00:00 (0.458323001861572)
+Benchmark Times:
+  Run Start:    2023-05-24 03:55:29 (1684911329)
+  Run Stop:     2023-05-24 04:04:08 (1684911848)
+  Run Elapsed:  00:08:39 (519)
+  Run Reported: 00:08:38 (518 498258000 518.498258)
+ Success 631.deepsjeng_s base refspeed ratio=2.76, runtime=518.498258, copies=1, threads=8, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running (#2) 641.leela_s refspeed (ref) base Rubens-m64 threads:8 [2023-05-24 04:04:09]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /usr/local/spec_cpu2017/benchspec/CPU/641.leela_s/run/run_base_refspeed_Rubens-m64.0000
+    -o ref.out -e ref.err ../run_base_refspeed_Rubens-m64.0000/leela_s_base.Rubens-m64 ref.sgf > ref.out 2>> ref.err (timed)
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/641.leela_s/run/run_base_refspeed_Rubens-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/641.leela_s/run/run_base_refspeed_Rubens-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2023-05-24 04:04:09 (1684911849.68759)
+Stop command: 2023-05-24 04:13:39 (1684912419.61435)
+Elapsed time for command: 00:09:29 (569.926753997803)
+Workload elapsed time (copy 0 workload 1) = 569.745012 seconds
+Copy 0 of 641.leela_s (base refspeed) run 2 finished at 2023-05-24 04:13:39.  Total elapsed time: 569.745012
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+comparing 'ref.out' with 
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/641.leela_s/run/run_base_refspeed_Rubens-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/641.leela_s/run/run_base_refspeed_Rubens-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2023-05-24 04:13:39 (1684912419.68418)
+Stop command: 2023-05-24 04:13:40 (1684912420.04668)
+Elapsed time for command: 00:00:00 (0.362503051757812)
+Benchmark Times:
+  Run Start:    2023-05-24 04:04:09 (1684911849)
+  Run Stop:     2023-05-24 04:13:39 (1684912419)
+  Run Elapsed:  00:09:30 (570)
+  Run Reported: 00:09:29 (569 745203000 569.745203)
+ Success 641.leela_s base refspeed ratio=2.99, runtime=569.745203, copies=1, threads=8, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running (#2) 648.exchange2_s refspeed (ref) base Rubens-m64 threads:8 [2023-05-24 04:13:40]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /usr/local/spec_cpu2017/benchspec/CPU/648.exchange2_s/run/run_base_refspeed_Rubens-m64.0000
+    -o exchange2.txt -e exchange2.err ../run_base_refspeed_Rubens-m64.0000/exchange2_s_base.Rubens-m64 6 > exchange2.txt 2>> exchange2.err (timed)
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/648.exchange2_s/run/run_base_refspeed_Rubens-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/648.exchange2_s/run/run_base_refspeed_Rubens-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2023-05-24 04:13:40 (1684912420.18859)
+Stop command: 2023-05-24 04:21:28 (1684912888.69587)
+Elapsed time for command: 00:07:48 (468.507277011871)
+Workload elapsed time (copy 0 workload 1) = 468.341944 seconds
+Copy 0 of 648.exchange2_s (base refspeed) run 2 finished at 2023-05-24 04:21:28.  Total elapsed time: 468.341944
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+comparing 's.txt' with 
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/648.exchange2_s/run/run_base_refspeed_Rubens-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/648.exchange2_s/run/run_base_refspeed_Rubens-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2023-05-24 04:21:28 (1684912888.80174)
+Stop command: 2023-05-24 04:21:29 (1684912889.15432)
+Elapsed time for command: 00:00:00 (0.352575063705444)
+Benchmark Times:
+  Run Start:    2023-05-24 04:13:40 (1684912420)
+  Run Stop:     2023-05-24 04:21:28 (1684912888)
+  Run Elapsed:  00:07:48 (468)
+  Run Reported: 00:07:48 (468 342057000 468.342057)
+ Success 648.exchange2_s base refspeed ratio=6.28, runtime=468.342057, copies=1, threads=8, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running (#2) 998.specrand_is refspeed (ref) base Rubens-m64 threads:8 [2023-05-24 04:21:29]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /usr/local/spec_cpu2017/benchspec/CPU/998.specrand_is/run/run_base_refspeed_Rubens-m64.0000
+    -o rand.234923.out -e rand.234923.err ../run_base_refspeed_Rubens-m64.0000/specrand_is_base.Rubens-m64 1255432124 234923 > rand.234923.out 2>> rand.234923.err (timed)
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/998.specrand_is/run/run_base_refspeed_Rubens-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/998.specrand_is/run/run_base_refspeed_Rubens-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2023-05-24 04:21:29 (1684912889.27279)
+Stop command: 2023-05-24 04:21:29 (1684912889.5129)
+Elapsed time for command: 00:00:00 (0.240108013153076)
+Workload elapsed time (copy 0 workload 1) = 0.078617 seconds
+Copy 0 of 998.specrand_is (base refspeed) run 2 finished at 2023-05-24 04:21:29.  Total elapsed time: 0.078617
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+comparing 'rand.234923.out' with floatcompare=1, nansupport=0
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/998.specrand_is/run/run_base_refspeed_Rubens-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/998.specrand_is/run/run_base_refspeed_Rubens-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2023-05-24 04:21:29 (1684912889.58315)
+Stop command: 2023-05-24 04:21:31 (1684912891.12449)
+Elapsed time for command: 00:00:01 (1.54133987426758)
+Benchmark Times:
+  Run Start:    2023-05-24 04:21:29 (1684912889)
+  Run Stop:     2023-05-24 04:21:29 (1684912889)
+  Run Elapsed:  00:00:00 (0)
+  Run Reported: 00:00:00 (0 78719000 0.078719)
+ Success 998.specrand_is base refspeed ratio=127.03, runtime=0.078719, copies=1, threads=8, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running (#3) 600.perlbench_s refspeed (ref) base Rubens-m64 threads:8 [2023-05-24 04:21:32]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /usr/local/spec_cpu2017/benchspec/CPU/600.perlbench_s/run/run_base_refspeed_Rubens-m64.0001
+    -o checkspam.2500.5.25.11.150.1.1.1.1.out -e checkspam.2500.5.25.11.150.1.1.1.1.err ../run_base_refspeed_Rubens-m64.0001/perlbench_s_base.Rubens-m64 -I./lib checkspam.pl 2500 5 25 11 150 1 1 1 1 > checkspam.2500.5.25.11.150.1.1.1.1.out 2>> checkspam.2500.5.25.11.150.1.1.1.1.err (timed)
+    -o diffmail.4.800.10.17.19.300.out -e diffmail.4.800.10.17.19.300.err ../run_base_refspeed_Rubens-m64.0001/perlbench_s_base.Rubens-m64 -I./lib diffmail.pl 4 800 10 17 19 300 > diffmail.4.800.10.17.19.300.out 2>> diffmail.4.800.10.17.19.300.err (timed)
+    -o splitmail.6400.12.26.16.100.0.out -e splitmail.6400.12.26.16.100.0.err ../run_base_refspeed_Rubens-m64.0001/perlbench_s_base.Rubens-m64 -I./lib splitmail.pl 6400 12 26 16 100 0 > splitmail.6400.12.26.16.100.0.out 2>> splitmail.6400.12.26.16.100.0.err (timed)
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/600.perlbench_s/run/run_base_refspeed_Rubens-m64.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/600.perlbench_s/run/run_base_refspeed_Rubens-m64.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2023-05-24 04:21:32 (1684912892.63652)
+Stop command: 2023-05-24 04:30:52 (1684913452.83888)
+Elapsed time for command: 00:09:20 (560.202365159988)
+Workload elapsed time (copy 0 workload 1) = 234.314954 seconds
+Workload elapsed time (copy 0 workload 2) = 147.571955 seconds
+Workload elapsed time (copy 0 workload 3) = 178.145115 seconds
+Copy 0 of 600.perlbench_s (base refspeed) run 3 finished at 2023-05-24 04:30:52.  Total elapsed time: 560.032024
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+comparing 'checkspam.2500.5.25.11.150.1.1.1.1.out' with floatcompare=1, nansupport=no
+comparing 'diffmail.4.800.10.17.19.300.out' with floatcompare=1, nansupport=no
+comparing 'splitmail.6400.12.26.16.100.0.out' with floatcompare=1, nansupport=no
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/600.perlbench_s/run/run_base_refspeed_Rubens-m64.0001 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/600.perlbench_s/run/run_base_refspeed_Rubens-m64.0001 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2023-05-24 04:30:52 (1684913452.92672)
+Stop command: 2023-05-24 04:30:54 (1684913454.2205)
+Elapsed time for command: 00:00:01 (1.29378008842468)
+Benchmark Times:
+  Run Start:    2023-05-24 04:21:32 (1684912892)
+  Run Stop:     2023-05-24 04:30:52 (1684913452)
+  Run Elapsed:  00:09:20 (560)
+  Run Reported: 00:09:20 (560 32336000 560.032336)
+ Success 600.perlbench_s base refspeed ratio=3.17, runtime=560.032336, copies=1, threads=8, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running (#3) 602.gcc_s refspeed (ref) base Rubens-m64 threads:8 [2023-05-24 04:30:55]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /usr/local/spec_cpu2017/benchspec/CPU/602.gcc_s/run/run_base_refspeed_Rubens-m64.0001
+    -o gcc-pp.opts-O5_-fipa-pta.out -e gcc-pp.opts-O5_-fipa-pta.err ../run_base_refspeed_Rubens-m64.0001/sgcc_base.Rubens-m64 gcc-pp.c -O5 -fipa-pta -o gcc-pp.opts-O5_-fipa-pta.s > gcc-pp.opts-O5_-fipa-pta.out 2>> gcc-pp.opts-O5_-fipa-pta.err (timed)
+    -o gcc-pp.opts-O5_-finline-limit_1000_-fselective-scheduling_-fselective-scheduling2.out -e gcc-pp.opts-O5_-finline-limit_1000_-fselective-scheduling_-fselective-scheduling2.err ../run_base_refspeed_Rubens-m64.0001/sgcc_base.Rubens-m64 gcc-pp.c -O5 -finline-limit=1000 -fselective-scheduling -fselective-scheduling2 -o gcc-pp.opts-O5_-finline-limit_1000_-fselective-scheduling_-fselective-scheduling2.s > gcc-pp.opts-O5_-finline-limit_1000_-fselective-scheduling_-fselective-scheduling2.out 2>> gcc-pp.opts-O5_-finline-limit_1000_-fselective-scheduling_-fselective-scheduling2.err (timed)
+    -o gcc-pp.opts-O5_-finline-limit_24000_-fgcse_-fgcse-las_-fgcse-lm_-fgcse-sm.out -e gcc-pp.opts-O5_-finline-limit_24000_-fgcse_-fgcse-las_-fgcse-lm_-fgcse-sm.err ../run_base_refspeed_Rubens-m64.0001/sgcc_base.Rubens-m64 gcc-pp.c -O5 -finline-limit=24000 -fgcse -fgcse-las -fgcse-lm -fgcse-sm -o gcc-pp.opts-O5_-finline-limit_24000_-fgcse_-fgcse-las_-fgcse-lm_-fgcse-sm.s > gcc-pp.opts-O5_-finline-limit_24000_-fgcse_-fgcse-las_-fgcse-lm_-fgcse-sm.out 2>> gcc-pp.opts-O5_-finline-limit_24000_-fgcse_-fgcse-las_-fgcse-lm_-fgcse-sm.err (timed)
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/602.gcc_s/run/run_base_refspeed_Rubens-m64.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/602.gcc_s/run/run_base_refspeed_Rubens-m64.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2023-05-24 04:30:55 (1684913455.17837)
+Stop command: 2023-05-24 04:43:55 (1684914235.14782)
+Elapsed time for command: 00:12:59 (779.969444990158)
+Workload elapsed time (copy 0 workload 1) = 437.122856 seconds
+Workload elapsed time (copy 0 workload 2) = 176.715554 seconds
+Workload elapsed time (copy 0 workload 3) = 165.850676 seconds
+Copy 0 of 602.gcc_s (base refspeed) run 3 finished at 2023-05-24 04:43:54.  Total elapsed time: 779.689086
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+comparing 'gcc-pp.opts-O5_-finline-limit_1000_-fselective-scheduling_-fselective-scheduling2.s' with floatcompare=1, nansupport=no
+comparing 'gcc-pp.opts-O5_-finline-limit_24000_-fgcse_-fgcse-las_-fgcse-lm_-fgcse-sm.s' with floatcompare=1, nansupport=no
+comparing 'gcc-pp.opts-O5_-fipa-pta.s' with floatcompare=1, nansupport=no
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/602.gcc_s/run/run_base_refspeed_Rubens-m64.0001 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/602.gcc_s/run/run_base_refspeed_Rubens-m64.0001 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2023-05-24 04:43:56 (1684914236.40146)
+Stop command: 2023-05-24 04:44:27 (1684914267.60956)
+Elapsed time for command: 00:00:31 (31.2080979347229)
+Benchmark Times:
+  Run Start:    2023-05-24 04:30:55 (1684913455)
+  Run Stop:     2023-05-24 04:43:55 (1684914235)
+  Run Elapsed:  00:13:00 (780)
+  Run Reported: 00:12:59 (779 692524000 779.692524)
+ Success 602.gcc_s base refspeed ratio=5.11, runtime=779.692524, copies=1, threads=8, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running (#3) 605.mcf_s refspeed (ref) base Rubens-m64 threads:8 [2023-05-24 04:44:27]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /usr/local/spec_cpu2017/benchspec/CPU/605.mcf_s/run/run_base_refspeed_Rubens-m64.0001
+    -o inp.out -e inp.err ../run_base_refspeed_Rubens-m64.0001/mcf_s_base.Rubens-m64 inp.in  > inp.out 2>> inp.err (timed)
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/605.mcf_s/run/run_base_refspeed_Rubens-m64.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/605.mcf_s/run/run_base_refspeed_Rubens-m64.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2023-05-24 04:44:28 (1684914268.01017)
+Stop command: 2023-05-24 05:04:18 (1684915458.19521)
+Elapsed time for command: 00:19:50 (1190.18504118919)
+Workload elapsed time (copy 0 workload 1) = 1190.020359 seconds
+Copy 0 of 605.mcf_s (base refspeed) run 3 finished at 2023-05-24 05:04:18.  Total elapsed time: 1190.020359
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+comparing 'inp.out' with 
+comparing 'mcf.out' with 
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/605.mcf_s/run/run_base_refspeed_Rubens-m64.0001 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/605.mcf_s/run/run_base_refspeed_Rubens-m64.0001 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2023-05-24 05:04:18 (1684915458.29196)
+Stop command: 2023-05-24 05:04:18 (1684915458.83241)
+Elapsed time for command: 00:00:00 (0.540449142456055)
+Benchmark Times:
+  Run Start:    2023-05-24 04:44:28 (1684914268)
+  Run Stop:     2023-05-24 05:04:18 (1684915458)
+  Run Elapsed:  00:19:50 (1190)
+  Run Reported: 00:19:50 (1190 20471000 1190.020471)
+ Success 605.mcf_s base refspeed ratio=3.97, runtime=1190.020471, copies=1, threads=8, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running (#3) 620.omnetpp_s refspeed (ref) base Rubens-m64 threads:8 [2023-05-24 05:04:19]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /usr/local/spec_cpu2017/benchspec/CPU/620.omnetpp_s/run/run_base_refspeed_Rubens-m64.0001
+    -o omnetpp.General-0.out -e omnetpp.General-0.err ../run_base_refspeed_Rubens-m64.0001/omnetpp_s_base.Rubens-m64 -c General -r 0 > omnetpp.General-0.out 2>> omnetpp.General-0.err (timed)
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/620.omnetpp_s/run/run_base_refspeed_Rubens-m64.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/620.omnetpp_s/run/run_base_refspeed_Rubens-m64.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2023-05-24 05:04:19 (1684915459.57725)
+Stop command: 2023-05-24 05:17:29 (1684916249.11036)
+Elapsed time for command: 00:13:09 (789.533111095428)
+Workload elapsed time (copy 0 workload 1) = 789.371568 seconds
+Copy 0 of 620.omnetpp_s (base refspeed) run 3 finished at 2023-05-24 05:17:28.  Total elapsed time: 789.371568
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+comparing 'General-0.sca' with abstol=1e-06, reltol=1e-05
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/620.omnetpp_s/run/run_base_refspeed_Rubens-m64.0001 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/620.omnetpp_s/run/run_base_refspeed_Rubens-m64.0001 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2023-05-24 05:17:29 (1684916249.18709)
+Stop command: 2023-05-24 05:17:34 (1684916254.90049)
+Elapsed time for command: 00:00:05 (5.71339297294617)
+Benchmark Times:
+  Run Start:    2023-05-24 05:04:19 (1684915459)
+  Run Stop:     2023-05-24 05:17:29 (1684916249)
+  Run Elapsed:  00:13:10 (790)
+  Run Reported: 00:13:09 (789 371688000 789.371688)
+ Success 620.omnetpp_s base refspeed ratio=2.07, runtime=789.371688, copies=1, threads=8, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running (#3) 623.xalancbmk_s refspeed (ref) base Rubens-m64 threads:8 [2023-05-24 05:17:36]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /usr/local/spec_cpu2017/benchspec/CPU/623.xalancbmk_s/run/run_base_refspeed_Rubens-m64.0001
+    -o ref-t5.out -e ref-t5.err ../run_base_refspeed_Rubens-m64.0001/xalancbmk_s_base.Rubens-m64 -v t5.xml xalanc.xsl > ref-t5.out 2>> ref-t5.err (timed)
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/623.xalancbmk_s/run/run_base_refspeed_Rubens-m64.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/623.xalancbmk_s/run/run_base_refspeed_Rubens-m64.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2023-05-24 05:17:36 (1684916256.27236)
+Stop command: 2023-05-24 05:28:16 (1684916896.99401)
+Elapsed time for command: 00:10:40 (640.721652030945)
+Workload elapsed time (copy 0 workload 1) = 640.55422 seconds
+Copy 0 of 623.xalancbmk_s (base refspeed) run 3 finished at 2023-05-24 05:28:16.  Total elapsed time: 640.55422
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+comparing 'ref-t5.out' with 
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/623.xalancbmk_s/run/run_base_refspeed_Rubens-m64.0001 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/623.xalancbmk_s/run/run_base_refspeed_Rubens-m64.0001 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2023-05-24 05:28:17 (1684916897.09121)
+Stop command: 2023-05-24 05:28:17 (1684916897.70296)
+Elapsed time for command: 00:00:00 (0.611747026443481)
+Benchmark Times:
+  Run Start:    2023-05-24 05:17:36 (1684916256)
+  Run Stop:     2023-05-24 05:28:16 (1684916896)
+  Run Elapsed:  00:10:40 (640)
+  Run Reported: 00:10:40 (640 554370000 640.55437)
+ Success 623.xalancbmk_s base refspeed ratio=2.21, runtime=640.554370, copies=1, threads=8, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running (#3) 625.x264_s refspeed (ref) base Rubens-m64 threads:8 [2023-05-24 05:28:17]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /usr/local/spec_cpu2017/benchspec/CPU/625.x264_s/run/run_base_refspeed_Rubens-m64.0001
+    -o run_000-1000_x264_s_base.Rubens-m64_x264_pass1.out -e run_000-1000_x264_s_base.Rubens-m64_x264_pass1.err ../run_base_refspeed_Rubens-m64.0001/x264_s_base.Rubens-m64 --pass 1 --stats x264_stats.log --bitrate 1000 --frames 1000 -o BuckBunny_New.264 BuckBunny.yuv 1280x720 > run_000-1000_x264_s_base.Rubens-m64_x264_pass1.out 2>> run_000-1000_x264_s_base.Rubens-m64_x264_pass1.err (timed)
+    -o run_000-1000_x264_s_base.Rubens-m64_x264_pass2.out -e run_000-1000_x264_s_base.Rubens-m64_x264_pass2.err ../run_base_refspeed_Rubens-m64.0001/x264_s_base.Rubens-m64 --pass 2 --stats x264_stats.log --bitrate 1000 --dumpyuv 200 --frames 1000 -o BuckBunny_New.264 BuckBunny.yuv 1280x720 > run_000-1000_x264_s_base.Rubens-m64_x264_pass2.out 2>> run_000-1000_x264_s_base.Rubens-m64_x264_pass2.err (timed)
+    -o run_0500-1250_x264_s_base.Rubens-m64_x264.out -e run_0500-1250_x264_s_base.Rubens-m64_x264.err ../run_base_refspeed_Rubens-m64.0001/x264_s_base.Rubens-m64 --seek 500 --dumpyuv 200 --frames 1250 -o BuckBunny_New.264 BuckBunny.yuv 1280x720 > run_0500-1250_x264_s_base.Rubens-m64_x264.out 2>> run_0500-1250_x264_s_base.Rubens-m64_x264.err (timed)
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/625.x264_s/run/run_base_refspeed_Rubens-m64.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/625.x264_s/run/run_base_refspeed_Rubens-m64.0001 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2023-05-24 05:28:17 (1684916897.99974)
+Stop command: 2023-05-24 05:36:52 (1684917412.83266)
+Elapsed time for command: 00:08:34 (514.83292388916)
+Workload elapsed time (copy 0 workload 1) = 63.606085 seconds
+Workload elapsed time (copy 0 workload 2) = 224.329213 seconds
+Workload elapsed time (copy 0 workload 3) = 226.729857 seconds
+Copy 0 of 625.x264_s (base refspeed) run 3 finished at 2023-05-24 05:36:52.  Total elapsed time: 514.665155
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+comparing 'imagevalidate_frame_1100.out' with reltol=0.085
+comparing 'imagevalidate_frame_1249.out' with reltol=0.085
+comparing 'imagevalidate_frame_200.out' with reltol=0.085
+comparing 'imagevalidate_frame_400.out' with reltol=0.085
+comparing 'imagevalidate_frame_600.out' with reltol=0.085
+comparing 'imagevalidate_frame_700.out' with reltol=0.085
+comparing 'imagevalidate_frame_800.out' with reltol=0.085
+comparing 'imagevalidate_frame_900.out' with reltol=0.085
+comparing 'imagevalidate_frame_999.out' with reltol=0.085
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/625.x264_s/run/run_base_refspeed_Rubens-m64.0001 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/625.x264_s/run/run_base_refspeed_Rubens-m64.0001 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2023-05-24 05:36:52 (1684917412.96892)
+Stop command: 2023-05-24 05:36:55 (1684917415.23837)
+Elapsed time for command: 00:00:02 (2.26944589614868)
+Benchmark Times:
+  Run Start:    2023-05-24 05:28:17 (1684916897)
+  Run Stop:     2023-05-24 05:36:52 (1684917412)
+  Run Elapsed:  00:08:35 (515)
+  Run Reported: 00:08:34 (514 665432000 514.665432)
+ Success 625.x264_s base refspeed ratio=3.43, runtime=514.665432, copies=1, threads=8, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running (#3) 631.deepsjeng_s refspeed (ref) base Rubens-m64 threads:8 [2023-05-24 05:36:55]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /usr/local/spec_cpu2017/benchspec/CPU/631.deepsjeng_s/run/run_base_refspeed_Rubens-m64.0000
+    -o ref.out -e ref.err ../run_base_refspeed_Rubens-m64.0000/deepsjeng_s_base.Rubens-m64 ref.txt > ref.out 2>> ref.err (timed)
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/631.deepsjeng_s/run/run_base_refspeed_Rubens-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/631.deepsjeng_s/run/run_base_refspeed_Rubens-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2023-05-24 05:36:55 (1684917415.37675)
+Stop command: 2023-05-24 05:45:37 (1684917937.10267)
+Elapsed time for command: 00:08:41 (521.725924015045)
+Workload elapsed time (copy 0 workload 1) = 521.475704 seconds
+Copy 0 of 631.deepsjeng_s (base refspeed) run 3 finished at 2023-05-24 05:45:36.  Total elapsed time: 521.475704
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+comparing 'ref.out' with obiwan=1
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/631.deepsjeng_s/run/run_base_refspeed_Rubens-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/631.deepsjeng_s/run/run_base_refspeed_Rubens-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2023-05-24 05:45:37 (1684917937.93246)
+Stop command: 2023-05-24 05:45:38 (1684917938.40493)
+Elapsed time for command: 00:00:00 (0.472470045089722)
+Benchmark Times:
+  Run Start:    2023-05-24 05:36:55 (1684917415)
+  Run Stop:     2023-05-24 05:45:37 (1684917937)
+  Run Elapsed:  00:08:42 (522)
+  Run Reported: 00:08:41 (521 477800000 521.4778)
+ Success 631.deepsjeng_s base refspeed ratio=2.75, runtime=521.477800, copies=1, threads=8, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running (#3) 641.leela_s refspeed (ref) base Rubens-m64 threads:8 [2023-05-24 05:45:38]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /usr/local/spec_cpu2017/benchspec/CPU/641.leela_s/run/run_base_refspeed_Rubens-m64.0000
+    -o ref.out -e ref.err ../run_base_refspeed_Rubens-m64.0000/leela_s_base.Rubens-m64 ref.sgf > ref.out 2>> ref.err (timed)
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/641.leela_s/run/run_base_refspeed_Rubens-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/641.leela_s/run/run_base_refspeed_Rubens-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2023-05-24 05:45:38 (1684917938.92586)
+Stop command: 2023-05-24 05:55:08 (1684918508.21188)
+Elapsed time for command: 00:09:29 (569.286012887955)
+Workload elapsed time (copy 0 workload 1) = 569.121817 seconds
+Copy 0 of 641.leela_s (base refspeed) run 3 finished at 2023-05-24 05:55:08.  Total elapsed time: 569.121817
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+comparing 'ref.out' with 
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/641.leela_s/run/run_base_refspeed_Rubens-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/641.leela_s/run/run_base_refspeed_Rubens-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2023-05-24 05:55:08 (1684918508.28073)
+Stop command: 2023-05-24 05:55:08 (1684918508.6469)
+Elapsed time for command: 00:00:00 (0.366168975830078)
+Benchmark Times:
+  Run Start:    2023-05-24 05:45:38 (1684917938)
+  Run Stop:     2023-05-24 05:55:08 (1684918508)
+  Run Elapsed:  00:09:30 (570)
+  Run Reported: 00:09:29 (569 121985000 569.121985)
+ Success 641.leela_s base refspeed ratio=3.00, runtime=569.121985, copies=1, threads=8, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running (#3) 648.exchange2_s refspeed (ref) base Rubens-m64 threads:8 [2023-05-24 05:55:08]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /usr/local/spec_cpu2017/benchspec/CPU/648.exchange2_s/run/run_base_refspeed_Rubens-m64.0000
+    -o exchange2.txt -e exchange2.err ../run_base_refspeed_Rubens-m64.0000/exchange2_s_base.Rubens-m64 6 > exchange2.txt 2>> exchange2.err (timed)
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/648.exchange2_s/run/run_base_refspeed_Rubens-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/648.exchange2_s/run/run_base_refspeed_Rubens-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2023-05-24 05:55:08 (1684918508.77356)
+Stop command: 2023-05-24 06:02:47 (1684918967.40268)
+Elapsed time for command: 00:07:38 (458.629125118256)
+Workload elapsed time (copy 0 workload 1) = 458.463858 seconds
+Copy 0 of 648.exchange2_s (base refspeed) run 3 finished at 2023-05-24 06:02:47.  Total elapsed time: 458.463858
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+comparing 's.txt' with 
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/648.exchange2_s/run/run_base_refspeed_Rubens-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/648.exchange2_s/run/run_base_refspeed_Rubens-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2023-05-24 06:02:47 (1684918967.51348)
+Stop command: 2023-05-24 06:02:47 (1684918967.87551)
+Elapsed time for command: 00:00:00 (0.362035036087036)
+Benchmark Times:
+  Run Start:    2023-05-24 05:55:08 (1684918508)
+  Run Stop:     2023-05-24 06:02:47 (1684918967)
+  Run Elapsed:  00:07:39 (459)
+  Run Reported: 00:07:38 (458 463962000 458.463962)
+ Success 648.exchange2_s base refspeed ratio=6.41, runtime=458.463962, copies=1, threads=8, power=0.00W, temp=0.00 degC, humidity=0.00%
+-----------------------------------
+  Running (#3) 998.specrand_is refspeed (ref) base Rubens-m64 threads:8 [2023-05-24 06:02:47]
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+Commands to run (specinvoke command file):
+    -r
+    -N C
+    -C /usr/local/spec_cpu2017/benchspec/CPU/998.specrand_is/run/run_base_refspeed_Rubens-m64.0000
+    -o rand.234923.out -e rand.234923.err ../run_base_refspeed_Rubens-m64.0000/specrand_is_base.Rubens-m64 1255432124 234923 > rand.234923.out 2>> rand.234923.err (timed)
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/998.specrand_is/run/run_base_refspeed_Rubens-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/998.specrand_is/run/run_base_refspeed_Rubens-m64.0000 -f speccmds.cmd -q -e speccmds.err -o speccmds.stdout'
+Start command: 2023-05-24 06:02:48 (1684918968.00975)
+Stop command: 2023-05-24 06:02:48 (1684918968.25728)
+Elapsed time for command: 00:00:00 (0.247529983520508)
+Workload elapsed time (copy 0 workload 1) = 0.080595 seconds
+Copy 0 of 998.specrand_is (base refspeed) run 3 finished at 2023-05-24 06:02:48.  Total elapsed time: 0.080595
+OpenMP environment variables removed: None
+OpenMP environment variables in effect:
+	OMP_NUM_THREADS	=> '8'
+Pre-run environment changes:
+	'OMP_NUM_THREADS' added: (value now '8')
+comparing 'rand.234923.out' with floatcompare=1, nansupport=0
+Specinvoke: /usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/998.specrand_is/run/run_base_refspeed_Rubens-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout
+Issuing command '/usr/local/spec_cpu2017/bin/specinvoke -d /usr/local/spec_cpu2017/benchspec/CPU/998.specrand_is/run/run_base_refspeed_Rubens-m64.0000 -f compare.cmd -E -e compare.err -o compare.stdout'
+Start command: 2023-05-24 06:02:48 (1684918968.34808)
+Stop command: 2023-05-24 06:02:49 (1684918969.89245)
+Elapsed time for command: 00:00:01 (1.54436898231506)
+Benchmark Times:
+  Run Start:    2023-05-24 06:02:48 (1684918968)
+  Run Stop:     2023-05-24 06:02:48 (1684918968)
+  Run Elapsed:  00:00:00 (0)
+  Run Reported: 00:00:00 (0 80712000 0.080712)
+ Success 998.specrand_is base refspeed ratio=123.90, runtime=0.080712, copies=1, threads=8, power=0.00W, temp=0.00 degC, humidity=0.00%
+Success: 3x600.perlbench_s 3x602.gcc_s 3x605.mcf_s 3x620.omnetpp_s 3x623.xalancbmk_s 3x625.x264_s 3x631.deepsjeng_s 3x641.leela_s 3x648.exchange2_s 3x998.specrand_is
+Producing Raw Reports
+ label: Rubens-m64
+  workload: refspeed (ref)
+   benchset: intspeed
+   metric: SPECspeed2017_int_base
+    format: raw -> /usr/local/spec_cpu2017/result/CPU2017.069.intspeed.refspeed.rsf
+Parsing flags for 600.perlbench_s base: done
+Parsing flags for 602.gcc_s base: done
+Parsing flags for 605.mcf_s base: done
+Parsing flags for 620.omnetpp_s base: done
+Parsing flags for 623.xalancbmk_s base: done
+Parsing flags for 625.x264_s base: done
+Parsing flags for 631.deepsjeng_s base: done
+Parsing flags for 641.leela_s base: done
+Parsing flags for 648.exchange2_s base: done
+Doing flag reduction: done
+    format: flags -> /usr/local/spec_cpu2017/result/CPU2017.069.intspeed.refspeed.flags.html
+    format: cfg -> /usr/local/spec_cpu2017/result/CPU2017.069.intspeed.refspeed.cfg
+    format: CSV -> /usr/local/spec_cpu2017/result/CPU2017.069.intspeed.refspeed.csv
+    format: PDF -> 
+A line in your Compiler Version Notes section is too long!
+A line in your Compiler Version Notes section is too long!
+
+A line in your Compiler Version Notes section is too long!
+
+/usr/local/spec_cpu2017/result/CPU2017.069.intspeed.refspeed.pdf
+    format: HTML -> /usr/local/spec_cpu2017/result/CPU2017.069.intspeed.refspeed.html
+    format: Text -> /usr/local/spec_cpu2017/result/CPU2017.069.intspeed.refspeed.txt
+   benchset: intrate
+   benchset: fpspeed
+   benchset: fprate
+runcpu finished at 2023-05-24 06:03:03; 18435 total seconds elapsed
+Info: file_tail(469293): file '/usr/local/spec_cpu2017/tmp/CPU2017.069/templogs/preenv.intspeed.069.0.log.debug' was removed and will no longer be followed.  No action is required.
+The log for this run is in /usr/local/spec_cpu2017/result/CPU2017.069.log
+
+runcpu finished at 2023-05-24 06:03:05; 18438 total seconds elapsed

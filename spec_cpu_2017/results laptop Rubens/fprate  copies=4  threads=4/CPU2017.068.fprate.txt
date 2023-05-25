@@ -1,0 +1,711 @@
+                                                             SPEC CPU(R)2017 Floating Point Rate Result
+                                                                           Laptop Rubens 
+
+                                            CPU2017 License: nnn (Your SPEC license number)          Test date: May-2023
+                                            Test sponsor: Laptop Rubens                  Hardware availability:         
+                                            Tested by:    Laptop Rubens                  Software availability:         
+
+                 Base     Base        Base        Peak     Peak        Peak
+Benchmarks       Copies  Run Time     Rate        Copies  Run Time     Rate 
+--------------- -------  ---------  ---------    -------  ---------  ---------
+503.bwaves_r          4       1786      22.5   *
+503.bwaves_r          4       1435      28.0   S
+503.bwaves_r          4       1823      22.0   S
+507.cactuBSSN_r       4       1559       3.25  S
+507.cactuBSSN_r       4       1714       2.96  *
+507.cactuBSSN_r       4       1760       2.88  S
+508.namd_r            4        929       4.09  S
+508.namd_r            4        673       5.65  S
+508.namd_r            4        711       5.34  *
+510.parest_r          4       1699       6.16  S
+510.parest_r          4       1501       6.97  S
+510.parest_r          4       1607       6.51  *
+511.povray_r          4       1494       6.25  *
+511.povray_r          4       1350       6.92  S
+511.povray_r          4       1883       4.96  S
+519.lbm_r             4       1045       4.03  S
+519.lbm_r             4       1047       4.03  *
+519.lbm_r             4       1406       3.00  S
+521.wrf_r             4       1792       5.00  S
+521.wrf_r             4       1908       4.70  *
+521.wrf_r             4       2441       3.67  S
+526.blender_r         4        840       7.26  S
+526.blender_r         4        908       6.71  *
+526.blender_r         4        976       6.24  S
+527.cam4_r            4       1050       6.67  S
+527.cam4_r            4       1104       6.34  *
+527.cam4_r            4       1668       4.19  S
+538.imagick_r         4       1190       8.36  S
+538.imagick_r         4       1375       7.24  *
+538.imagick_r         4       2959       3.36  S
+544.nab_r             4        812       8.29  S
+544.nab_r             4        977       6.89  *
+544.nab_r             4       1225       5.50  S
+549.fotonik3d_r       4       1561       9.99  S
+549.fotonik3d_r       4       1699       9.18  *
+549.fotonik3d_r       4       2681       5.81  S
+554.roms_r            4       1382       4.60  S
+554.roms_r            4       1528       4.16  *
+554.roms_r            4       1861       3.41  S
+=================================================================================
+503.bwaves_r          4       1786      22.5   *
+507.cactuBSSN_r       4       1714       2.96  *
+508.namd_r            4        711       5.34  *
+510.parest_r          4       1607       6.51  *
+511.povray_r          4       1494       6.25  *
+519.lbm_r             4       1047       4.03  *
+521.wrf_r             4       1908       4.70  *
+526.blender_r         4        908       6.71  *
+527.cam4_r            4       1104       6.34  *
+538.imagick_r         4       1375       7.24  *
+544.nab_r             4        977       6.89  *
+549.fotonik3d_r       4       1699       9.18  *
+554.roms_r            4       1528       4.16  *
+ SPECrate(R)2017_fp_base                 6.25
+ SPECrate(R)2017_fp_peak                                               Not Run
+
+
+                                                                              HARDWARE
+                                                                              --------
+            CPU Name: Intel Core i7-2620M
+             Max MHz:  
+             Nominal:  
+             Enabled:  cores, 1 chip,  threads/core
+           Orderable:  
+            Cache L1:  
+                  L2:  
+                  L3:  
+               Other:  
+              Memory: 7.733 GB fixme: If using DDR4, the format is:
+                      'N GB (N x N GB nRxn PC4-nnnnX-X)'
+             Storage: 1007 GB  add more disk info here
+               Other:  
+
+
+                                                                              SOFTWARE
+                                                                              --------
+                  OS: Ubuntu 22.04.2 LTS
+                      5.15.90.1-microsoft-standard-WSL2
+            Compiler: C/C++/Fortran: Version 7.2.1 of GCC, the
+                      GNU Compiler Collection
+            Parallel: No
+            Firmware:  
+         File System: ext4
+        System State: Run level 5 (add definition here)
+       Base Pointers: 64-bit
+       Peak Pointers: Not Applicable
+               Other:  
+    Power Management: --
+
+
+                                                                     Environment Variables Notes
+                                                                     ---------------------------
+    Environment variables set by runcpu before the start of the run:
+    LD_LIBRARY_PATH = "/usr/lib64/:/usr/lib/:/lib64"
+    
+
+                                                                           Platform Notes
+                                                                           --------------
+    
+     Sysinfo program /usr/local/spec_cpu2017/bin/sysinfo
+     Rev: r6732 of 2022-11-07 fe91c89b7ed5c36ae2c92cc097bec197
+     running on NotebookRubens Tue May 23 01:18:59 2023
+    
+     SUT (System Under Test) info as seen by some common utilities.
+    
+     ------------------------------------------------------------
+     Table of contents
+     ------------------------------------------------------------
+      1. uname -a
+      2. w
+      3. Username
+      4. ulimit -a
+      5. sysinfo process ancestry
+      6. /proc/cpuinfo
+      7. lscpu
+      8. numactl warning
+      9. /proc/meminfo
+     10. who -r
+     11. Systemd service manager version: systemd 249 (249.11-0ubuntu3.9)
+     12. Services, from systemctl list-unit-files
+     13. Linux kernel boot-time arguments, from /proc/cmdline
+     14. sysctl
+     15. /sys/kernel/mm/transparent_hugepage
+     16. /sys/kernel/mm/transparent_hugepage/khugepaged
+     17. OS release
+     18. Disk information
+     19. dmidecode
+     ------------------------------------------------------------
+    
+     ------------------------------------------------------------
+     1. uname -a
+       Linux NotebookRubens 5.15.90.1-microsoft-standard-WSL2 #1 SMP Fri Jan 27 02:56:13 UTC 2023 x86_64 x86_64
+       x86_64 GNU/Linux
+    
+     ------------------------------------------------------------
+     2. w
+        01:18:59 up  9:31,  4 users,  load average: 0.08, 0.05, 0.12
+       USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+       rubens   pts/1    -                Mon10   15:15m  0.08s  0.05s -bash
+       rubens   pts/2    -                Mon10   14:06m  9.76s  8.80s sudo -i
+       root     pts/3    -                Mon11    6:50   5.35s  5.13s -bash
+       rubens   pts/5    -                00:22   11.00s  3.63s  0.64s sudo -i
+    
+     ------------------------------------------------------------
+     3. Username
+       From environment variable $USER:  root
+       From the command 'logname':       rubens
+    
+     ------------------------------------------------------------
+     4. ulimit -a
+       time(seconds)        unlimited
+       file(blocks)         unlimited
+       data(kbytes)         unlimited
+       stack(kbytes)        8192
+       coredump(blocks)     0
+       memory(kbytes)       unlimited
+       locked memory(kbytes) 1013600
+       process              31649
+       nofiles              1024
+       vmemory(kbytes)      unlimited
+       locks                unlimited
+       rtprio               0
+    
+     ------------------------------------------------------------
+     5. sysinfo process ancestry
+      /sbin/init
+      /init
+      /init
+      /init
+      -bash
+      sudo -i
+      sudo -i
+      -bash
+      runcpu --config=rubens-try1 --reportable --iterations=3 fprate
+      runcpu --configfile rubens-try1 --reportable --iterations 3 --nopower --runmode rate --tune base --size
+        refrate fprate --nopreenv --note-preenv --logfile $SPEC/tmp/CPU2017.068/templogs/preenv.fprate.068.0.log
+        --lognum 068.0 --from_runcpu 2
+      specperl $SPEC/bin/sysinfo
+     $SPEC = /usr/local/spec_cpu2017
+    
+     ------------------------------------------------------------
+     6. /proc/cpuinfo
+         model name      : Intel(R) Core(TM) i7-2620M CPU @ 2.70GHz
+         vendor_id       : GenuineIntel
+         cpu family      : 6
+         model           : 42
+         stepping        : 7
+         microcode       : 0xffffffff
+         bugs            : cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit
+                           mmio_unknown
+         cpu cores       : 2
+         siblings        : 4
+         1 physical ids (chips)
+         4 processors (hardware threads)
+         physical id 0: core ids 0-1
+         physical id 0: apicids 0-3
+       Caution: /proc/cpuinfo data regarding chips, cores, and threads is not necessarily reliable, especially for
+       virtualized systems.  Use the above data carefully.
+    
+     ------------------------------------------------------------
+     7. lscpu
+    
+     From lscpu from util-linux 2.37.2:
+       Architecture:                    x86_64
+       CPU op-mode(s):                  32-bit, 64-bit
+       Address sizes:                   36 bits physical, 48 bits virtual
+       Byte Order:                      Little Endian
+       CPU(s):                          4
+       On-line CPU(s) list:             0-3
+       Vendor ID:                       GenuineIntel
+       Model name:                      Intel(R) Core(TM) i7-2620M CPU @ 2.70GHz
+       CPU family:                      6
+       Model:                           42
+       Thread(s) per core:              2
+       Core(s) per socket:              2
+       Socket(s):                       1
+       Stepping:                        7
+       BogoMIPS:                        5387.76
+       Flags:                           fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36
+                                        clflush mmx fxsr sse sse2 ht syscall nx rdtscp lm constant_tsc
+                                        arch_perfmon rep_good nopl xtopology cpuid pni pclmulqdq ssse3 cx16 pdcm
+                                        pcid sse4_1 sse4_2 popcnt aes xsave avx hypervisor lahf_lm pti ssbd ibrs
+                                        ibpb stibp xsaveopt flush_l1d arch_capabilities
+       Hypervisor vendor:               Microsoft
+       Virtualization type:             full
+       L1d cache:                       64 KiB (2 instances)
+       L1i cache:                       64 KiB (2 instances)
+       L2 cache:                        512 KiB (2 instances)
+       L3 cache:                        4 MiB (1 instance)
+       Vulnerability Itlb multihit:     KVM: Mitigation: VMX unsupported
+       Vulnerability L1tf:              Mitigation; PTE Inversion
+       Vulnerability Mds:               Vulnerable: Clear CPU buffers attempted, no microcode; SMT Host state
+                                        unknown
+       Vulnerability Meltdown:          Mitigation; PTI
+       Vulnerability Mmio stale data:   Unknown: No mitigations
+       Vulnerability Retbleed:          Not affected
+       Vulnerability Spec store bypass: Mitigation; Speculative Store Bypass disabled via prctl and seccomp
+       Vulnerability Spectre v1:        Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+       Vulnerability Spectre v2:        Mitigation; Retpolines, IBPB conditional, IBRS_FW, STIBP conditional, RSB
+                                        filling, PBRSB-eIBRS Not affected
+       Vulnerability Srbds:             Not affected
+       Vulnerability Tsx async abort:   Not affected
+    
+     From lscpu --cache:
+          NAME ONE-SIZE ALL-SIZE WAYS TYPE        LEVEL SETS PHY-LINE COHERENCY-SIZE
+          L1d       32K      64K    8 Data            1   64        1             64
+          L1i       32K      64K    8 Instruction     1   64        1             64
+          L2       256K     512K    8 Unified         2  512        1             64
+          L3         4M       4M   16 Unified         3 4096        1             64
+    
+     ------------------------------------------------------------
+     8. numactl warning
+    
+     Unable to get information from 'numactl --hardware'.  Please consider installing numactl.
+    
+     ------------------------------------------------------------
+     9. /proc/meminfo
+        MemTotal:        8108808 kB
+    
+     ------------------------------------------------------------
+     10. who -r
+       run-level 5 May 22 10:03
+    
+     ------------------------------------------------------------
+     11. Systemd service manager version: systemd 249 (249.11-0ubuntu3.9)
+       Default Target  Status
+       graphical       running
+    
+     ------------------------------------------------------------
+     12. Services, from systemctl list-unit-files
+       STATE            UNIT FILES
+       enabled          apparmor console-setup cron dmesg e2scrub_reap getty@ irqbalance keyboard-setup rsyslog
+                        setvtrgb snapd systemd-pstore systemd-resolved systemd-timesyncd
+       enabled-runtime  console-getty systemd-remount-fs
+       disabled         debug-shell nftables rsync serial-getty@ systemd-boot-check-no-failures
+                        systemd-network-generator systemd-networkd systemd-networkd-wait-online systemd-sysext
+                        systemd-time-wait-sync
+       generated        apport
+       indirect         uuidd
+       masked           cryptdisks cryptdisks-early hwclock networkd-dispatcher rc rcS screen-cleanup sudo
+                        systemd-binfmt ua-reboot-cmds ubuntu-advantage ufw unattended-upgrades x11-common
+    
+     ------------------------------------------------------------
+     13. Linux kernel boot-time arguments, from /proc/cmdline
+       initrd=\initrd.img
+       WSL_ROOT_INIT=1
+       panic=-1
+       nr_cpus=4
+       bonding.max_bonds=0
+       dummy.numdummies=0
+       fb_tunnels=none
+       swiotlb=force
+       console=hvc0
+       debug
+       pty.legacy_count=0
+    
+     ------------------------------------------------------------
+     14. sysctl
+       kernel.randomize_va_space           2
+       vm.compaction_proactiveness        20
+       vm.dirty_background_bytes           0
+       vm.dirty_background_ratio          10
+       vm.dirty_bytes                      0
+       vm.dirty_expire_centisecs        3000
+       vm.dirty_ratio                     20
+       vm.dirty_writeback_centisecs      500
+       vm.dirtytime_expire_seconds     43200
+       vm.extfrag_threshold              500
+       vm.nr_hugepages                     0
+       vm.nr_overcommit_hugepages          0
+       vm.swappiness                      60
+       vm.watermark_boost_factor       15000
+       vm.watermark_scale_factor          10
+    
+     ------------------------------------------------------------
+     15. /sys/kernel/mm/transparent_hugepage
+       defrag          always defer defer+madvise [madvise] never
+       enabled         [always] madvise never
+       hpage_pmd_size  2097152
+       shmem_enabled   always within_size advise [never] deny force
+    
+     ------------------------------------------------------------
+     16. /sys/kernel/mm/transparent_hugepage/khugepaged
+       alloc_sleep_millisecs   60000
+       defrag                      1
+       max_ptes_none             511
+       max_ptes_shared           256
+       max_ptes_swap              64
+       pages_to_scan            4096
+       scan_sleep_millisecs    10000
+    
+     ------------------------------------------------------------
+     17. OS release
+       From /etc/*-release /etc/*-version
+       os-release Ubuntu 22.04.2 LTS
+    
+     ------------------------------------------------------------
+     18. Disk information
+     SPEC is set to: /usr/local/spec_cpu2017
+       Filesystem     Type  Size  Used Avail Use% Mounted on
+       /dev/sdc       ext4 1007G   71G  885G   8% /
+    
+     ------------------------------------------------------------
+     19. dmidecode
+       Additional information from dmidecode 3.3 follows.  WARNING: Use caution when you interpret this section.
+       The 'dmidecode' program reads system data which is "intended to allow hardware to be accurately
+       determined", but the intent may not be met, as there are frequent changes to hardware, firmware, and the
+       "DMTF SMBIOS" standard.
+    
+     BIOS: (could not find information)
+
+                                                                       Compiler Version Notes
+                                                                       ----------------------
+    ============================================================================================================
+    C               | 519.lbm_r(base) 538.imagick_r(base) 544.nab_r(base)
+    ------------------------------------------------------------------------------------------------------------
+    Using built-in specs.
+    COLLECT_GCC=/usr/bin/gcc
+    COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
+    OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+    OFFLOAD_TARGET_DEFAULT=1
+    Target: x86_64-linux-gnu
+    Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.3.0-1ubuntu1~22.04'
+      --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs
+      --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr
+      --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared
+      --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix
+      --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug
+      --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object
+      --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib
+      --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto
+      --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64
+      --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic
+      --enable-offload-targets=nvptx-none=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-gcn/usr
+      --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu
+      --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+    Thread model: posix
+    Supported LTO compression algorithms: zlib zstd
+    gcc version 11.3.0 (Ubuntu 11.3.0-1ubuntu1~22.04) 
+    ------------------------------------------------------------------------------------------------------------
+    
+    ============================================================================================================
+    C++             | 508.namd_r(base) 510.parest_r(base)
+    ------------------------------------------------------------------------------------------------------------
+    Using built-in specs.
+    COLLECT_GCC=/usr/bin/g++
+    COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
+    OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+    OFFLOAD_TARGET_DEFAULT=1
+    Target: x86_64-linux-gnu
+    Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.3.0-1ubuntu1~22.04'
+      --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs
+      --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr
+      --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared
+      --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix
+      --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug
+      --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object
+      --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib
+      --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto
+      --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64
+      --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic
+      --enable-offload-targets=nvptx-none=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-gcn/usr
+      --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu
+      --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+    Thread model: posix
+    Supported LTO compression algorithms: zlib zstd
+    gcc version 11.3.0 (Ubuntu 11.3.0-1ubuntu1~22.04) 
+    ------------------------------------------------------------------------------------------------------------
+    
+    ============================================================================================================
+    C++, C          | 511.povray_r(base) 526.blender_r(base)
+    ------------------------------------------------------------------------------------------------------------
+    Using built-in specs.
+    COLLECT_GCC=/usr/bin/g++
+    COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
+    OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+    OFFLOAD_TARGET_DEFAULT=1
+    Target: x86_64-linux-gnu
+    Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.3.0-1ubuntu1~22.04'
+      --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs
+      --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr
+      --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared
+      --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix
+      --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug
+      --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object
+      --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib
+      --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto
+      --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64
+      --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic
+      --enable-offload-targets=nvptx-none=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-gcn/usr
+      --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu
+      --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+    Thread model: posix
+    Supported LTO compression algorithms: zlib zstd
+    gcc version 11.3.0 (Ubuntu 11.3.0-1ubuntu1~22.04) 
+    Using built-in specs.
+    COLLECT_GCC=/usr/bin/gcc
+    COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
+    OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+    OFFLOAD_TARGET_DEFAULT=1
+    Target: x86_64-linux-gnu
+    Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.3.0-1ubuntu1~22.04'
+      --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs
+      --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr
+      --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared
+      --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix
+      --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug
+      --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object
+      --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib
+      --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto
+      --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64
+      --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic
+      --enable-offload-targets=nvptx-none=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-gcn/usr
+      --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu
+      --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+    Thread model: posix
+    Supported LTO compression algorithms: zlib zstd
+    gcc version 11.3.0 (Ubuntu 11.3.0-1ubuntu1~22.04) 
+    ------------------------------------------------------------------------------------------------------------
+    
+    ============================================================================================================
+    C++, C, Fortran | 507.cactuBSSN_r(base)
+    ------------------------------------------------------------------------------------------------------------
+    Using built-in specs.
+    COLLECT_GCC=/usr/bin/g++
+    COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
+    OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+    OFFLOAD_TARGET_DEFAULT=1
+    Target: x86_64-linux-gnu
+    Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.3.0-1ubuntu1~22.04'
+      --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs
+      --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr
+      --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared
+      --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix
+      --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug
+      --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object
+      --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib
+      --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto
+      --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64
+      --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic
+      --enable-offload-targets=nvptx-none=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-gcn/usr
+      --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu
+      --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+    Thread model: posix
+    Supported LTO compression algorithms: zlib zstd
+    gcc version 11.3.0 (Ubuntu 11.3.0-1ubuntu1~22.04) 
+    Using built-in specs.
+    COLLECT_GCC=/usr/bin/gcc
+    COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
+    OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+    OFFLOAD_TARGET_DEFAULT=1
+    Target: x86_64-linux-gnu
+    Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.3.0-1ubuntu1~22.04'
+      --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs
+      --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr
+      --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared
+      --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix
+      --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug
+      --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object
+      --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib
+      --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto
+      --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64
+      --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic
+      --enable-offload-targets=nvptx-none=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-gcn/usr
+      --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu
+      --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+    Thread model: posix
+    Supported LTO compression algorithms: zlib zstd
+    gcc version 11.3.0 (Ubuntu 11.3.0-1ubuntu1~22.04) 
+    Using built-in specs.
+    COLLECT_GCC=/usr/bin/gfortran
+    COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
+    OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+    OFFLOAD_TARGET_DEFAULT=1
+    Target: x86_64-linux-gnu
+    Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.3.0-1ubuntu1~22.04'
+      --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs
+      --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr
+      --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared
+      --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix
+      --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug
+      --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object
+      --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib
+      --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto
+      --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64
+      --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic
+      --enable-offload-targets=nvptx-none=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-gcn/usr
+      --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu
+      --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+    Thread model: posix
+    Supported LTO compression algorithms: zlib zstd
+    gcc version 11.3.0 (Ubuntu 11.3.0-1ubuntu1~22.04) 
+    ------------------------------------------------------------------------------------------------------------
+    
+    ============================================================================================================
+    Fortran         | 503.bwaves_r(base) 549.fotonik3d_r(base) 554.roms_r(base)
+    ------------------------------------------------------------------------------------------------------------
+    Using built-in specs.
+    COLLECT_GCC=/usr/bin/gfortran
+    COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
+    OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+    OFFLOAD_TARGET_DEFAULT=1
+    Target: x86_64-linux-gnu
+    Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.3.0-1ubuntu1~22.04'
+      --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs
+      --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr
+      --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared
+      --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix
+      --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug
+      --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object
+      --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib
+      --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto
+      --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64
+      --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic
+      --enable-offload-targets=nvptx-none=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-gcn/usr
+      --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu
+      --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+    Thread model: posix
+    Supported LTO compression algorithms: zlib zstd
+    gcc version 11.3.0 (Ubuntu 11.3.0-1ubuntu1~22.04) 
+    ------------------------------------------------------------------------------------------------------------
+    
+    ============================================================================================================
+    Fortran, C      | 521.wrf_r(base) 527.cam4_r(base)
+    ------------------------------------------------------------------------------------------------------------
+    Using built-in specs.
+    COLLECT_GCC=/usr/bin/gfortran
+    COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
+    OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+    OFFLOAD_TARGET_DEFAULT=1
+    Target: x86_64-linux-gnu
+    Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.3.0-1ubuntu1~22.04'
+      --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs
+      --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr
+      --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared
+      --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix
+      --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug
+      --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object
+      --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib
+      --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto
+      --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64
+      --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic
+      --enable-offload-targets=nvptx-none=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-gcn/usr
+      --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu
+      --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+    Thread model: posix
+    Supported LTO compression algorithms: zlib zstd
+    gcc version 11.3.0 (Ubuntu 11.3.0-1ubuntu1~22.04) 
+    Using built-in specs.
+    COLLECT_GCC=/usr/bin/gcc
+    COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
+    OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+    OFFLOAD_TARGET_DEFAULT=1
+    Target: x86_64-linux-gnu
+    Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.3.0-1ubuntu1~22.04'
+      --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs
+      --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr
+      --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared
+      --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix
+      --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug
+      --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object
+      --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib
+      --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto
+      --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64
+      --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic
+      --enable-offload-targets=nvptx-none=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-gcn/usr
+      --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu
+      --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+    Thread model: posix
+    Supported LTO compression algorithms: zlib zstd
+    gcc version 11.3.0 (Ubuntu 11.3.0-1ubuntu1~22.04) 
+    ------------------------------------------------------------------------------------------------------------
+
+                                                                      Base Compiler Invocation
+                                                                      ------------------------
+C benchmarks: 
+     gcc
+
+C++ benchmarks: 
+     g++
+
+Fortran benchmarks: 
+     gfortran
+
+Benchmarks using both Fortran and C: 
+     gfortran gcc
+
+Benchmarks using both C and C++: 
+     g++ gcc
+
+Benchmarks using Fortran, C, and C++: 
+     g++ gcc gfortran
+
+
+                                                                       Base Portability Flags
+                                                                       ----------------------
+    503.bwaves_r: -DSPEC_LP64
+ 507.cactuBSSN_r: -DSPEC_LP64
+      508.namd_r: -DSPEC_LP64
+    510.parest_r: -DSPEC_LP64
+    511.povray_r: -DSPEC_LP64
+       519.lbm_r: -DSPEC_LP64
+       521.wrf_r: -DSPEC_CASE_FLAG -fconvert=big-endian -DSPEC_LP64
+   526.blender_r: -funsigned-char -DSPEC_LINUX -DSPEC_LP64
+      527.cam4_r: -DSPEC_CASE_FLAG -DSPEC_LP64
+   538.imagick_r: -DSPEC_LP64
+       544.nab_r: -DSPEC_LP64
+ 549.fotonik3d_r: -DSPEC_LP64
+      554.roms_r: -DSPEC_LP64
+
+
+                                                                       Base Optimization Flags
+                                                                       -----------------------
+C benchmarks: 
+     -m64 -std=c99 -g -O3 -march=native -fno-unsafe-math-optimizations -fno-tree-loop-vectorize
+
+C++ benchmarks: 
+     -m64 -std=c++03 -g -O3 -march=native -fno-unsafe-math-optimizations -fno-tree-loop-vectorize
+
+Fortran benchmarks: 
+     -m64 -g -O3 -march=native -fno-unsafe-math-optimizations -fno-tree-loop-vectorize
+
+Benchmarks using both Fortran and C: 
+     -m64 -std=c99 -g -O3 -march=native -fno-unsafe-math-optimizations -fno-tree-loop-vectorize
+
+Benchmarks using both C and C++: 
+     -m64 -std=c++03 -std=c99 -g -O3 -march=native -fno-unsafe-math-optimizations -fno-tree-loop-vectorize
+
+Benchmarks using Fortran, C, and C++: 
+     -m64 -std=c++03 -std=c99 -g -O3 -march=native -fno-unsafe-math-optimizations -fno-tree-loop-vectorize
+
+
+                                                                          Base Other Flags
+                                                                          ----------------
+C benchmarks: 
+     -fallow-argument-mismatch
+
+C++ benchmarks: 
+     -fallow-argument-mismatch
+
+Fortran benchmarks: 
+     -fallow-argument-mismatch
+
+Benchmarks using both Fortran and C: 
+     -fallow-argument-mismatch
+
+Benchmarks using both C and C++: 
+     -fallow-argument-mismatch
+
+Benchmarks using Fortran, C, and C++: 
+     -fallow-argument-mismatch
+
+
+  SPEC CPU and SPECrate are registered trademarks of the Standard Performance Evaluation Corporation.  All other brand and
+    product names appearing in this result are trademarks or registered trademarks of their respective holders.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For questions about this result, please contact the tester.
+For other inquiries, please contact info@spec.org.
+Copyright 2017-2023 Standard Performance Evaluation Corporation
+Tested with SPEC CPU(R)2017 v1.1.9 on 2023-05-23 01:18:57-0300.
+Report generated on 2023-05-23 17:32:08 by CPU2017 text formatter v6255.

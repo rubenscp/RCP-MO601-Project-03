@@ -1,0 +1,516 @@
+##################################################################################################################################
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN                                                      #
+#                                                                                                                                #
+# 'reportable' flag not set during run                                                                                           #
+# 657.xz_s (base) did not have enough runs!                                                                                      #
+#                                                                                                                                #
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN                                                      #
+##################################################################################################################################
+                                                                SPEC CPU(R)2017 Integer Speed Result
+                                                                           Laptop Rubens 
+
+                                            CPU2017 License: nnn (Your SPEC license number)          Test date: May-2023
+                                            Test sponsor: Laptop Rubens                  Hardware availability:         
+                                            Tested by:    Laptop Rubens                  Software availability:         
+
+                       Estimated                       Estimated
+                 Base     Base        Base        Peak     Peak        Peak
+Benchmarks      Threads  Run Time     Ratio      Threads  Run Time     Ratio
+--------------- -------  ---------  ---------    -------  ---------  ---------
+600.perlbench_s       8        569       3.12  S
+600.perlbench_s       8        565       3.14  *
+600.perlbench_s       8        560       3.17  S
+602.gcc_s             8        846       4.70  S
+602.gcc_s             8        777       5.12  S
+602.gcc_s             8        780       5.11  *
+605.mcf_s             8       1238       3.81  S
+605.mcf_s             8       1170       4.03  S
+605.mcf_s             8       1190       3.97  *
+620.omnetpp_s         8        795       2.05  S
+620.omnetpp_s         8        760       2.15  S
+620.omnetpp_s         8        789       2.07  *
+623.xalancbmk_s       8        627       2.26  S
+623.xalancbmk_s       8        630       2.25  *
+623.xalancbmk_s       8        641       2.21  S
+625.x264_s            8        516       3.42  *
+625.x264_s            8        569       3.10  S
+625.x264_s            8        515       3.43  S
+631.deepsjeng_s       8        513       2.79  S
+631.deepsjeng_s       8        518       2.76  *
+631.deepsjeng_s       8        521       2.75  S
+641.leela_s           8        568       3.00  S
+641.leela_s           8        570       2.99  S
+641.leela_s           8        569       3.00  *
+648.exchange2_s       8        454       6.48  S
+648.exchange2_s       8        468       6.28  S
+648.exchange2_s       8        458       6.41  *
+657.xz_s                                      NR
+=================================================================================
+600.perlbench_s       8        565       3.14  *
+602.gcc_s             8        780       5.11  *
+605.mcf_s             8       1190       3.97  *
+620.omnetpp_s         8        789       2.07  *
+623.xalancbmk_s       8        630       2.25  *
+625.x264_s            8        516       3.42  *
+631.deepsjeng_s       8        518       2.76  *
+641.leela_s           8        569       3.00  *
+648.exchange2_s       8        458       6.41  *
+657.xz_s                                      NR
+ Est. SPECspeed(R)2017_int_base          3.35
+ Est. SPECspeed(R)2017_int_peak                                        Not Run
+
+
+                                                                              HARDWARE
+                                                                              --------
+            CPU Name: Intel Core i7-2620M
+             Max MHz:  
+             Nominal:  
+             Enabled:  cores, 1 chip,  threads/core
+           Orderable:  
+            Cache L1:  
+                  L2:  
+                  L3:  
+               Other:  
+              Memory: 7.733 GB fixme: If using DDR4, the format is:
+                      'N GB (N x N GB nRxn PC4-nnnnX-X)'
+             Storage: 1007 GB  add more disk info here
+               Other:  
+
+
+                                                                              SOFTWARE
+                                                                              --------
+                  OS: Ubuntu 22.04.2 LTS
+                      5.15.90.1-microsoft-standard-WSL2
+            Compiler: C/C++/Fortran: Version 7.2.1 of GCC, the
+                      GNU Compiler Collection
+            Parallel: Yes
+            Firmware:  
+         File System: ext4
+        System State: Run level 5 (add definition here)
+       Base Pointers: 64-bit
+       Peak Pointers: Not Applicable
+               Other:  
+    Power Management: --
+
+
+                                                                     Environment Variables Notes
+                                                                     ---------------------------
+    Environment variables set by runcpu before the start of the run:
+    LD_LIBRARY_PATH = "/usr/lib64/:/usr/lib/:/lib64"
+    
+
+                                                                           Platform Notes
+                                                                           --------------
+    
+     Sysinfo program /usr/local/spec_cpu2017/bin/sysinfo
+     Rev: r6732 of 2022-11-07 fe91c89b7ed5c36ae2c92cc097bec197
+     running on NotebookRubens Wed May 24 00:55:49 2023
+    
+     SUT (System Under Test) info as seen by some common utilities.
+    
+     ------------------------------------------------------------
+     Table of contents
+     ------------------------------------------------------------
+      1. uname -a
+      2. w
+      3. Username
+      4. ulimit -a
+      5. sysinfo process ancestry
+      6. /proc/cpuinfo
+      7. lscpu
+      8. numactl warning
+      9. /proc/meminfo
+     10. who -r
+     11. Systemd service manager version: systemd 249 (249.11-0ubuntu3.9)
+     12. Services, from systemctl list-unit-files
+     13. Linux kernel boot-time arguments, from /proc/cmdline
+     14. sysctl
+     15. /sys/kernel/mm/transparent_hugepage
+     16. /sys/kernel/mm/transparent_hugepage/khugepaged
+     17. OS release
+     18. Disk information
+     19. dmidecode
+     ------------------------------------------------------------
+    
+     ------------------------------------------------------------
+     1. uname -a
+       Linux NotebookRubens 5.15.90.1-microsoft-standard-WSL2 #1 SMP Fri Jan 27 02:56:13 UTC 2023 x86_64 x86_64
+       x86_64 GNU/Linux
+    
+     ------------------------------------------------------------
+     2. w
+        00:55:49 up 1 day,  9:08,  3 users,  load average: 0.02, 0.01, 0.00
+       USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+       rubens   pts/1    -                Mon10   38:52m  0.08s  0.05s -bash
+       rubens   pts/2    -                20:28    3:50m  0.52s  0.50s sudo -i
+       rubens   pts/4    -                20:47    2.00s  3.33s  0.91s sudo -i
+    
+     ------------------------------------------------------------
+     3. Username
+       From environment variable $USER:  root
+       From the command 'logname':       rubens
+    
+     ------------------------------------------------------------
+     4. ulimit -a
+       time(seconds)        unlimited
+       file(blocks)         unlimited
+       data(kbytes)         unlimited
+       stack(kbytes)        8192
+       coredump(blocks)     0
+       memory(kbytes)       unlimited
+       locked memory(kbytes) 1013600
+       process              31649
+       nofiles              1024
+       vmemory(kbytes)      unlimited
+       locks                unlimited
+       rtprio               0
+    
+     ------------------------------------------------------------
+     5. sysinfo process ancestry
+      /sbin/init
+      /init
+      /init
+      /init
+      -bash
+      sudo -i
+      sudo -i
+      -bash
+      runcpu --config=rubens-try1 --noreportable --iterations=3 600.perlbench_s 602.gcc_s 605.mcf_s 620.omnetpp_s
+        623.xalancbmk_s 625.x264_s 631.deepsjeng_s 641.leela_s 648.exchange2_s 998.specrand_is
+      runcpu --configfile rubens-try1 --noreportable --iterations 3 --noreportable --nopower --runmode speed
+        --tune base --size refspeed 600.perlbench_s 602.gcc_s 605.mcf_s 620.omnetpp_s 623.xalancbmk_s 625.x264_s
+        631.deepsjeng_s 641.leela_s 648.exchange2_s 998.specrand_is --nopreenv --note-preenv --logfile
+        $SPEC/tmp/CPU2017.069/templogs/preenv.intspeed.069.0.log --lognum 069.0 --from_runcpu 2
+      specperl $SPEC/bin/sysinfo
+     $SPEC = /usr/local/spec_cpu2017
+    
+     ------------------------------------------------------------
+     6. /proc/cpuinfo
+         model name      : Intel(R) Core(TM) i7-2620M CPU @ 2.70GHz
+         vendor_id       : GenuineIntel
+         cpu family      : 6
+         model           : 42
+         stepping        : 7
+         microcode       : 0xffffffff
+         bugs            : cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit
+                           mmio_unknown
+         cpu cores       : 2
+         siblings        : 4
+         1 physical ids (chips)
+         4 processors (hardware threads)
+         physical id 0: core ids 0-1
+         physical id 0: apicids 0-3
+       Caution: /proc/cpuinfo data regarding chips, cores, and threads is not necessarily reliable, especially for
+       virtualized systems.  Use the above data carefully.
+    
+     ------------------------------------------------------------
+     7. lscpu
+    
+     From lscpu from util-linux 2.37.2:
+       Architecture:                    x86_64
+       CPU op-mode(s):                  32-bit, 64-bit
+       Address sizes:                   36 bits physical, 48 bits virtual
+       Byte Order:                      Little Endian
+       CPU(s):                          4
+       On-line CPU(s) list:             0-3
+       Vendor ID:                       GenuineIntel
+       Model name:                      Intel(R) Core(TM) i7-2620M CPU @ 2.70GHz
+       CPU family:                      6
+       Model:                           42
+       Thread(s) per core:              2
+       Core(s) per socket:              2
+       Socket(s):                       1
+       Stepping:                        7
+       BogoMIPS:                        5387.76
+       Flags:                           fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36
+                                        clflush mmx fxsr sse sse2 ht syscall nx rdtscp lm constant_tsc
+                                        arch_perfmon rep_good nopl xtopology cpuid pni pclmulqdq ssse3 cx16 pdcm
+                                        pcid sse4_1 sse4_2 popcnt aes xsave avx hypervisor lahf_lm pti ssbd ibrs
+                                        ibpb stibp xsaveopt flush_l1d arch_capabilities
+       Hypervisor vendor:               Microsoft
+       Virtualization type:             full
+       L1d cache:                       64 KiB (2 instances)
+       L1i cache:                       64 KiB (2 instances)
+       L2 cache:                        512 KiB (2 instances)
+       L3 cache:                        4 MiB (1 instance)
+       Vulnerability Itlb multihit:     KVM: Mitigation: VMX unsupported
+       Vulnerability L1tf:              Mitigation; PTE Inversion
+       Vulnerability Mds:               Vulnerable: Clear CPU buffers attempted, no microcode; SMT Host state
+                                        unknown
+       Vulnerability Meltdown:          Mitigation; PTI
+       Vulnerability Mmio stale data:   Unknown: No mitigations
+       Vulnerability Retbleed:          Not affected
+       Vulnerability Spec store bypass: Mitigation; Speculative Store Bypass disabled via prctl and seccomp
+       Vulnerability Spectre v1:        Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+       Vulnerability Spectre v2:        Mitigation; Retpolines, IBPB conditional, IBRS_FW, STIBP conditional, RSB
+                                        filling, PBRSB-eIBRS Not affected
+       Vulnerability Srbds:             Not affected
+       Vulnerability Tsx async abort:   Not affected
+    
+     From lscpu --cache:
+          NAME ONE-SIZE ALL-SIZE WAYS TYPE        LEVEL SETS PHY-LINE COHERENCY-SIZE
+          L1d       32K      64K    8 Data            1   64        1             64
+          L1i       32K      64K    8 Instruction     1   64        1             64
+          L2       256K     512K    8 Unified         2  512        1             64
+          L3         4M       4M   16 Unified         3 4096        1             64
+    
+     ------------------------------------------------------------
+     8. numactl warning
+    
+     Unable to get information from 'numactl --hardware'.  Please consider installing numactl.
+    
+     ------------------------------------------------------------
+     9. /proc/meminfo
+        MemTotal:        8108808 kB
+    
+     ------------------------------------------------------------
+     10. who -r
+       run-level 5 May 22 10:03
+    
+     ------------------------------------------------------------
+     11. Systemd service manager version: systemd 249 (249.11-0ubuntu3.9)
+       Default Target  Status
+       graphical       running
+    
+     ------------------------------------------------------------
+     12. Services, from systemctl list-unit-files
+       STATE            UNIT FILES
+       enabled          apparmor console-setup cron dmesg e2scrub_reap getty@ irqbalance keyboard-setup rsyslog
+                        setvtrgb snapd systemd-pstore systemd-resolved systemd-timesyncd
+       enabled-runtime  console-getty systemd-remount-fs
+       disabled         debug-shell nftables rsync serial-getty@ systemd-boot-check-no-failures
+                        systemd-network-generator systemd-networkd systemd-networkd-wait-online systemd-sysext
+                        systemd-time-wait-sync
+       generated        apport
+       indirect         uuidd
+       masked           cryptdisks cryptdisks-early hwclock networkd-dispatcher rc rcS screen-cleanup sudo
+                        systemd-binfmt ua-reboot-cmds ubuntu-advantage ufw unattended-upgrades x11-common
+    
+     ------------------------------------------------------------
+     13. Linux kernel boot-time arguments, from /proc/cmdline
+       initrd=\initrd.img
+       WSL_ROOT_INIT=1
+       panic=-1
+       nr_cpus=4
+       bonding.max_bonds=0
+       dummy.numdummies=0
+       fb_tunnels=none
+       swiotlb=force
+       console=hvc0
+       debug
+       pty.legacy_count=0
+    
+     ------------------------------------------------------------
+     14. sysctl
+       kernel.randomize_va_space           2
+       vm.compaction_proactiveness        20
+       vm.dirty_background_bytes           0
+       vm.dirty_background_ratio          10
+       vm.dirty_bytes                      0
+       vm.dirty_expire_centisecs        3000
+       vm.dirty_ratio                     20
+       vm.dirty_writeback_centisecs      500
+       vm.dirtytime_expire_seconds     43200
+       vm.extfrag_threshold              500
+       vm.nr_hugepages                     0
+       vm.nr_overcommit_hugepages          0
+       vm.swappiness                      60
+       vm.watermark_boost_factor       15000
+       vm.watermark_scale_factor          10
+    
+     ------------------------------------------------------------
+     15. /sys/kernel/mm/transparent_hugepage
+       defrag          always defer defer+madvise [madvise] never
+       enabled         [always] madvise never
+       hpage_pmd_size  2097152
+       shmem_enabled   always within_size advise [never] deny force
+    
+     ------------------------------------------------------------
+     16. /sys/kernel/mm/transparent_hugepage/khugepaged
+       alloc_sleep_millisecs   60000
+       defrag                      1
+       max_ptes_none             511
+       max_ptes_shared           256
+       max_ptes_swap              64
+       pages_to_scan            4096
+       scan_sleep_millisecs    10000
+    
+     ------------------------------------------------------------
+     17. OS release
+       From /etc/*-release /etc/*-version
+       os-release Ubuntu 22.04.2 LTS
+    
+     ------------------------------------------------------------
+     18. Disk information
+     SPEC is set to: /usr/local/spec_cpu2017
+       Filesystem     Type  Size  Used Avail Use% Mounted on
+       /dev/sdc       ext4 1007G   76G  881G   8% /
+    
+     ------------------------------------------------------------
+     19. dmidecode
+       Additional information from dmidecode 3.3 follows.  WARNING: Use caution when you interpret this section.
+       The 'dmidecode' program reads system data which is "intended to allow hardware to be accurately
+       determined", but the intent may not be met, as there are frequent changes to hardware, firmware, and the
+       "DMTF SMBIOS" standard.
+    
+     BIOS: (could not find information)
+
+                                                                       Compiler Version Notes
+                                                                       ----------------------
+    ============================================================================================================
+    C       | 600.perlbench_s(base) 602.gcc_s(base) 605.mcf_s(base) 625.x264_s(base)
+    ------------------------------------------------------------------------------------------------------------
+    Using built-in specs.
+    COLLECT_GCC=/usr/bin/gcc
+    COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
+    OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+    OFFLOAD_TARGET_DEFAULT=1
+    Target: x86_64-linux-gnu
+    Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.3.0-1ubuntu1~22.04'
+      --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs
+      --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr
+      --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared
+      --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix
+      --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug
+      --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object
+      --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib
+      --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto
+      --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64
+      --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic
+      --enable-offload-targets=nvptx-none=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-gcn/usr
+      --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu
+      --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+    Thread model: posix
+    Supported LTO compression algorithms: zlib zstd
+    gcc version 11.3.0 (Ubuntu 11.3.0-1ubuntu1~22.04) 
+    ------------------------------------------------------------------------------------------------------------
+    
+    ============================================================================================================
+    C++     | 620.omnetpp_s(base) 623.xalancbmk_s(base) 631.deepsjeng_s(base) 641.leela_s(base)
+    ------------------------------------------------------------------------------------------------------------
+    Using built-in specs.
+    COLLECT_GCC=/usr/bin/g++
+    COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
+    OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+    OFFLOAD_TARGET_DEFAULT=1
+    Target: x86_64-linux-gnu
+    Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.3.0-1ubuntu1~22.04'
+      --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs
+      --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr
+      --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared
+      --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix
+      --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug
+      --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object
+      --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib
+      --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto
+      --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64
+      --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic
+      --enable-offload-targets=nvptx-none=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-gcn/usr
+      --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu
+      --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+    Thread model: posix
+    Supported LTO compression algorithms: zlib zstd
+    gcc version 11.3.0 (Ubuntu 11.3.0-1ubuntu1~22.04) 
+    ------------------------------------------------------------------------------------------------------------
+    
+    ============================================================================================================
+    Fortran | 648.exchange2_s(base)
+    ------------------------------------------------------------------------------------------------------------
+    Using built-in specs.
+    COLLECT_GCC=/usr/bin/gfortran
+    COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
+    OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+    OFFLOAD_TARGET_DEFAULT=1
+    Target: x86_64-linux-gnu
+    Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.3.0-1ubuntu1~22.04'
+      --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs
+      --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr
+      --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared
+      --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix
+      --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug
+      --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object
+      --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib
+      --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto
+      --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64
+      --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic
+      --enable-offload-targets=nvptx-none=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-gcn/usr
+      --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu
+      --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+    Thread model: posix
+    Supported LTO compression algorithms: zlib zstd
+    gcc version 11.3.0 (Ubuntu 11.3.0-1ubuntu1~22.04) 
+    ------------------------------------------------------------------------------------------------------------
+
+                                                                      Base Compiler Invocation
+                                                                      ------------------------
+C benchmarks (except as noted below): 
+     gcc
+
+C++ benchmarks: 
+     g++
+
+Fortran benchmarks: 
+     gfortran
+
+
+                                                                       Base Portability Flags
+                                                                       ----------------------
+ 600.perlbench_s: -DSPEC_LINUX_X64 -DSPEC_LP64
+       602.gcc_s: -DSPEC_LP64
+       605.mcf_s: -DSPEC_LP64
+   620.omnetpp_s: -DSPEC_LP64
+ 623.xalancbmk_s: -DSPEC_LINUX -DSPEC_LP64
+      625.x264_s: -DSPEC_LP64
+ 631.deepsjeng_s: -DSPEC_LP64
+     641.leela_s: -DSPEC_LP64
+ 648.exchange2_s: -DSPEC_LP64
+
+
+                                                                       Base Optimization Flags
+                                                                       -----------------------
+C benchmarks:
+
+ 600.perlbench_s: -m64 -std=c99 -g -O3 -march=native -fno-unsafe-math-optimizations -fno-tree-loop-vectorize -fopenmp
+                  -DSPEC_OPENMP -fno-strict-aliasing -fgnu89-inline
+
+       602.gcc_s: Same as 600.perlbench_s
+
+       605.mcf_s: Same as 600.perlbench_s
+
+      625.x264_s: Same as 600.perlbench_s
+
+C++ benchmarks: 
+     -m64 -std=c++03 -g -O3 -march=native -fno-unsafe-math-optimizations -fno-tree-loop-vectorize -fopenmp -DSPEC_OPENMP
+
+Fortran benchmarks: 
+     -m64 -g -O3 -march=native -fno-unsafe-math-optimizations -fno-tree-loop-vectorize -DSPEC_OPENMP -fopenmp
+
+
+                                                                          Base Other Flags
+                                                                          ----------------
+C benchmarks (except as noted below): 
+     -fallow-argument-mismatch -fcommon
+
+C++ benchmarks: 
+     -fallow-argument-mismatch -fcommon
+
+Fortran benchmarks: 
+     -fallow-argument-mismatch -fcommon
+
+
+  SPEC CPU and SPECspeed are registered trademarks of the Standard Performance Evaluation Corporation.  All other brand and
+    product names appearing in this result are trademarks or registered trademarks of their respective holders.
+##################################################################################################################################
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN                                                      #
+#                                                                                                                                #
+# 'reportable' flag not set during run                                                                                           #
+# 657.xz_s (base) did not have enough runs!                                                                                      #
+#                                                                                                                                #
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN                                                      #
+##################################################################################################################################
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For questions about this result, please contact the tester.
+For other inquiries, please contact info@spec.org.
+Copyright 2017-2023 Standard Performance Evaluation Corporation
+Tested with SPEC CPU(R)2017 v1.1.9 on 2023-05-24 00:55:48-0300.
+Report generated on 2023-05-24 06:03:03 by CPU2017 text formatter v6255.
