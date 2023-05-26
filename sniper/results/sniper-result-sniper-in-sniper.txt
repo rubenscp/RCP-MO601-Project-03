@@ -1,0 +1,18 @@
+../../run-sniper --wrap-sim="../../run-sniper -n4 -cgainestown -ccacheonly --no-cache-warming -gscheduler/type=roaming --roi -sprogresstrace -- " -n2 --traces=fft,fft -sstop-by-icount:10000 -gcore/hook_periodic_ins/ins_global=10000 -d sim-inside
+[SNIPER] (0) Using trace file /usr/local/sniper/test/sniper-in-sniper/fft.sift
+[SNIPER] (1) Using trace file /usr/local/sniper/test/sniper-in-sniper/fft.sift
+[SNIPER] Start
+[SNIPER] Start
+Executing Python script /usr/local/sniper/test/sniper-in-sniper/sim.scripts.py
+[SNIPER] --------------------------------------------------------------------------------
+[SNIPER] Sniper using SIFT/trace-driven frontend
+[SNIPER] Running pre-ROI region in  FAST_FORWARD mode
+[SNIPER] Running application ROI in CACHE_ONLY mode
+[SNIPER] Running post-ROI region in FAST_FORWARD mode
+[SNIPER] --------------------------------------------------------------------------------
+[TRACE:0] -- DONE --
+[RECORD-TRACE] Using the Pin frontend (sift/recorder)
+[SNIPER] End
+[SNIPER] Elapsed time: 4.79 seconds
+[SNIPER] End
+[SNIPER] Elapsed time: 5.09 seconds
