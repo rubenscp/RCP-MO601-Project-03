@@ -1,0 +1,68 @@
+---Dinero IV cache simulator, version 7
+---Written by Jan Edler and Mark D. Hill
+---Copyright (C) 1997 NEC Research Institute, Inc. and Mark D. Hill.
+---All rights reserved.
+---Copyright (C) 1985, 1989 Mark D. Hill.  All rights reserved.
+---See -copyright option for details
+
+---Summary of options (-help option gives usage information).
+
+-l1-isize 4096
+-l1-dsize 4096
+-l1-ibsize 8
+-l1-dbsize 8
+-l1-isbsize 8
+-l1-dsbsize 8
+-l1-iassoc 1
+-l1-dassoc 1
+-l1-irepl l
+-l1-drepl l
+-l1-ifetch d
+-l1-dfetch d
+-l1-dwalloc a
+-l1-dwback a
+-skipcount 0
+-flushcount 0
+-maxcount 0
+-stat-interval 0
+-informat p
+-on-trigger 0x0
+-off-trigger 0x0
+
+---Simulation begins.
+---Simulation complete.
+l1-icache
+ Metrics		      Total	      Instrn	       Data	       Read	      Write	       Misc
+ -----------------	      ------	      ------	      ------	      ------	      ------	      ------
+ Demand Fetches		     2244575	     2244575	           0	           0	           0	           0
+  Fraction of total	      1.0000	      1.0000	      0.0000	      0.0000	      0.0000	      0.0000
+
+ Demand Misses		      964294	      964294	           0	           0	           0	           0
+  Demand miss rate	      0.4296	      0.4296	      0.0000	      0.0000	      0.0000	      0.0000
+
+ Multi-block refs              1679
+ Bytes From Memory	     7714352
+ ( / Demand Fetches)	      3.4369
+ Bytes To Memory	           0
+ ( / Demand Writes)	      0.0000
+ Total Bytes r/w Mem	     7714352
+ ( / Demand Fetches)	      3.4369
+
+l1-dcache
+ Metrics		      Total	      Instrn	       Data	       Read	      Write	       Misc
+ -----------------	      ------	      ------	      ------	      ------	      ------	      ------
+ Demand Fetches		      404840	           0	      404840	      216159	      134973	       53708
+  Fraction of total	      1.0000	      0.0000	      1.0000	      0.5339	      0.3334	      0.1327
+
+ Demand Misses		      262695	           0	      262695	      134424	       92525	       35746
+  Demand miss rate	      0.6489	      0.0000	      0.6489	      0.6219	      0.6855	      0.6656
+
+ Multi-block refs                 0
+ Bytes From Memory	     1908968
+ ( / Demand Fetches)	      4.7154
+ Bytes To Memory	      789984
+ ( / Demand Writes)	      5.8529
+ Total Bytes r/w Mem	     2698952
+ ( / Demand Fetches)	      6.6667
+
+---Execution complete.
