@@ -1,0 +1,41 @@
+FFT with Blocking Transpose
+   1024 Complex Doubles
+   1 Processors
+   65536 Cache lines
+   16 Byte line size
+   4096 Bytes per page
+
+
+                 PROCESS STATISTICS
+            Computation      Transpose     Transpose
+ Proc          Time            Time        Fraction
+    0               400             86       0.21500
+
+                 TIMING INFORMATION
+Start time                        :      -1822743358
+Initialization finish time        :      -1822743036
+Overall finish time               :      -1822742636
+Total time with initialization    :              722
+Total time without initialization :              400
+Overall transpose time            :               86
+Overall transpose fraction        :          0.21500
+
+
+ Performance counter stats for './fft':
+
+              1.51 msec task-clock                #    0.680 CPUs utilized
+                 0      context-switches          #    0.000 /sec
+                 0      cpu-migrations            #    0.000 /sec
+                58      page-faults               #   38.312 K/sec
+           3546144      cycles                    #    2.342 GHz
+           2854674      stalled-cycles-frontend   #   80.50% frontend cycles idle
+           2043166      stalled-cycles-backend    #   57.62% backend cycles idle
+           2083507      instructions              #    0.59  insn per cycle
+                                                  #    1.37  stalled cycles per insn
+            190165      branches                  #  125.613 M/sec
+              5594      branch-misses             #    2.94% of all branches
+
+       0.002227599 seconds time elapsed
+
+       0.002269000 seconds user
+       0.000000000 seconds sys

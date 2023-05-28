@@ -1,0 +1,27 @@
+
+FFT with Blocking Transpose
+   1024 Complex Doubles
+   1 Processors
+   65536 Cache lines
+   16 Byte line size
+   4096 Bytes per page
+
+
+                 PROCESS STATISTICS
+            Computation      Transpose     Transpose
+ Proc          Time            Time        Fraction
+    0               352             69       0.19602
+
+                 TIMING INFORMATION
+Start time                        :       1744998617
+Initialization finish time        :       1744999416
+Overall finish time               :       1744999768
+Total time with initialization    :             1151
+Total time without initialization :              352
+Overall transpose time            :               69
+Overall transpose fraction        :          0.19602
+
+
+real    0m0.019s
+user    0m0.002s
+sys     0m0.000s

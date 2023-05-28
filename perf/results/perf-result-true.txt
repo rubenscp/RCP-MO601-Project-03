@@ -1,0 +1,20 @@
+root@NotebookRubens:/usr/local/perf-benchmark# perf stat ./true
+
+ Performance counter stats for './true':
+
+              0.62 msec task-clock                #    0.480 CPUs utilized
+                 0      context-switches          #    0.000 /sec
+                 0      cpu-migrations            #    0.000 /sec
+                25      page-faults               #   40.545 K/sec
+           1375740      cycles                    #    2.231 GHz
+           1224556      stalled-cycles-frontend   #   89.01% frontend cycles idle
+           1083692      stalled-cycles-backend    #   78.77% backend cycles idle
+            315668      instructions              #    0.23  insn per cycle
+                                                  #    3.88  stalled cycles per insn
+             63021      branches                  #  102.207 M/sec
+              2900      branch-misses             #    4.60% of all branches
+
+       0.001284600 seconds time elapsed
+
+       0.001445000 seconds user
+       0.000000000 seconds sys
