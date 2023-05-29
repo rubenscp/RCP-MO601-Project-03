@@ -1,24 +1,10 @@
-../../run-sniper -v -n 1 -c gainestown --roi -- ./fft -p 1
-[SNIPER] Running ['/usr/local/sniper/record-trace', '-o', '/tmp/tmpmxPmVb/run_benchmarks', '-v', '--roi', '--pa', '-e', '1', '-s', '0', '-r', '1', '--follow', '--routine-tracing', '--', './fft', '-p', '1']
 [SNIPER] Start
-[SNIPER] Running ['bash', '-c', '/usr/local/sniper/lib/sniper -c /usr/local/sniper/config/base.cfg --general/total_cores=1 --general/output_dir=/usr/local/sniper/test/fft --config=/usr/local/sniper/config/nehalem.cfg --config=/usr/local/sniper/config/gainestown.cfg -g --general/magic=true -g --traceinput/stop_with_first_app=true -g --traceinput/restart_apps=false -g --traceinput/stop_with_first_app=false -g --traceinput/enabled=true -g --traceinput/emulate_syscalls=true -g --traceinput/num_apps=1 -g --traceinput/trace_prefix=/tmp/tmpmxPmVb/run_benchmarks']
 [SNIPER] --------------------------------------------------------------------------------
 [SNIPER] Sniper using SIFT/trace-driven frontend
-[SNIPER] Running pre-ROI region in  CACHE_ONLY mode
-[SNIPER] Running application ROI in DETAILED mode
-[SNIPER] Running post-ROI region in FAST_FORWARD mode
+[SNIPER] Running full application in DETAILED mode
 [SNIPER] --------------------------------------------------------------------------------
-[RECORD-TRACE] Using the Pin frontend (sift/recorder)
-[SIFT_RECORDER] Running /usr/local/sniper/pin_kit/pin -mt -injection child -xyzzy -ifeellucky -follow_execv 1  -t /usr/local/sniper/sift/recorder/obj-intel64/sift_recorder -verbose 1 -debug 0 -roi 1 -roi-mpi 0 -f 0 -d 0 -b 0 -o /tmp/tmpmxPmVb/run_benchmarks -e 1 -s 0 -r 1 -pa 1 -rtntrace 1 -stop 0    -- ./fft -p 1
 [SNIPER] Enabling performance models
 [SNIPER] Setting instrumentation mode to DETAILED
-[SNIPER] Disabling performance models
-[SNIPER] Leaving ROI after 2.92 seconds
-[SNIPER] Simulated 1.2M instructions, 1.7M cycles, 0.69 IPC
-[SNIPER] Simulation speed 404.9 KIPS (404.9 KIPS / target core - 2469.7ns/instr)
-[SNIPER] Sampling: executed 42.99% of simulated time in detailed mode
-[SNIPER] Setting instrumentation mode to FAST_FORWARD
-[TRACE:0] -- DONE --
 
 FFT with Blocking Transpose
    1024 Complex Doubles
@@ -31,23 +17,23 @@ FFT with Blocking Transpose
                  PROCESS STATISTICS
             Computation      Transpose     Transpose
  Proc          Time            Time        Fraction
-    0               248             28       0.11290
+    0               249             30       0.12048
 
                  TIMING INFORMATION
-Start time                        :      -1844408306
-Initialization finish time        :      -1844407925
-Overall finish time               :      -1844407677
-Total time with initialization    :              629
-Total time without initialization :              248
-Overall transpose time            :               28
-Overall transpose fraction        :          0.11290
+Start time                        :      -1844408280
+Initialization finish time        :      -1844408159
+Overall finish time               :      -1844407910
+Total time with initialization    :              370
+Total time without initialization :              249
+Overall transpose time            :               30
+Overall transpose fraction        :          0.12048
 
+[TRACE:0] -- DONE --
+[RECORD-TRACE] Using the Pin frontend (sift/recorder)
+[SNIPER] Disabling performance models
+[SNIPER] Leaving ROI after 35.78 seconds
+[SNIPER] Simulated 1.6M instructions, 1.1M cycles, 1.45 IPC
+[SNIPER] Simulation speed 45.7 KIPS (45.7 KIPS / target core - 21858.3ns/instr)
+[SNIPER] Setting instrumentation mode to FAST_FORWARD
 [SNIPER] End
-[SNIPER] Elapsed time: 6.21 seconds
-
-
-Optional: Run '../../tools/cpistack.py' in this directory to generate cpi-stack output for this run
-Optional: Run '../../tools/mcpat.py' in this directory to generate power output for this run
-Optional: Run '../../tools/dumpstats.py' in this directory to view detailed statistics for this run
-Optional: Run '../../tools/gen_topology.py' in this directory to view the system topology for this run
-
+[SNIPER] Elapsed time: 36.19 seconds

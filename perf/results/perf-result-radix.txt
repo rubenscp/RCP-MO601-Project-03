@@ -11,31 +11,32 @@ Integer Radix Sort
                  PROCESS STATISTICS
                Total            Rank            Sort
  Proc          Time             Time            Time
-    0          17962           12667            5284
+    0          38614            1636           36975
 
                  TIMING INFORMATION
-Start time                        :      -1915652633
-Initialization finish time        :      -1915565866
-Overall finish time               :      -1915547904
-Total time with initialization    :           104729
-Total time without initialization :            17962
+Start time                        :         39635560
+Initialization finish time        :         39828245
+Overall finish time               :         39866859
+Total time with initialization    :           231299
+Total time without initialization :            38614
 
 
  Performance counter stats for './RADIX':
 
-             57.04 msec task-clock                #    0.519 CPUs utilized
-                19      context-switches          #  333.114 /sec
-                 0      cpu-migrations            #    0.000 /sec
-               602      page-faults               #   10.554 K/sec
-         124725545      cycles                    #    2.187 GHz
-         108059719      stalled-cycles-frontend   #   86.64% frontend cycles idle
-          77653570      stalled-cycles-backend    #   62.26% backend cycles idle
-          49091318      instructions              #    0.39  insn per cycle
-                                                  #    2.20  stalled cycles per insn
-           1838642      branches                  #   32.236 M/sec
-             13639      branch-misses             #    0.74% of all branches
+             82.33 msec task-clock                #    0.337 CPUs utilized
+                21      context-switches          #  255.056 /sec
+                 4      cpu-migrations            #   48.582 /sec
+               605      page-faults               #    7.348 K/sec
+         118135743      cycles                    #    1.435 GHz
+         101510923      stalled-cycles-frontend   #   85.93% frontend cycles idle
+          71291370      stalled-cycles-backend    #   60.35% backend cycles idle
+          49058550      instructions              #    0.42  insn per cycle
+                                                  #    2.07  stalled cycles per insn
+           1832692      branches                  #   22.259 M/sec
+             15582      branch-misses             #    0.85% of all branches
 
-       0.109805213 seconds time elapsed
+       0.244433302 seconds time elapsed
 
-       0.048477000 seconds user
-       0.009695000 seconds sys
+       0.083240000 seconds user
+       0.000000000 seconds sys
+

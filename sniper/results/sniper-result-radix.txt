@@ -5,6 +5,7 @@
 [SNIPER] --------------------------------------------------------------------------------
 [SNIPER] Enabling performance models
 [SNIPER] Setting instrumentation mode to DETAILED
+[RECORD-TRACE] Using the Pin frontend (sift/recorder)
 
 Integer Radix Sort
      262144 Keys
@@ -18,7 +19,7 @@ Integer Radix Sort
                  PROCESS STATISTICS
                Total            Rank            Sort
  Proc          Time             Time            Time
-    0           2430            1115            1315
+    0           2430            1112            1317
 
                  TIMING INFORMATION
 Start time                        :      -1844408187
@@ -28,11 +29,10 @@ Total time with initialization    :            39118
 Total time without initialization :             2430
 
 [TRACE:0] -- DONE --
-[RECORD-TRACE] Using the Pin frontend (sift/recorder)
 [SNIPER] Disabling performance models
-[SNIPER] Leaving ROI after 101.01 seconds
+[SNIPER] Leaving ROI after 267.37 seconds
 [SNIPER] Simulated 46.6M instructions, 104.4M cycles, 0.45 IPC
-[SNIPER] Simulation speed 461.8 KIPS (461.8 KIPS / target core - 2165.5ns/instr)
+[SNIPER] Simulation speed 174.5 KIPS (174.5 KIPS / target core - 5731.5ns/instr)
 [SNIPER] Setting instrumentation mode to FAST_FORWARD
 [SNIPER] End
-[SNIPER] Elapsed time: 101.11 seconds
+[SNIPER] Elapsed time: 267.41 seconds
