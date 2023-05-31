@@ -1,0 +1,24 @@
+Num of threads: 4
+Detecting cells in frame 0
+Cells detected: 36
+
+Detection runtime
+-----------------
+GICOV computation: 0.28887 seconds
+   GICOV dilation: 0.12891 seconds
+            Total: 0.43428 seconds
+
+Tracking cells across 5 frames
+Processing frame 5 / 5
+
+Tracking runtime (average per frame):
+------------------------------------
+MGVF computation: 8.03575 seconds
+ Snake evolution: 0.00992 seconds
+           Total: 2.17117 seconds
+
+Total application run time: 11.29013 seconds
+
+real    0m11.298s
+user    0m41.787s
+sys     0m0.070s

@@ -1,0 +1,21 @@
+Hello world from parent
+Hello world from child
+
+ Performance counter stats for './fork':
+
+              2.36 msec task-clock                #    0.198 CPUs utilized
+                 1      context-switches          #  423.298 /sec
+                 0      cpu-migrations            #    0.000 /sec
+                53      page-faults               #   22.435 K/sec
+           3077059      cycles                    #    1.303 GHz
+           2761487      stalled-cycles-frontend   #   89.74% frontend cycles idle
+           2453126      stalled-cycles-backend    #   79.72% backend cycles idle
+            653156      instructions              #    0.21  insn per cycle
+                                                  #    4.23  stalled cycles per insn
+            128050      branches                  #   54.203 M/sec
+              5792      branch-misses             #    4.52% of all branches
+
+       0.011937503 seconds time elapsed
+
+       0.003388000 seconds user
+       0.000000000 seconds sys

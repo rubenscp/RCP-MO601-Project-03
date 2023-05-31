@@ -19,20 +19,24 @@ Integer Radix Sort
                  PROCESS STATISTICS
                Total            Rank            Sort
  Proc          Time             Time            Time
-    0           2430            1112            1317
+    0           2432            1116            1315
 
                  TIMING INFORMATION
-Start time                        :      -1844408187
-Initialization finish time        :      -1844371499
-Overall finish time               :      -1844369069
-Total time with initialization    :            39118
-Total time without initialization :             2430
+Start time                        :      -1844408188
+Initialization finish time        :      -1844371498
+Overall finish time               :      -1844369066
+Total time with initialization    :            39122
+Total time without initialization :             2432
 
 [TRACE:0] -- DONE --
 [SNIPER] Disabling performance models
-[SNIPER] Leaving ROI after 267.37 seconds
-[SNIPER] Simulated 46.6M instructions, 104.4M cycles, 0.45 IPC
-[SNIPER] Simulation speed 174.5 KIPS (174.5 KIPS / target core - 5731.5ns/instr)
+[SNIPER] Leaving ROI after 135.74 seconds
+[SNIPER] Simulated 46.7M instructions, 104.5M cycles, 0.45 IPC
+[SNIPER] Simulation speed 343.7 KIPS (343.7 KIPS / target core - 2909.8ns/instr)
 [SNIPER] Setting instrumentation mode to FAST_FORWARD
 [SNIPER] End
-[SNIPER] Elapsed time: 267.41 seconds
+[SNIPER] Elapsed time: 135.82 seconds
+
+real    2m16.297s
+user    2m6.044s
+sys     0m9.178s

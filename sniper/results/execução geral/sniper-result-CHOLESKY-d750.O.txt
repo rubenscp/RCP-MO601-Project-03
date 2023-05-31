@@ -1,0 +1,59 @@
+[SNIPER] Start
+[SNIPER] --------------------------------------------------------------------------------
+[SNIPER] Sniper using SIFT/trace-driven frontend
+[SNIPER] Running full application in DETAILED mode
+[SNIPER] --------------------------------------------------------------------------------
+[SNIPER] Enabling performance models
+[SNIPER] Setting instrumentation mode to DETAILED
+[RECORD-TRACE] Using the Pin frontend (sift/recorder)
+
+Sparse Cholesky Factorization
+     Problem:
+     1 Processors
+     Postpass partition size: 32
+     16384 byte cache
+
+
+true partitions
+Fan-out, no block copy-across
+LB domain, embedded distribution
+No ordering
+1 supers, 750.00 nodes/super, 750 max super
+1/1 supers before/after
+140906375/140906375 (1.00) ops before/after amalgamation
+before partition
+Divide for 1 P, 1 domains, 1.00 of work static, 1.00 eff, (inf overall)
+0 total domain updates
+750 max height, 140906375 ops, 62625.06 conc, 250.25 bl for 1 P
+Target partition size 0, postpass size 32
+Processor array is 1 by 1
+No redistribution
+Supers:
+Blocks:
+1 partitions
+1 partitions, 0 blocks
+[HOOKS] Entering ROI
+
+[HOOKS] Leaving ROI
+140906375 operations for factorization
+
+                            PROCESS STATISTICS
+              Total
+ Proc         Time
+    0         42077
+                            TIMING INFORMATION
+Start time                        :      -1844408170
+Initialization finish time        :      -1844387282
+Overall finish time               :      -1844345205
+Total time with initialization    :            62965
+Total time without initialization :            42077
+
+[TRACE:0] -- DONE --
+[SNIPER] Disabling performance models
+[SNIPER] Leaving ROI after 4632.49 seconds
+[SNIPER] Simulated 309.8M instructions, 167.9M cycles, 1.84 IPC
+[SNIPER] Simulation speed 66.9 KIPS (66.9 KIPS / target core - 14951.6ns/instr)
+[SNIPER] Setting instrumentation mode to FAST_FORWARD
+[SNIPER] End
+[SNIPER] Elapsed time: 4628.97 seconds
+

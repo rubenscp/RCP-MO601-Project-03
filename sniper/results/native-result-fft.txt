@@ -10,13 +10,18 @@ FFT with Blocking Transpose
                  PROCESS STATISTICS
             Computation      Transpose     Transpose
  Proc          Time            Time        Fraction
-    0               276             65       0.23551
+    0               201             53       0.26368
 
                  TIMING INFORMATION
-Start time                        :       1894464277
-Initialization finish time        :       1894465145
-Overall finish time               :       1894465421
-Total time with initialization    :             1144
-Total time without initialization :              276
-Overall transpose time            :               65
-Overall transpose fraction        :          0.23551
+Start time                        :        398572913
+Initialization finish time        :        398573140
+Overall finish time               :        398573341
+Total time with initialization    :              428
+Total time without initialization :              201
+Overall transpose time            :               53
+Overall transpose fraction        :          0.26368
+
+
+real    0m0.001s
+user    0m0.002s
+sys     0m0.000s

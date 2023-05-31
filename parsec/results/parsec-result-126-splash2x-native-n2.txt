@@ -1,0 +1,438 @@
+[PARSEC] Benchmarks to run:  splash2x.barnes splash2x.cholesky splash2x.fft splash2x.fmm splash2x.lu_cb splash2x.lu_ncb splash2x.ocean_cp splash2x.ocean_ncp splash2x.radiosity splash2x.radix splash2x.raytrace splash2x.volrend splash2x.water_nsquared splash2x.water_spatial
+
+[PARSEC] [========== Running benchmark splash2x.barnes [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'native'.
+input.template
+[PARSEC] Running 'time /usr/local/parsec-3.0/ext/splash2x/apps/barnes/inst/amd64-linux.gcc/bin/run.sh 2 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file input_2...
+Running /usr/local/parsec-3.0/ext/splash2x/apps/barnes/inst/amd64-linux.gcc/bin/barnes 2 < input_2:
+
+		Hack code: Plummer model
+
+     nbody     dtime       eps       tol     dtout     tstop    fcells     NPROC
+   4194304   0.02500    0.0500      1.00     0.250     0.075      2.00         2
+
+COMPUTESTART  = 1685486805344784
+COMPUTEEND    = 1685486968723411
+COMPUTETIME   =    163378627
+TRACKTIME     =     72094145
+PARTITIONTIME =       395811	 0.01
+TREEBUILDTIME =      2122193	 0.03
+FORCECALCTIME =     69152951	 0.96
+RESTTIME      =       423190	 0.01
+
+real	2m44.312s
+user	5m22.148s
+sys	0m0.430s
+[PARSEC] [----------    End of output    ----------]
+
+[PARSEC] [========== Running benchmark splash2x.cholesky [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'native'.
+d750.O
+lshp.O
+tk14.O
+tk15.O
+tk16.O
+tk17.O
+tk18.O
+tk23.O
+tk25.O
+tk29.O
+wr10.O
+[PARSEC] Running 'time /usr/local/parsec-3.0/ext/splash2x/kernels/cholesky/inst/amd64-linux.gcc/bin/run.sh 2 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file tk29.O...
+Running /usr/local/parsec-3.0/ext/splash2x/kernels/cholesky/inst/amd64-linux.gcc/bin/cholesky -p2 < tk29.O:
+
+Sparse Cholesky Factorization
+     Problem:         
+     2 Processors
+     Postpass partition size: 32
+     16384 byte cache
+
+
+true partitions
+Fan-out, no block copy-across
+LB domain, embedded distribution
+No ordering
+3231 supers, 4.33 nodes/super, 174 max super
+3231/1187 supers before/after
+393059150/405034303 (1.03) ops before/after amalgamation
+before partition
+Divide for 2 P, 99 domains, 0.73 of work static, 0.99 eff, (inf overall)
+311715 total domain updates
+1779 max height, 405034303 ops, 75891.76 conc, 194.80 bl for 2 P
+Target partition size 0, postpass size 32
+Processor array is 2 by 1
+No redistribution
+Supers: 111: 1  222: 1  546: 1  
+Blocks: 27: 1  28: 3  31: 2  32: 20  33: 2  
+28 partitions
+28 partitions, 483 blocks
+405034303 operations for factorization
+
+                            PROCESS STATISTICS
+              Total
+ Proc         Time 
+    0        147008
+                            TIMING INFORMATION
+Start time                        : 1685486968849290
+Initialization finish time        : 1685486968949579
+Overall finish time               : 1685486969096587
+Total time with initialization    :           247297
+Total time without initialization :           147008
+
+
+real	0m0.261s
+user	0m0.359s
+sys	0m0.040s
+[PARSEC] [----------    End of output    ----------]
+
+[PARSEC] [========== Running benchmark splash2x.fft [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /usr/local/parsec-3.0/ext/splash2x/kernels/fft/inst/amd64-linux.gcc/bin/run.sh 2 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /usr/local/parsec-3.0/ext/splash2x/kernels/fft/inst/amd64-linux.gcc/bin/fft -m28 -p2:
+Killed
+
+real	0m28.628s
+user	0m20.091s
+sys	0m4.692s
+[PARSEC] [----------    End of output    ----------]
+
+[PARSEC] [========== Running benchmark splash2x.fmm [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'native'.
+input.template
+[PARSEC] Running 'time /usr/local/parsec-3.0/ext/splash2x/apps/fmm/inst/amd64-linux.gcc/bin/run.sh 2 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file input_2...
+Running /usr/local/parsec-3.0/ext/splash2x/apps/fmm/inst/amd64-linux.gcc/bin/fmm 2 < input_2:
+Segmentation fault
+
+real	0m0.016s
+user	0m0.006s
+sys	0m0.000s
+[PARSEC] [----------    End of output    ----------]
+
+[PARSEC] [========== Running benchmark splash2x.lu_cb [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /usr/local/parsec-3.0/ext/splash2x/kernels/lu_cb/inst/amd64-linux.gcc/bin/run.sh 2 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /usr/local/parsec-3.0/ext/splash2/kernels/lu_cb/inst/amd64-linux.gcc/bin/lu_cb -p2 -n8096 -b32:
+
+Blocked Dense LU Factorization
+     8096 by 8096 Matrix
+     2 Processors
+     32 by 32 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     174792955          2302        847923     170253705       3688919
+
+                            TIMING INFORMATION
+Start time                        : 1685486998807163
+Initialization finish time        : 1685486998808409
+Overall finish time               : 1685487173601392
+Total time with initialization    :        174794229
+Total time without initialization :        174792983
+
+
+real	2m57.551s
+user	5m41.654s
+sys	0m1.681s
+[PARSEC] [----------    End of output    ----------]
+
+[PARSEC] [========== Running benchmark splash2x.lu_ncb [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /usr/local/parsec-3.0/ext/splash2x/kernels/lu_ncb/inst/amd64-linux.gcc/bin/run.sh 2 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /usr/local/parsec-3.0/ext/splash2/kernels/lu_ncb/inst/amd64-linux.gcc/bin/lu_ncb -p2 -n8096 -b32:
+
+Blocked Dense LU Factorization
+     8096 by 8096 Matrix
+     2 Processors
+     32 by 32 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0     161587446          3604        973834     157891959       2717922
+
+                            TIMING INFORMATION
+Start time                        : 1685487176334948
+Initialization finish time        : 1685487176335162
+Overall finish time               : 1685487337922633
+Total time with initialization    :        161587685
+Total time without initialization :        161587471
+
+
+real	2m42.473s
+user	5m16.816s
+sys	0m0.860s
+[PARSEC] [----------    End of output    ----------]
+
+[PARSEC] [========== Running benchmark splash2x.ocean_cp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /usr/local/parsec-3.0/ext/splash2x/apps/ocean_cp/inst/amd64-linux.gcc/bin/run.sh 2 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /usr/local/parsec-3.0/ext/splash2x/apps/ocean_cp/inst/amd64-linux.gcc/bin/ocean_cp -n4098 -p2 -e1e-07 -r10000 -t14400:
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 2
+    Grid size                          : 4098 x 4098
+    Grid resolution (meters)           : 10000.00
+    Time between relaxations (seconds) : 14400
+    Error tolerance                    : 1e-07
+
+
+                       PROCESS STATISTICS
+                  Total          Multigrid         Multigrid
+ Proc             Time             Time            Fraction
+    0          76002644           63568427             0.836
+
+                       TIMING INFORMATION
+Start time                        : 1685487338851505
+Initialization finish time        : 1685487347098206
+Overall finish time               : 1685487423101524
+Total time with initialization    :         84250019
+Total time without initialization :         76003318
+    (excludes first timestep)
+
+
+real	1m24.280s
+user	2m37.854s
+sys	0m2.923s
+[PARSEC] [----------    End of output    ----------]
+
+[PARSEC] [========== Running benchmark splash2x.ocean_ncp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /usr/local/parsec-3.0/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/run.sh 2 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /usr/local/parsec-3.0/ext/splash2x/apps/ocean_ncp/inst/amd64-linux.gcc/bin/ocean_ncp -n4098 -p2 -e1e-07 -r10000 -t14400:
+Segmentation fault
+
+real	0m0.009s
+user	0m0.003s
+sys	0m0.000s
+[PARSEC] [----------    End of output    ----------]
+
+[PARSEC] [========== Running benchmark splash2x.radiosity [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /usr/local/parsec-3.0/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/run.sh 2 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /usr/local/parsec-3.0/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc/bin/radiosity -bf 1.5e-4 -batch -largeroom -p 2:
+TIMING STATISTICS MEASURED BY MAIN PROCESS:
+	Overall start time	    1685487423593744
+	Overall end time	    1685487530503804
+	Total time with initialization	           106910060
+	Total time without initialization	           106909915
+Rasiosity Statistics
+
+    Histogram of interactions/elem
+	 Interactions  Occurrence
+	 -------------------------------
+	 (Over 100)      31838 (5314.163574)
+	    100          89 (2237.863281)
+	    99          93 (4802.041504)
+	    98          115 (1947.130127)
+	    97          97 (1561.269775)
+	    96          114 (2132.827393)
+	    95          95 (2498.823975)
+	    94          72 (2368.608887)
+	    93          81 (1919.867310)
+	    92          134 (4099.140625)
+	    91          100 (4834.576172)
+	    90          85 (4174.987793)
+	    89          143 (1866.359863)
+	    88          96 (1638.860229)
+	    87          102 (1492.806519)
+	    86          129 (1438.851807)
+	    85          121 (4123.395020)
+	    84          104 (2317.035889)
+	    83          97 (1178.841553)
+	    82          108 (8475.317383)
+	    81          111 (2516.780762)
+	    80          135 (3036.673340)
+	    79          117 (2504.423584)
+	    78          111 (1329.722412)
+	    77          135 (4033.119873)
+	    76          118 (3681.571777)
+	    75          86 (6786.750488)
+	    74          124 (3976.764404)
+	    73          129 (4028.987305)
+	    72          136 (3863.759277)
+	    71          109 (1345.809692)
+	    70          112 (1028.156860)
+	    69          106 (1184.963013)
+	    68          99 (4510.683594)
+	    67          106 (4549.630371)
+	    66          105 (1226.386108)
+	    65          93 (1023.443909)
+	    64          118 (1179.430664)
+	    63          136 (1094.069092)
+	    62          144 (1155.302368)
+	    61          103 (4382.127930)
+	    60          136 (1293.364014)
+	    59          119 (4223.021973)
+	    58          146 (3544.859131)
+	    57          156 (3522.385010)
+	    56          123 (4133.031738)
+	    55          138 (8760.458008)
+	    54          136 (3742.920654)
+	    53          153 (5334.792969)
+	    52          146 (8075.515625)
+	    51          138 (3868.639160)
+	    50          111 (4781.025391)
+	    49          122 (4415.029785)
+	    48          144 (6119.991211)
+	    47          112 (7442.375000)
+	    46          143 (1389.210938)
+	    45          112 (4400.572266)
+	    44          92 (5781.890137)
+	    43          120 (7689.592773)
+	    42          96 (4576.682129)
+	    41          126 (7051.408691)
+	    40          110 (10557.518555)
+	    39          101 (8618.818359)
+	    38          102 (8085.734863)
+	    37          102 (4640.656250)
+	    36          96 (2172.031494)
+	    35          164 (5596.732910)
+	    34          165 (3192.195801)
+	    33          102 (1014.214600)
+	    32          132 (1358.579468)
+	    31          135 (1422.885498)
+	    30          116 (4109.037598)
+	    29          97 (15659.407227)
+	    28          180 (1152.140625)
+	    27          103 (4682.793945)
+	    26          159 (3714.336182)
+	    25          96 (5162.059082)
+	    24          174 (5202.742676)
+	    23          193 (4697.972656)
+	    22          1236 (1515.999756)
+	    21          48 (15891.231445)
+	    20          76 (5360.154297)
+	    19          131 (3966.923584)
+	    18          63 (6749.488281)
+	    17          96 (4906.353027)
+	    16          517 (4125.409668)
+	    15          37 (20493.169922)
+	    14          21 (858.750732)
+	    13          18 (21607.433594)
+	    12          21 (39253.910156)
+	    11          26 (711.638550)
+	    10          19 (902.337891)
+	    9          20 (1605.759277)
+	    8          20 (830.564331)
+	    7          36 (843.382324)
+	    6          28 (608.954529)
+	    5          4 (522.946411)
+	    4          25 (1015.135559)
+	    3          5 (522.946411)
+	    2          9 (864.744080)
+	    1          15 (522.946350)
+	    0          27 (522.946350)
+    Configurations
+	Patch assignment: Static equal number
+	Always inserting at top of list for visibility testing (not sorted)
+	Recursive pruning enabled for BSP tree traversal
+	Patch cache:      Enabled
+	Always check all other queues when task stealing (not neighbor scheme)
+    Parameters
+	Number of processors:    2
+	Number of task queues:   2
+	Number of tasks / queue: 200
+	Area epsilon:            2000.000000
+	#inter parallel refine:  5
+	#visibility comp / task: 4
+	BF epsilon:              0.000150
+	Energy convergence:      0.000050
+    Iterations to converge:   11 times
+    Resource Usage
+	Number of patches:            532
+	Total number of elements:     43640
+	Total number of interactions: 15846307
+	          completely visible: 8657672
+	        completely invisible: 1816292
+	           partially visible: 5372343
+	Interaction coherence (root interaction not counted)
+	       Common for 4 siblings: 10042024
+	       Common for 3 siblings: 2988333
+	       Common for 2 siblings: 1250824
+	       Common for no sibling: 1013628
+	Avg. elements per patch:      82.0
+	Avg. interactions per patch:  29786.3
+	Avg. interactions per element:363.1
+	Number of elements in equivalent uniform mesh: 32902
+	Elem(hierarchical)/Elem(uniform): 132.64%
+
+real	3m9.081s
+user	4m55.576s
+sys	0m0.360s
+[PARSEC] [----------    End of output    ----------]
+
+[PARSEC] [========== Running benchmark splash2x.radix [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'native' available, skipping input setup.
+[PARSEC] Running 'time /usr/local/parsec-3.0/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/run.sh 2 native':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /usr/local/parsec-3.0/ext/splash2x/kernels/radix/inst/amd64-linux.gcc/bin/radix -p2 -r4096 -n268435456 -m2147483647:
+
+Integer Radix Sort
+     268435456 Keys
+     2 Processors
+     Radix = 4096
+     Max key = 2147483647
+
+
+                 PROCESS STATISTICS
+               Total            Rank            Sort
+ Proc          Time             Time            Time
+    0       17649277         1076583        16544258
+
+                 TIMING INFORMATION
+Start time                        : 1685487612330301
+Initialization finish time        : 1685487630801721
+Overall finish time               : 1685487648450998
+Total time with initialization    :         36120697
+Total time without initialization :         17649277
+
+
+real	0m36.138s
+user	1m9.879s
+sys	0m2.204s
+[PARSEC] [----------    End of output    ----------]
+
+[PARSEC] [========== Running benchmark splash2x.raytrace [1] ==========]
+[PARSEC] Error: Binary '/usr/local/parsec-3.0/ext/splash2x/apps/raytrace/inst/amd64-linux.gcc/bin/run.sh' of package 'splash2x.raytrace' cannot be found.

@@ -1,4 +1,3 @@
-
 FFT with Blocking Transpose
    1024 Complex Doubles
    1 Processors
@@ -10,34 +9,39 @@ FFT with Blocking Transpose
                  PROCESS STATISTICS
             Computation      Transpose     Transpose
  Proc          Time            Time        Fraction
-    0               372             75       0.20161
+    0               286             67       0.23427
 
                  TIMING INFORMATION
-Start time                        :        194448950
-Initialization finish time        :        194454711
-Overall finish time               :        194455083
-Total time with initialization    :             6133
-Total time without initialization :              372
-Overall transpose time            :               75
-Overall transpose fraction        :          0.20161
+Start time                        :       2094223815
+Initialization finish time        :       2094224496
+Overall finish time               :       2094224782
+Total time with initialization    :              967
+Total time without initialization :              286
+Overall transpose time            :               67
+Overall transpose fraction        :          0.23427
 
 
  Performance counter stats for './fft':
 
-              1.79 msec task-clock                #    0.083 CPUs utilized
-                12      context-switches          #    6.692 K/sec
-                 0      cpu-migrations            #    0.000 /sec
-                61      page-faults               #   34.016 K/sec
-           4238960      cycles                    #    2.364 GHz
-           3211087      stalled-cycles-frontend   #   75.75% frontend cycles idle
-           2214489      stalled-cycles-backend    #   52.24% backend cycles idle
-           2793932      instructions              #    0.66  insn per cycle
-                                                  #    1.15  stalled cycles per insn
-            329898      branches                  #  183.961 M/sec
-             11061      branch-misses             #    3.35% of all branches
+              1.56 msec task-clock                #    0.099 CPUs utilized
+                14      context-switches          #    8.983 K/sec
+                 2      cpu-migrations            #    1.283 K/sec
+                61      page-faults               #   39.140 K/sec
+           3938641      cycles                    #    2.527 GHz
+           2838626      stalled-cycles-frontend   #   72.07% frontend cycles idle
+           2095528      stalled-cycles-backend    #   53.20% backend cycles idle
+           2803179      instructions              #    0.71  insn per cycle
+                                                  #    1.01  stalled cycles per insn
+            331605      branches                  #  212.772 M/sec
+             18425      branch-misses             #    5.56% of all branches
 
-       0.021505200 seconds time elapsed
+       0.015805000 seconds time elapsed
 
-       0.002926000 seconds user
+       0.002454000 seconds user
        0.000000000 seconds sys
 
+
+
+real    0m0.080s
+user    0m0.003s
+sys     0m0.015s

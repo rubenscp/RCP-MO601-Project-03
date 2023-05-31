@@ -1,6 +1,6 @@
 
 Sparse Cholesky Factorization
-     Problem:         
+     Problem:
      1 Processors
      Postpass partition size: 32
      16384 byte cache
@@ -20,8 +20,8 @@ Divide for 1 P, 1 domains, 1.00 of work static, 1.00 eff, (inf overall)
 Target partition size 0, postpass size 32
 Processor array is 1 by 1
 No redistribution
-Supers: 
-Blocks: 
+Supers:
+Blocks:
 1 partitions
 1 partitions, 0 blocks
 [HOOKS] Entering ROI
@@ -30,12 +30,16 @@ Blocks:
 
                             PROCESS STATISTICS
               Total
- Proc         Time 
-    0        158097
+ Proc         Time
+    0         34092
                             TIMING INFORMATION
-Start time                        :       1319049773
-Initialization finish time        :       1319168074
-Overall finish time               :       1319326171
-Total time with initialization    :           276398
-Total time without initialization :           158097
+Start time                        :       -586057645
+Initialization finish time        :       -586029813
+Overall finish time               :       -585995721
+Total time with initialization    :            61924
+Total time without initialization :            34092
 
+
+real    0m0.065s
+user    0m0.065s
+sys     0m0.000s

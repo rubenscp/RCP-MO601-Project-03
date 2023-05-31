@@ -1,0 +1,12 @@
+Configuration used: cores = 4, boxes1d = 10
+Time spent in different stages of CPU/MCPU KERNEL:
+ 0.000000000000 s,  0.000000000000 % : CPU/MCPU: VARIABLES
+ 0.000011000000 s,  0.000350886490 % : MCPU: SET DEVICE
+ 0.000000000000 s,  0.000000000000 % : CPU/MCPU: INPUTS
+ 3.134906053543 s, 99.999649047852 % : CPU/MCPU: KERNEL
+Total time:
+3.134917020798 s
+
+real    0m3.169s
+user    0m11.815s
+sys     0m0.010s

@@ -5,9 +5,10 @@
 [SNIPER] --------------------------------------------------------------------------------
 [SNIPER] Enabling performance models
 [SNIPER] Setting instrumentation mode to DETAILED
+[RECORD-TRACE] Using the Pin frontend (sift/recorder)
 
 Sparse Cholesky Factorization
-     Problem:         
+     Problem:
      1 Processors
      Postpass partition size: 32
      16384 byte cache
@@ -27,8 +28,8 @@ Divide for 1 P, 41 domains, 1.00 of work static, 1.00 eff, (inf overall)
 Target partition size 0, postpass size 32
 Processor array is 1 by 1
 No redistribution
-Supers: 
-Blocks: 
+Supers:
+Blocks:
 1 partitions
 1 partitions, 0 blocks
 [HOOKS] Entering ROI
@@ -37,21 +38,24 @@ Blocks:
 
                             PROCESS STATISTICS
               Total
- Proc         Time 
-    0          2906
+ Proc         Time
+    0          2891
                             TIMING INFORMATION
-Start time                        :      -1844408170
-Initialization finish time        :      -1844403991
-Overall finish time               :      -1844401085
-Total time with initialization    :             7085
-Total time without initialization :             2906
+Start time                        :      -1844408173
+Initialization finish time        :      -1844404109
+Overall finish time               :      -1844401218
+Total time with initialization    :             6955
+Total time without initialization :             2891
 
 [TRACE:0] -- DONE --
-[RECORD-TRACE] Using the Pin frontend (sift/recorder)
 [SNIPER] Disabling performance models
-[SNIPER] Leaving ROI after 704.33 seconds
-[SNIPER] Simulated 44.3M instructions, 19.3M cycles, 2.30 IPC
-[SNIPER] Simulation speed 62.9 KIPS (62.9 KIPS / target core - 15904.3ns/instr)
+[SNIPER] Leaving ROI after 143.84 seconds
+[SNIPER] Simulated 44.3M instructions, 18.9M cycles, 2.34 IPC
+[SNIPER] Simulation speed 308.0 KIPS (308.0 KIPS / target core - 3246.8ns/instr)
 [SNIPER] Setting instrumentation mode to FAST_FORWARD
 [SNIPER] End
-[SNIPER] Elapsed time: 704.18 seconds
+[SNIPER] Elapsed time: 143.90 seconds
+
+real    2m24.331s
+user    2m14.326s
+sys     0m10.320s

@@ -1,10 +1,18 @@
+root@NotebookRubens:/usr/local/sniper/test/fft# time make run
+../../run-sniper -v -n 1 -c gainestown --roi -- ./fft -p 1
+[SNIPER] Running ['/usr/local/sniper/record-trace', '-o', '/tmp/tmpWDL05O/run_benchmarks', '-v', '--roi', '--pa', '-e', '1', '-s', '0', '-r', '1', '--follow', '--routine-tracing', '--', './fft', '-p', '1']
 [SNIPER] Start
+[SNIPER] Running ['bash', '-c', '/usr/local/sniper/lib/sniper -c /usr/local/sniper/config/base.cfg --general/total_cores=1 --general/output_dir=/usr/local/sniper/test/fft --config=/usr/local/sniper/config/nehalem.cfg --config=/usr/local/sniper/config/gainestown.cfg -g --general/magic=true -g --traceinput/stop_with_first_app=true -g --traceinput/restart_apps=false -g --traceinput/stop_with_first_app=false -g --traceinput/enabled=true -g --traceinput/emulate_syscalls=true -g --traceinput/num_apps=1 -g --traceinput/trace_prefix=/tmp/tmpWDL05O/run_benchmarks']
 [SNIPER] --------------------------------------------------------------------------------
 [SNIPER] Sniper using SIFT/trace-driven frontend
-[SNIPER] Running full application in DETAILED mode
+[SNIPER] Running pre-ROI region in  CACHE_ONLY mode
+[SNIPER] Running application ROI in DETAILED mode
+[SNIPER] Running post-ROI region in FAST_FORWARD mode
 [SNIPER] --------------------------------------------------------------------------------
-[SNIPER] Enabling performance models
-[SNIPER] Setting instrumentation mode to DETAILED
+[RECORD-TRACE] Using the Pin frontend (sift/recorder)
+[SIFT_RECORDER] Running /usr/local/sniper/pin_kit/pin -mt -injection child -xyzzy -ifeellucky -follow_execv 1  -t /usr/local/sniper/sift/recorder/obj-intel64/sift_recorder -verbose 1 -debug 0 -roi 1 -roi-mpi 0 -f 0 -d 0 -b 0 -o /tmp/tmpWDL05O/run_benchmarks -e 1 -s 0 -r 1 -pa 1 -rtntrace 1 -stop 0    -- ./fft -p 1
+[SIFT_RECORDER:0:0] Output = [/tmp/tmpWDL05O/run_benchmarks.app0.th0.sift]
+[SIFT_RECORDER:0:0] Response = [/tmp/tmpWDL05O/run_benchmarks_response.app0.th0.sift]
 
 FFT with Blocking Transpose
    1024 Complex Doubles
@@ -13,27 +21,43 @@ FFT with Blocking Transpose
    16 Byte line size
    4096 Bytes per page
 
+[SNIPER] Enabling performance models
+[SNIPER] Setting instrumentation mode to DETAILED
+[SIFT_RECORDER:0] ROI Begin
+[SNIPER] Disabling performance models
+[SNIPER] Leaving ROI after 3.39 seconds
+[SNIPER] Simulated 1.2M instructions, 1.7M cycles, 0.69 IPC
+[SNIPER] Simulation speed 347.8 KIPS (347.8 KIPS / target core - 2875.2ns/instr)
+[SNIPER] Sampling: executed 43.11% of simulated time in detailed mode
+[SNIPER] Setting instrumentation mode to FAST_FORWARD
+[TRACE:0] -- DONE --
+[SIFT_RECORDER:0] ROI End
 
                  PROCESS STATISTICS
             Computation      Transpose     Transpose
  Proc          Time            Time        Fraction
-    0               249             30       0.12048
+    0               248             29       0.11694
 
                  TIMING INFORMATION
-Start time                        :      -1844408280
-Initialization finish time        :      -1844408159
-Overall finish time               :      -1844407910
-Total time with initialization    :              370
-Total time without initialization :              249
-Overall transpose time            :               30
-Overall transpose fraction        :          0.12048
+Start time                        :      -1844408306
+Initialization finish time        :      -1844407928
+Overall finish time               :      -1844407680
+Total time with initialization    :              626
+Total time without initialization :              248
+Overall transpose time            :               29
+Overall transpose fraction        :          0.11694
 
-[TRACE:0] -- DONE --
-[RECORD-TRACE] Using the Pin frontend (sift/recorder)
-[SNIPER] Disabling performance models
-[SNIPER] Leaving ROI after 35.78 seconds
-[SNIPER] Simulated 1.6M instructions, 1.1M cycles, 1.45 IPC
-[SNIPER] Simulation speed 45.7 KIPS (45.7 KIPS / target core - 21858.3ns/instr)
-[SNIPER] Setting instrumentation mode to FAST_FORWARD
+[SIFT_RECORDER:0:0] Recorded 1170005 (out of 1340604) instructions
 [SNIPER] End
-[SNIPER] Elapsed time: 36.19 seconds
+[SNIPER] Elapsed time: 6.87 seconds
+
+
+Optional: Run '../../tools/cpistack.py' in this directory to generate cpi-stack output for this run
+Optional: Run '../../tools/mcpat.py' in this directory to generate power output for this run
+Optional: Run '../../tools/dumpstats.py' in this directory to view detailed statistics for this run
+Optional: Run '../../tools/gen_topology.py' in this directory to view the system topology for this run
+
+
+real    0m7.125s
+user    0m4.875s
+sys     0m0.572s

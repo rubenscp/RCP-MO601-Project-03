@@ -1,4 +1,3 @@
-
 Sparse Cholesky Factorization
      Problem:
      1 Processors
@@ -31,32 +30,37 @@ Blocks:
                             PROCESS STATISTICS
               Total
  Proc         Time
-    0        107039
+    0         32725
                             TIMING INFORMATION
-Start time                        :        271845097
-Initialization finish time        :        271917816
-Overall finish time               :        272024855
-Total time with initialization    :           179758
-Total time without initialization :           107039
+Start time                        :       2043870316
+Initialization finish time        :       2043908477
+Overall finish time               :       2043941202
+Total time with initialization    :            70886
+Total time without initialization :            32725
 
 
- Performance counter stats for './CHOLESKY d750.O':
+ Performance counter stats for './CHOLESKY input/d750.O':
 
-            131.64 msec task-clock                #    0.627 CPUs utilized
-                49      context-switches          #  372.228 /sec
+             63.95 msec task-clock                #    0.834 CPUs utilized
+                 8      context-switches          #  125.088 /sec
                  0      cpu-migrations            #    0.000 /sec
-              2448      page-faults               #   18.596 K/sec
-         250775918      cycles                    #    1.905 GHz
-         158238263      stalled-cycles-frontend   #   63.10% frontend cycles idle
-          80267624      stalled-cycles-backend    #   32.01% backend cycles idle
-         318793875      instructions              #    1.27  insn per cycle
-                                                  #    0.50  stalled cycles per insn
-          40068789      branches                  #  304.382 M/sec
-            299627      branch-misses             #    0.75% of all branches
+              2448      page-faults               #   38.277 K/sec
+         177815525      cycles                    #    2.780 GHz
+          83573091      stalled-cycles-frontend   #   47.00% frontend cycles idle
+          39981392      stalled-cycles-backend    #   22.48% backend cycles idle
+         319675663      instructions              #    1.80  insn per cycle
+                                                  #    0.26  stalled cycles per insn
+          40231893      branches                  #  629.066 M/sec
+            151278      branch-misses             #    0.38% of all branches
 
-       0.209806402 seconds time elapsed
+       0.076645300 seconds time elapsed
 
-       0.117218000 seconds user
-       0.029304000 seconds sys
+       0.058451000 seconds user
+       0.009741000 seconds sys
 
 
+
+real    0m0.137s
+user    0m0.063s
+sys     0m0.019s
+root@NotebookRube

@@ -1,0 +1,41 @@
+2 waiting
+2 working
+2 waiting
+2 working
+2 waiting
+2 working
+2 waiting
+2 working
+2 waiting
+2 working
+2 done
+1 waiting
+1 working
+1 waiting
+1 working
+1 waiting
+1 working
+1 waiting
+1 working
+1 waiting
+1 working
+1 done
+
+ Performance counter stats for './spinloop':
+
+              1.16 msec task-clock                #    0.057 CPUs utilized
+                 1      context-switches          #  865.276 /sec
+                 0      cpu-migrations            #    0.000 /sec
+                31      page-faults               #   26.824 K/sec
+           2522015      cycles                    #    2.182 GHz
+           2247954      stalled-cycles-frontend   #   89.13% frontend cycles idle
+           1984630      stalled-cycles-backend    #   78.69% backend cycles idle
+            531750      instructions              #    0.21  insn per cycle
+                                                  #    4.23  stalled cycles per insn
+            109533      branches                  #   94.776 M/sec
+              5244      branch-misses             #    4.79% of all branches
+
+       0.020184399 seconds time elapsed
+
+       0.002096000 seconds user
+       0.000000000 seconds sys

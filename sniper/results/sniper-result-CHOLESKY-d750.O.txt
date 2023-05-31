@@ -33,27 +33,31 @@ Blocks:
 1 partitions
 1 partitions, 0 blocks
 [HOOKS] Entering ROI
-
 [HOOKS] Leaving ROI
 140906375 operations for factorization
 
                             PROCESS STATISTICS
               Total
  Proc         Time
-    0         42077
+    0         43191
                             TIMING INFORMATION
-Start time                        :      -1844408170
-Initialization finish time        :      -1844387282
-Overall finish time               :      -1844345205
-Total time with initialization    :            62965
-Total time without initialization :            42077
+Start time                        :      -1844408171
+Initialization finish time        :      -1844387153
+Overall finish time               :      -1844343962
+Total time with initialization    :            64209
+Total time without initialization :            43191
 
 [TRACE:0] -- DONE --
 [SNIPER] Disabling performance models
-[SNIPER] Leaving ROI after 4632.49 seconds
-[SNIPER] Simulated 309.8M instructions, 167.9M cycles, 1.84 IPC
-[SNIPER] Simulation speed 66.9 KIPS (66.9 KIPS / target core - 14951.6ns/instr)
+[SNIPER] Leaving ROI after 800.55 seconds
+[SNIPER] Simulated 309.8M instructions, 171.2M cycles, 1.81 IPC
+[SNIPER] Simulation speed 387.0 KIPS (387.0 KIPS / target core - 2583.8ns/instr)
 [SNIPER] Setting instrumentation mode to FAST_FORWARD
 [SNIPER] End
-[SNIPER] Elapsed time: 4628.97 seconds
+[SNIPER] Elapsed time: 800.03 seconds
+
+real    13m20.362s
+user    12m43.810s
+sys     0m40.666s
+root@NotebookRubens:/usr/local/sniper/projeto03-programs/cholesky#
 

@@ -31,31 +31,36 @@ Blocks:
                             PROCESS STATISTICS
               Total
  Proc         Time
-    0         16906
+    0          2791
                             TIMING INFORMATION
-Start time                        :        238241009
-Initialization finish time        :        238280514
-Overall finish time               :        238297420
-Total time with initialization    :            56411
-Total time without initialization :            16906
+Start time                        :       2001911361
+Initialization finish time        :       2001919846
+Overall finish time               :       2001922637
+Total time with initialization    :            11276
+Total time without initialization :             2791
 
 
- Performance counter stats for './CHOLESKY tk14.O':
+ Performance counter stats for './CHOLESKY input/tk14.O':
 
-             30.20 msec task-clock                #    0.354 CPUs utilized
-                43      context-switches          #    1.424 K/sec
+             10.95 msec task-clock                #    0.778 CPUs utilized
+                 4      context-switches          #  365.220 /sec
                  0      cpu-migrations            #    0.000 /sec
-               663      page-faults               #   21.952 K/sec
-          43349489      cycles                    #    1.435 GHz
-          28529854      stalled-cycles-frontend   #   65.81% frontend cycles idle
-          16486550      stalled-cycles-backend    #   38.03% backend cycles idle
-          47273748      instructions              #    1.09  insn per cycle
-                                                  #    0.60  stalled cycles per insn
-           5744156      branches                  #  190.193 M/sec
-            157523      branch-misses             #    2.74% of all branches
+               666      page-faults               #   60.809 K/sec
+          32377847      cycles                    #    2.956 GHz
+          16856861      stalled-cycles-frontend   #   52.06% frontend cycles idle
+          11050548      stalled-cycles-backend    #   34.13% backend cycles idle
+          47234927      instructions              #    1.46  insn per cycle
+                                                  #    0.36  stalled cycles per insn
+           5729315      branches                  #  523.115 M/sec
+            134777      branch-misses             #    2.35% of all branches
 
-       0.085269899 seconds time elapsed
+       0.014068800 seconds time elapsed
 
-       0.032778000 seconds user
+       0.011494000 seconds user
        0.000000000 seconds sys
 
+
+
+real    0m0.072s
+user    0m0.029s
+sys     0m0.000s

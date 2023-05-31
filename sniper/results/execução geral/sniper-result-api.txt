@@ -1,0 +1,28 @@
+../../run-sniper -n 2 -c gainestown --roi -g --api/simple/cores_per_socket=1 -- ./api
+[SNIPER] Start
+[SNIPER] --------------------------------------------------------------------------------
+[SNIPER] Sniper using SIFT/trace-driven frontend
+[SNIPER] Running pre-ROI region in  CACHE_ONLY mode
+[SNIPER] Running application ROI in DETAILED mode
+[SNIPER] Running post-ROI region in FAST_FORWARD mode
+[SNIPER] --------------------------------------------------------------------------------
+[SNIPER] Enabling performance models
+[SNIPER] Setting instrumentation mode to DETAILED
+API Test: Running in the simulator
+[SNIPER] Disabling performance models
+[SNIPER] Leaving ROI after 0.35 seconds
+[SNIPER] Simulated 0.1M instructions, 0.1M cycles, 0.66 IPC
+[SNIPER] Simulation speed 210.3 KIPS (105.2 KIPS / target core - 9509.5ns/instr)
+[SNIPER] Sampling: executed 64.90% of simulated time in detailed mode
+[SNIPER] Setting instrumentation mode to FAST_FORWARD
+[TRACE:0] -- DONE --
+[RECORD-TRACE] Using the Pin frontend (sift/recorder)
+[SNIPER] End
+[SNIPER] Elapsed time: 3.11 seconds
+
+
+Optional: Run '../../tools/cpistack.py' in this directory to generate cpi-stack output for this run
+Optional: Run '../../tools/mcpat.py' in this directory to generate power output for this run
+Optional: Run '../../tools/dumpstats.py' in this directory to view detailed statistics for this run
+Optional: Run '../../tools/gen_topology.py' in this directory to view the system topology for this run
+

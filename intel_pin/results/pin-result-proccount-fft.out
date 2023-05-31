@@ -1,0 +1,185 @@
+              Procedure           Image            Address        Calls Instructions
+    __vdso_gettimeofday          [vdso]       7ffccbfc6610            9          567
+                  _fini             fft             4bbc10            1            4
+__deregister_frame_info             fft             4b9e40            1            2
+__deregister_frame_info_bases             fft             4b9d10            1           35
+  __register_frame_info             fft             4b9a40            1           34
+          strncpy_ifunc             fft             4aee40            1            9
+    __strncasecmp_ifunc             fft             4a2840            1            6
+     __strcasecmp_ifunc             fft             4a27f0            1            6
+   _dl_find_object_init             fft             49e720            1          208
+  _dlfo_process_initial             fft             49e190            2          308
+_dl_find_object_from_map             fft             49e120            3          161
+           strspn_ifunc             fft             49afa0            1            6
+          strpbrk_ifunc             fft             49af80            1            6
+   __mpn_extract_double             fft             49a930            2           44
+            __mpn_mul_1             fft             499890           14          318
+           __mpn_rshift             fft             4992f0            2           36
+           __mpn_lshift             fft             4991d0            2           32
+      _dl_protect_relro             fft             495780            1           20
+    _dl_lookup_symbol_x             fft             493e30            5         1171
+            do_lookup_x             fft             493160            5          893
+            check_match             fft             492fb0            5          240
+                __uname             fft             48f2a0            1            6
+        __wmemset_ifunc             fft             48d0d0            1            6
+        __wmemchr_ifunc             fft             48d030            1            8
+         __wcslen_ifunc             fft             48cfc0            1           11
+         __strrchr_sse2             fft             48bd90            1           55
+                 strsep             fft             48af20            3           52
+           memchr_ifunc             fft             48aea0            1            8
+          strrchr_ifunc             fft             48adb0            1            8
+     __lll_elision_init             fft             4895f0            1           37
+    _IO_file_doallocate             fft             487430            1           62
+            __printf_fp             fft             47ec30            2           14
+          __printf_fp_l             fft             47c000            2         1622
+             hack_digit             fft             47bba0           12          396
+             _itoa_word             fft             47b930           13         1122
+              getrandom             fft             47b890            1            9
+          __sigjmp_save             fft             47a320            1            9
+            __sigsetjmp             fft             47a2b0            1           23
+           __ctype_init             fft             47a250            1           17
+      __libc_init_first             fft             46bfe0            1           18
+      __libc_early_init             fft             46bf10            1           46
+     __libc_init_secure             fft             46bec0            1            5
+ _dl_discover_osversion             fft             46bdb0            1           91
+   _dl_non_dynamic_init             fft             46a620            1          636
+           _dl_aux_init             fft             46a220            1          333
+      __tunable_get_val             fft             469e80           30          615
+        __tunables_init             fft             469610            1        17903
+      __tunable_set_val             fft             4694c0            5          290
+          __tls_init_tp             fft             468a80            1           55
+      __tls_pre_init_tp             fft             468a30            1           14
+_dl_tls_static_surplus_init             fft             467e80            1           37
+         _dl_setup_hash             fft             467ce0            1           31
+         _dl_get_origin             fft             467090            1           73
+         _dl_new_object             fft             466d80            1           89
+_dl_add_to_namespace_list             fft             466ce0            1           35
+         _dl_init_paths             fft             465840            1          499
+    fillin_rpath.isra.0             fft             465400            1          178
+expand_dynamic_string_token             fft             465280            2           46
+   _dl_debug_initialize             fft             462070            1           25
+            __init_misc             fft             461610            1           23
+               mprotect             fft             45fde0            1            6
+                   sbrk             fft             45fc30            3           71
+                  __brk             fft             45fbf0            4           32
+       __GI___getrlimit             fft             45fbb0            1           10
+                  write             fft             45f140           23          207
+              __fstatat             fft             45ef30            1            8
+                  fstat             fft             45eef0            1            7
+                 getopt             fft             45ec70            1           21
+     _getopt_internal_r             fft             45e600            1           88
+                  _exit             fft             45d550            1            7
+           gettimeofday             fft             45d430            9          189
+        __wcsnlen_ifunc             fft             45bd20            1           11
+__memset_sse2_unaligned_erms             fft             455d80            0          144
+__memset_sse2_unaligned             fft             455d00            1           10
+__memcpy_sse2_unaligned_erms             fft             454780            0          583
+__memmove_sse2_unaligned             fft             454690            5          231
+__mempcpy_sse2_unaligned             fft             454680           60          240
+        __strcspn_sse42             fft             454280            2          107
+          __strlen_sse2             fft             44d4b0           22          590
+       __strchrnul_sse2             fft             44ce10           28          828
+          __strchr_sse2             fft             44cbe0            2           96
+        __memcmp_sse4_1             fft             439a20            1           22
+        __strncmp_sse42             fft             437950            7          228
+__strcmp_sse2_unaligned             fft             433020            5          185
+      __strchrnul_ifunc             fft             431b60            1            8
+      __rawmemchr_ifunc             fft             431ae0            1            8
+     __new_memcpy_ifunc             fft             4319d0            1           19
+   __strcasecmp_l_ifunc             fft             431980            1            6
+         __stpcpy_ifunc             fft             431900            1            9
+        __mempcpy_ifunc             fft             4317f0            1           19
+           memset_ifunc             fft             4316f0            1           17
+   __libc_memmove_ifunc             fft             4315e0            1           19
+           memcmp_ifunc             fft             431540            1            9
+    __libc_strstr_ifunc             fft             431520            1            6
+          strncmp_ifunc             fft             430ca0            1           11
+        __strnlen_ifunc             fft             430c30            1            8
+           strlen_ifunc             fft             430bc0            1            8
+                 strdup             fft             430b00            2           36
+          strcspn_ifunc             fft             430ae0            1            6
+           strcpy_ifunc             fft             430a60            1            9
+           strcmp_ifunc             fft             4309e0            1            9
+           strchr_ifunc             fft             430970            1           12
+               __calloc             fft             42f870            1           71
+          __libc_valloc             fft             42f290            7          287
+                   free             fft             42e760            2           48
+                 malloc             fft             42e420           10          432
+          _int_memalign             fft             42e050            7          721
+     tcache_init.part.0             fft             42dcd0            1          115
+            _int_malloc             fft             42cd50           17         3148
+              sysmalloc             fft             42c420            1          161
+   ptmalloc_init.part.0             fft             42b830            1          843
+              _int_free             fft             42adf0           16         1347
+unlink_chunk.constprop.0             fft             42ab50            1           38
+ __pthread_mutex_unlock             fft             428e30           10          232
+   __pthread_mutex_lock             fft             427f50           10          367
+   __pthread_mutex_init             fft             427620            1           30
+__pthread_tunables_init             fft             427590            1           21
+    __pthread_cond_init             fft             423e50            1           10
+___pthread_cond_broadcast             fft             423af0            7          154
+__libc_cleanup_pop_restore             fft             423860           15          120
+__libc_cleanup_push_defer             fft             423820           15          150
+   __libc_alloca_cutoff             fft             4237d0            2           22
+            _IO_cleanup             fft             422390            1          139
+    _IO_flush_all_lockp             fft             422120            1          107
+     _IO_default_setbuf             fft             421ad0            1           50
+         _IO_doallocbuf             fft             421410            1           25
+               _IO_setb             fft             4213a0            1           24
+             __overflow             fft             420f70           27          460
+          _IO_file_sync             fft             420620            1           18
+      _IO_file_overflow             fft             420400           40         1316
+       _IO_new_do_write             fft             41f980           23         1311
+        _IO_file_xsputn             fft             41efa0           56         6267
+         _IO_file_write             fft             41e890           23          851
+          _IO_file_stat             fft             41e880            1            3
+    _IO_new_file_setbuf             fft             41dc70            1           14
+                putchar             fft             41b4a0            5          220
+                   puts             fft             41b150            5          355
+               _IO_padn             fft             41b010           10          470
+    __vfprintf_internal             fft             4176a0           13         5284
+             _IO_printf             fft             4144b0           13          393
+      __drand48_iterate             fft             4135d0         2048        40960
+              srand48_r             fft             4135a0            1            9
+            __erand48_r             fft             413530         2048        63488
+                srand48             fft             413520            1            3
+                drand48             fft             4134d0         2048        30720
+           __cxa_atexit             fft             4133f0            1           36
+           __new_exitfn             fft             413200            1           32
+                   exit             fft             4131e0            1            8
+    __run_exit_handlers             fft             412f80            1           76
+                 getenv             fft             412e90            8         1904
+                _setjmp             fft             412610            1            3
+       __libc_setup_tls             fft             40c700            1          149
+      __libc_start_main             fft             40b170            1          807
+update_active.constprop.0             fft             40acc0            1          170
+handle_intel.constprop.0             fft             40abd0           12          596
+intel_check_word.constprop.0             fft             40a8d0           26         5283
+get_common_cache_info.constprop.0             fft             40a4c0            1          212
+get_common_indices.constprop.0             fft             40a330            1           62
+ __libc_start_call_main             fft             40a290            1           22
+              call_fini             fft             40a250            1           18
+              __cos_avx             fft             409540         1056        98033
+              __sin_avx             fft             408c50         1056        99154
+            __cos_ifunc             fft             4065f0            1           12
+            __sin_ifunc             fft             406580            1           12
+              FFT1DOnce             fft             404e37           64       625728
+                Reverse             fft             404ceb           64        78784
+              Transpose             fft             4047dd            3       167397
+          TwiddleOneCol             fft             4045ca           32        81440
+                  FFT1D             fft             4039fa            1         3109
+             BitReverse             fft             4039b1         2048       145408
+                 InitU2             fft             403865            1        56817
+                  InitU             fft             403708            1         2038
+                  InitX             fft             40363f            1        28146
+             TouchArray             fft             4033be            1        72095
+             SlaveStart             fft             402d7f            1         1344
+                   main             fft             401845            1          460
+            frame_dummy             fft             401810            1           11
+  __do_global_dtors_aux             fft             4017d0            1           14
+     register_tm_clones             fft             401790            1            9
+   deregister_tm_clones             fft             401760            1            4
+_dl_relocate_static_pie             fft             401750            1            2
+                 _start             fft             401720            1           12
+                   .plt             fft             401020            0         4492
+                  _init             fft             401000            1            7

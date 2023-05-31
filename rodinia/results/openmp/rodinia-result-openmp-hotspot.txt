@@ -1,0 +1,7 @@
+Start computing the transient temperature
+Ending simulation
+Total time: 0.014 seconds
+
+real    0m1.706s
+user    0m1.630s
+sys     0m0.041s
